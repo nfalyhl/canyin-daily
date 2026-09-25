@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 白班底：和网页浅色模式的背景一致，避免启动瞬间闪白/闪黑 -->
+    <color name="page_bg">#F2F3F1</color>
+    <color name="ink">#14171B</color>
+    <color name="icon_bg">#14171B</color>
+</resources>
