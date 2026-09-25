@@ -1,0 +1,3360 @@
+{
+ "date": "2026-09-25",
+ "generated_at": "2026-09-25T23:59:33+08:00",
+ "headline": "80 条：产品上新 20 · 行业趋势 22 · 品牌动作 38；高频词 《数字化》、《快餐》、《开店》",
+ "brief": [
+  {
+   "cat": "product",
+   "text": "Toastique, the vibrant national gourmet toast, juice and…",
+   "id": "8736ba38c55bdf1f",
+   "region": "global",
+   "source": "QSR Magazine",
+   "url": "https://www.qsrmagazine.com/news/toastique-adds-raspberry-crumble-smoothie-and-cannoli-cloud-coffee/"
+  },
+  {
+   "cat": "trend",
+   "text": "魔镜洞察数据显示，近12个月主流电商平台黄精品类总销售额突破24.84亿元，同比暴涨730.2%，销量同比攀升6…",
+   "id": "1822348e70df6911",
+   "region": "cn",
+   "source": "Foodaily每日食品",
+   "url": "https://www.foodaily.com/articles/42336"
+  },
+  {
+   "cat": "brand",
+   "text": "Starbucks announced Thursday it’s closing about 250 Nort…",
+   "id": "88727957c929d674",
+   "region": "global",
+   "source": "QSR Magazine",
+   "url": "https://www.qsrmagazine.com/story/starbucks-to-close-250-north-america-locations-this-week/"
+  },
+  {
+   "cat": "product",
+   "text": "9月12日，头部烤鱼品牌探鱼在深圳光明大仟里店官宣：明星主厨林述巍担任探鱼焦香严选推荐官，并以\"一日店长\"的身份…",
+   "id": "26c0d1c3d63cadfe",
+   "region": "cn",
+   "source": "红餐网",
+   "url": "http://www.canyin168.com/Article/xw/81379.html"
+  },
+  {
+   "cat": "product",
+   "text": "2026年9月22日,国民民生品牌金龙鱼官宣全新品牌合作,新生代短剧演员申浩男正式出任品牌调味品产品首位品牌大使",
+   "id": "0d3ee800b56acb39",
+   "region": "cn",
+   "source": "餐饮界",
+   "url": "https://www.canyinj.com/news/24700.html"
+  }
+ ],
+ "keywords": [
+  "数字化",
+  "快餐",
+  "开店",
+  "食品安全",
+  "咖啡",
+  "人事"
+ ],
+ "counts": {
+  "product": 20,
+  "trend": 22,
+  "brand": 38
+ },
+ "region_counts": {
+  "cn": 40,
+  "global": 40
+ },
+ "market": {
+  "formula": "综合占比 = 0.6 × 资讯热度占比 + 0.4 × 已披露门店规模占比（仅统计本次采集到的公开信息）",
+  "cats": [
+   {
+    "id": "tea",
+    "label": "茶饮",
+    "color": "#2F9E6B",
+    "items": 3,
+    "brands": 5,
+    "stores": 3500,
+    "heat": 0.0484,
+    "stores_share": 0.4011,
+    "composite": 0.1895
+   },
+   {
+    "id": "fastfood_cn",
+    "label": "中式快餐",
+    "color": "#E08A1E",
+    "items": 3,
+    "brands": 1,
+    "stores": 3226,
+    "heat": 0.0484,
+    "stores_share": 0.3697,
+    "composite": 0.1769
+   },
+   {
+    "id": "supply",
+    "label": "食品供应链",
+    "color": "#6B7280",
+    "items": 16,
+    "brands": 7,
+    "stores": 0,
+    "heat": 0.2581,
+    "stores_share": 0.0,
+    "composite": 0.1548
+   },
+   {
+    "id": "bakery",
+    "label": "烘焙甜品",
+    "color": "#C77DBB",
+    "items": 4,
+    "brands": 2,
+    "stores": 2000,
+    "heat": 0.0645,
+    "stores_share": 0.2292,
+    "composite": 0.1304
+   },
+   {
+    "id": "coffee",
+    "label": "咖啡",
+    "color": "#8A5A2B",
+    "items": 10,
+    "brands": 4,
+    "stores": 0,
+    "heat": 0.1613,
+    "stores_share": 0.0,
+    "composite": 0.0968
+   },
+   {
+    "id": "fastfood_west",
+    "label": "西式快餐",
+    "color": "#C0392B",
+    "items": 9,
+    "brands": 5,
+    "stores": 0,
+    "heat": 0.1452,
+    "stores_share": 0.0,
+    "composite": 0.0871
+   },
+   {
+    "id": "delivery",
+    "label": "平台与配送",
+    "color": "#1B5FC1",
+    "items": 7,
+    "brands": 3,
+    "stores": 0,
+    "heat": 0.1129,
+    "stores_share": 0.0,
+    "composite": 0.0677
+   },
+   {
+    "id": "bar",
+    "label": "酒馆酒吧",
+    "color": "#5B6BB5",
+    "items": 3,
+    "brands": 3,
+    "stores": 0,
+    "heat": 0.0484,
+    "stores_share": 0.0,
+    "composite": 0.029
+   },
+   {
+    "id": "chinese",
+    "label": "中式正餐",
+    "color": "#B4740B",
+    "items": 3,
+    "brands": 1,
+    "stores": 0,
+    "heat": 0.0484,
+    "stores_share": 0.0,
+    "composite": 0.029
+   },
+   {
+    "id": "western",
+    "label": "西餐轻食",
+    "color": "#3E8E8E",
+    "items": 3,
+    "brands": 6,
+    "stores": 0,
+    "heat": 0.0484,
+    "stores_share": 0.0,
+    "composite": 0.029
+   },
+   {
+    "id": "snack",
+    "label": "小吃卤味",
+    "color": "#B08A2E",
+    "items": 1,
+    "brands": 2,
+    "stores": 0,
+    "heat": 0.0161,
+    "stores_share": 0.0,
+    "composite": 0.0097
+   }
+  ],
+  "brand_top": [
+   {
+    "name": "星巴克",
+    "cat": "coffee",
+    "count": 5,
+    "latest": "Starbucks closures, Burger King AI, Olive Garden sales",
+    "url": "https://www.nrn.com/quick-service/starbucks-closures-burger-king-ai-olive-garden-sales"
+   },
+   {
+    "name": "麦当劳",
+    "cat": "fastfood_west",
+    "count": 4,
+    "latest": "McDonald’s turns to AI for drive-thru, inventory management, order accuracy",
+    "url": "https://www.restaurantdive.com/news/mcdonalds-archiq-drive-thru-artificial-intelligence-next-strategy/831256/"
+   },
+   {
+    "name": "DoorDash",
+    "cat": "delivery",
+    "count": 2,
+    "latest": "Lowe’s debuts drone delivery pilot with Wing, DoorDash",
+    "url": "https://www.retaildive.com/news/lowes-drone-delivery-pilot-wing-doordash/831233/"
+   },
+   {
+    "name": "汉堡王",
+    "cat": "fastfood_west",
+    "count": 2,
+    "latest": "Starbucks closures, Burger King AI, Olive Garden sales",
+    "url": "https://www.nrn.com/quick-service/starbucks-closures-burger-king-ai-olive-garden-sales"
+   },
+   {
+    "name": "蜜雪冰城",
+    "cat": "tea",
+    "count": 2,
+    "latest": "蜜雪冰城、京东都盯上了！这门千亿生意火了，有人已开店3500家......",
+    "url": "http://www.canyin168.com/Article/xw/81375.html"
+   },
+   {
+    "name": "Blackmores",
+    "cat": "supply",
+    "count": 1,
+    "latest": "守护国民膳食健康｜澳佳宝以标准共建与循证科研助力鱼油行业高质量发展",
+    "url": "https://www.foodaily.com/articles/42338"
+   },
+   {
+    "name": "CAVA",
+    "cat": "western",
+    "count": 1,
+    "latest": "CAVA Announces Milestone Restaurant No. 500",
+    "url": "https://www.qsrmagazine.com/news/cava-announces-milestone-restaurant-no-500/"
+   },
+   {
+    "name": "Cava",
+    "cat": "western",
+    "count": 1,
+    "latest": "CAVA Announces Milestone Restaurant No. 500",
+    "url": "https://www.qsrmagazine.com/news/cava-announces-milestone-restaurant-no-500/"
+   },
+   {
+    "name": "Cracker Barrel",
+    "cat": "western",
+    "count": 1,
+    "latest": "Cracker Barrel sees traffic improvement as strategy is ‘on the right track’",
+    "url": "https://www.nrn.com/family-dining/cracker-barrel-sees-traffic-improvement-as-strategy-is-on-the-right-track-"
+   },
+   {
+    "name": "DQ冰雪皇后",
+    "cat": "bakery",
+    "count": 1,
+    "latest": "冰淇淋的热战场 DQ开出2000家门店之后",
+    "url": "http://news.winshang.com/html/074/2338.html"
+   },
+   {
+    "name": "Hidden Valley Ranch",
+    "cat": "supply",
+    "count": 1,
+    "latest": "Leftovers: Hidden Valley Ranch goes dark for Halloween | V8 energizes with electrolytes",
+    "url": "https://www.fooddive.com/news/hidden-valley-spooky-ranch-v8-electrolytes-ocean-spray-cranberry-fall-season/831354/"
+   },
+   {
+    "name": "Kikkoman",
+    "cat": "supply",
+    "count": 1,
+    "latest": "Kikkoman expands US production with $560M soy sauce plant",
+    "url": "https://www.fooddive.com/news/kikkoman-us-production-facility-soy-sauce-wisonsin/831117/"
+   },
+   {
+    "name": "Kraft Heinz",
+    "cat": "supply",
+    "count": 1,
+    "latest": "卡夫亨氏任婧：让创新跑得更快，同时坚守住食品安全底线",
+    "url": "http://www.news.cn/food/20260924/987eb8944f7340b787dc8d811984fb08/c.html"
+   },
+   {
+    "name": "Ocean Spray",
+    "cat": "supply",
+    "count": 1,
+    "latest": "Leftovers: Hidden Valley Ranch goes dark for Halloween | V8 energizes with electrolytes",
+    "url": "https://www.fooddive.com/news/hidden-valley-spooky-ranch-v8-electrolytes-ocean-spray-cranberry-fall-season/831354/"
+   },
+   {
+    "name": "Olive Garden",
+    "cat": "western",
+    "count": 1,
+    "latest": "Starbucks closures, Burger King AI, Olive Garden sales",
+    "url": "https://www.nrn.com/quick-service/starbucks-closures-burger-king-ai-olive-garden-sales"
+   },
+   {
+    "name": "V8",
+    "cat": "supply",
+    "count": 1,
+    "latest": "Leftovers: Hidden Valley Ranch goes dark for Halloween | V8 energizes with electrolytes",
+    "url": "https://www.fooddive.com/news/hidden-valley-spooky-ranch-v8-electrolytes-ocean-spray-cranberry-fall-season/831354/"
+   },
+   {
+    "name": "ほっともっと",
+    "cat": "fastfood_cn",
+    "count": 1,
+    "latest": "ほっともっと、新登場あったかスイーツ「カスタードパイ」「あんバターパイ」190円 10月1日から数量限定",
+    "url": "https://www.ssnp.co.jp/foodservice/703673/"
+   },
+   {
+    "name": "タリーズコーヒー",
+    "cat": "coffee",
+    "count": 1,
+    "latest": "タリーズ、「コーヒーの日」に合わせ「エアロカーノ」期間限定で展開 “ベルベットのような” 質感のエスプレッソビバレッジ",
+    "url": "https://www.ssnp.co.jp/beverage/703723/"
+   },
+   {
+    "name": "ビアードパパ",
+    "cat": "bakery",
+    "count": 1,
+    "latest": "ビアードパパ、秋限定「渋皮栗のモンブランシュー」とゴディバ監修「ショコラ ラングドシャシュー」が登場",
+    "url": "https://www.ssnp.co.jp/snack/703582/"
+   },
+   {
+    "name": "古茗",
+    "cat": "tea",
+    "count": 1,
+    "latest": "蜜雪冰城、京东都盯上了！这门千亿生意火了，有人已开店3500家......",
+    "url": "http://www.canyin168.com/Article/xw/81375.html"
+   }
+  ],
+  "scales": [
+   {
+    "kind": "门店数",
+    "value": "3500家",
+    "brand": "蜜雪冰城",
+    "cat": "tea",
+    "source": "红餐网",
+    "url": "http://www.canyin168.com/Article/xw/81375.html",
+    "date": ""
+   },
+   {
+    "kind": "门店数",
+    "value": "3226家",
+    "brand": "",
+    "cat": "fastfood_cn",
+    "source": "红餐网",
+    "url": "http://www.canyin168.com/Article/xw/81378.html",
+    "date": ""
+   },
+   {
+    "kind": "门店数",
+    "value": "2000家",
+    "brand": "DQ冰雪皇后",
+    "cat": "bakery",
+    "source": "赢商网",
+    "url": "http://news.winshang.com/html/074/2338.html",
+    "date": "2026-09-24"
+   },
+   {
+    "kind": "门店数",
+    "value": "7units",
+    "brand": "",
+    "cat": "",
+    "source": "Nation's Restaurant News",
+    "url": "https://www.nrn.com/independent-restaurants/50-restaurant-groups-in-the-northeast",
+    "date": "2026-09-24"
+   },
+   {
+    "kind": "营收",
+    "value": "24.84亿元",
+    "brand": "",
+    "cat": "supply",
+    "source": "Foodaily每日食品",
+    "url": "https://www.foodaily.com/articles/42336",
+    "date": ""
+   },
+   {
+    "kind": "金额",
+    "value": "131.5Million",
+    "brand": "DoorDash",
+    "cat": "delivery",
+    "source": "QSR Magazine",
+    "url": "https://www.qsrmagazine.com/story/doordash-agrees-to-131-5-million-settlement-over-worker-pay/",
+    "date": "2026-09-24"
+   },
+   {
+    "kind": "金额",
+    "value": "131.5million",
+    "brand": "DoorDash",
+    "cat": "delivery",
+    "source": "QSR Magazine",
+    "url": "https://www.qsrmagazine.com/story/doordash-agrees-to-131-5-million-settlement-over-worker-pay/",
+    "date": "2026-09-24"
+   }
+  ],
+  "total_stores": 8726,
+  "unclassified": 27
+ },
+ "total": 80,
+ "labels": {
+  "product": "产品上新",
+  "trend": "行业趋势",
+  "brand": "品牌动作"
+ },
+ "items": [
+  {
+   "title": "Toastique Adds Raspberry Crumble Smoothie and Cannoli Cloud Coffee",
+   "url": "https://www.qsrmagazine.com/news/toastique-adds-raspberry-crumble-smoothie-and-cannoli-cloud-coffee/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "Toastique, the vibrant national gourmet toast, juice and coffee bar, is proud to unveil its limited-time menu collaboration with…",
+   "cat": "product",
+   "tags": [
+    "联名",
+    "咖啡"
+   ],
+   "brands": [],
+   "bcats": [
+    "coffee",
+    "bar"
+   ],
+   "scales": [],
+   "score": 13.3,
+   "id": "8736ba38c55bdf1f",
+   "no": 1,
+   "tr": {
+    "zh": {
+     "t": "Toastique 新增 Raspberry Crumble Smoothie 和 Cannoli Cloud Coffee",
+     "s": "Toastique，这家充满活力的全国性精品吐司、果汁和咖啡吧，自豪地推出与…的限时菜单合作"
+    }
+   }
+  },
+  {
+   "title": "金沙旅享于澳门巴黎人呈献“名厨臻宴”",
+   "url": "https://www.canyinj.com/news/24492.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "以打造非凡体验而闻名的金沙旅享推出“名厨臻宴”系列活动，庆祝澳门巴黎人®十周年志庆，并树立全新旅享体验标杆。",
+   "cat": "product",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 8.35,
+   "id": "a0db04134d3b9b0b",
+   "no": 2
+  },
+  {
+   "title": "探鱼新品焦香升级，明星主厨林述巍任“推荐官”现身深圳门店",
+   "url": "http://www.canyin168.com/Article/xw/81379.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "region": "cn",
+   "summary": "9月12日，头部烤鱼品牌探鱼在深圳光明大仟里店官宣：明星主厨林述巍担任探鱼焦香严选推荐官，并以\"一日店长\"的身份出席当天活动。活动现场，林述巍围绕腌、烤、炖三道工艺进行讲解并邀请顾客品鉴，为本次焦香升级盖章认证。",
+   "cat": "product",
+   "tags": [],
+   "brands": [
+    "探鱼"
+   ],
+   "bcats": [
+    "chinese"
+   ],
+   "scales": [],
+   "score": 8.0,
+   "id": "26c0d1c3d63cadfe",
+   "no": 3
+  },
+  {
+   "title": "申浩男出任金龙鱼调味品首位品牌大使，把安心好味带进年轻人的厨房",
+   "url": "https://www.canyinj.com/news/24700.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "2026年9月22日,国民民生品牌金龙鱼官宣全新品牌合作,新生代短剧演员申浩男正式出任品牌调味品产品首位品牌大使。",
+   "cat": "product",
+   "tags": [],
+   "brands": [],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 7.85,
+   "id": "0d3ee800b56acb39",
+   "no": 4
+  },
+  {
+   "title": "Jamba Brings Back Pumpkin Smash, Adds Pumpkin Moo’d for October",
+   "url": "https://www.qsrmagazine.com/news/jamba-brings-back-pumpkin-smash-adds-pumpkin-mood-for-october/",
+   "published": "2026-09-25T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "Jamba will bring back its Pumpkin Smash smoothie and introduce Pumpkin Moo’d at participating locations nationwide beginning Oct…",
+   "cat": "product",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 7.8,
+   "id": "9e461db9ea460fb7",
+   "no": 5,
+   "tr": {
+    "zh": {
+     "t": "Jamba 重新推出 Pumpkin Smash，并于10月新增 Pumpkin Moo’d",
+     "s": "Jamba 将在全国参与活动的门店重新推出其 Pumpkin Smash 冰沙，并推出 Pumpkin Moo’d，从10月起…"
+    }
+   }
+  },
+  {
+   "title": "蜜雪冰城、京东都盯上了！这门千亿生意火了，有人已开店3500家......",
+   "url": "http://www.canyin168.com/Article/xw/81375.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "region": "cn",
+   "summary": "越来越多品牌开始盯上这门生意，茶饮品牌也在往“现打酒”里伸手。去年，蜜雪冰城斥资近3亿元拿下鲜啤福鹿家53%股权，截至7月30日，鲜啤福鹿家全国门店已超过3500家；古茗也在部分门店上线现打啤酒系列。",
+   "cat": "product",
+   "tags": [
+    "开店",
+    "茶饮"
+   ],
+   "brands": [
+    "蜜雪冰城",
+    "古茗",
+    "鲜啤福鹿家"
+   ],
+   "bcats": [
+    "tea",
+    "bar"
+   ],
+   "scales": [
+    {
+     "kind": "门店数",
+     "value": "3500家"
+    }
+   ],
+   "score": 7.5,
+   "id": "5210eb9bf192291d",
+   "no": 6
+  },
+  {
+   "title": "读懂情绪，看见增长｜一文回顾GDMS 2026精彩瞬间",
+   "url": "https://www.foodaily.com/articles/42339",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "region": "cn",
+   "summary": "第一项，GDMS 创始人 Ken Lee携手明略科技副总裁、秒针营销科学院院长谭北平，正式推出国内首份立足于品牌方视角的《2026 品牌 GEO 行动指南》，并正式公布《GEO 服务商名录》。",
+   "cat": "product",
+   "tags": [
+    "人事"
+   ],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 7.4,
+   "id": "97afdc461e71caff",
+   "no": 7
+  },
+  {
+   "title": "Leftovers: Hidden Valley Ranch goes dark for Halloween | V8 energizes with electrolytes",
+   "url": "https://www.fooddive.com/news/hidden-valley-spooky-ranch-v8-electrolytes-ocean-spray-cranberry-fall-season/831354/",
+   "published": "2026-09-25T00:00:00+08:00",
+   "source": "Food Dive",
+   "source_id": "fooddive",
+   "region": "global",
+   "summary": "The dressing turns black for its first-ever seasonal product, while Ocean Spray positions cranberry as the next pumpkin spice wi…",
+   "cat": "product",
+   "tags": [],
+   "brands": [
+    "Ocean Spray",
+    "V8",
+    "Hidden Valley Ranch"
+   ],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 6.9,
+   "id": "44ec743ba8e6679c",
+   "no": 8,
+   "tr": {
+    "zh": {
+     "t": "剩菜：Hidden Valley Ranch 为万圣节走暗黑风 | V8 用电解质补充能量",
+     "s": "这款调味酱在其首个季节限定产品中变成黑色，而 Ocean Spray 将蔓越莓定位为下一个南瓜香料 wi…"
+    }
+   }
+  },
+  {
+   "title": "ほっともっと、新登場あったかスイーツ「カスタードパイ」「あんバターパイ」190円 10月1日から数量限定",
+   "url": "https://www.ssnp.co.jp/foodservice/703673/",
+   "published": "2026-09-25T00:00:00+08:00",
+   "source": "食品産業新聞（日）",
+   "source_id": "ssnp",
+   "region": "global",
+   "summary": "プレナスが展開する持ち帰り弁当「Hotto Motto（ほっともっと）」は10月1日、全国の2,415店舗で、あったかスイーツ「ほっとカスタードパイ」「ほっとあんバターパイ」を数量限定で発売する。",
+   "cat": "product",
+   "tags": [],
+   "brands": [
+    "ほっともっと"
+   ],
+   "bcats": [
+    "fastfood_cn"
+   ],
+   "scales": [],
+   "score": 6.7,
+   "id": "4eefee996fcbfdf6",
+   "no": 9,
+   "tr": {
+    "zh": {
+     "t": "ほっともっと新推出暖心甜点：卡仕达派、红豆黄油派，190日元，10月1日起限量供应",
+     "s": "プレナス运营的外带便当 Hotto Motto（ほっともっと）将于10月1日在全国2,415家门店限量发售暖心甜点：热卡仕达派、热红豆黄油派。"
+    }
+   }
+  },
+  {
+   "title": "KFC unveils 'Open House' prototype as a centerpiece of its U.S. comeback plan",
+   "url": "https://www.nrn.com/quick-service/kfc-unveils-open-house-prototype-as-a-centerpiece-of-its-u-s-comeback-plan",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "The 3,400-square-foot McKinney, Texas, location serves as a learning lab for breakfast offerings, expanded dayparts, and \"AUV-ma…",
+   "cat": "product",
+   "tags": [],
+   "brands": [
+    "肯德基"
+   ],
+   "bcats": [
+    "fastfood_west"
+   ],
+   "scales": [],
+   "score": 5.9,
+   "id": "704fb1d7ee53a10d",
+   "no": 10,
+   "tr": {
+    "zh": {
+     "t": "KFC 推出 Open House 原型，作为其美国复兴计划的核心",
+     "s": "这家位于德克萨斯州麦金尼、占地3,400平方英尺的门店，将作为早餐供应、扩展时段以及 AUV-ma… 的学习实验室"
+    }
+   }
+  },
+  {
+   "title": "La Madeleine launches new specialty coffee program",
+   "url": "https://www.nrn.com/fast-casual/la-madeleine-launches-new-specialty-coffee-program",
+   "published": "2026-09-25T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "The espresso-based drinks are designed to pair with the chain's French-inspired bakery items and enhance the café experience",
+   "cat": "product",
+   "tags": [
+    "咖啡",
+    "烘焙"
+   ],
+   "brands": [],
+   "bcats": [
+    "coffee",
+    "bakery"
+   ],
+   "scales": [],
+   "score": 5.9,
+   "id": "b8be3f34e2e5fb28",
+   "no": 11,
+   "tr": {
+    "zh": {
+     "t": "La Madeleine 推出全新特色咖啡项目",
+     "s": "这些以浓缩咖啡为基底的饮品旨在搭配该连锁店法式风味的烘焙食品，并提升咖啡馆体验"
+    }
+   }
+  },
+  {
+   "title": "夏日畅饮正当时，奥乐齐多款啤酒及夏日美食就位，休闲美味省心购齐",
+   "url": "https://www.canyinj.com/news/24416.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "这个夏天，源自德国的全球连锁精选平价超市奥乐齐推出了多款自有品牌啤酒以及夏日佐酒、消暑美食。以好工艺、好产地、好原料、新趋势和实惠低价为消费者带来畅快舒爽的夏日美味选择。",
+   "cat": "product",
+   "tags": [
+    "价格战"
+   ],
+   "brands": [],
+   "bcats": [
+    "bar"
+   ],
+   "scales": [],
+   "score": 5.85,
+   "id": "2acb56bb58350055",
+   "no": 12
+  },
+  {
+   "title": "McAlister’s Unveils New Halloween",
+   "url": "https://www.qsrmagazine.com/news/mcalisters-unveils-new-halloween-themed-menu/",
+   "published": "2026-09-25T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "McAlister’s Deli is adding three Halloween-themed drinks and two desserts to its menu for October.",
+   "cat": "product",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 5.8,
+   "id": "2bcfa72f2c3b24ca",
+   "no": 13,
+   "tr": {
+    "zh": {
+     "t": "McAlister’s 推出全新万圣节",
+     "s": "McAlister’s Deli 将在10月为菜单新增三款万圣节主题饮品和两款甜点。"
+    }
+   }
+  },
+  {
+   "title": "Lowe’s debuts drone delivery pilot with Wing, DoorDash",
+   "url": "https://www.retaildive.com/news/lowes-drone-delivery-pilot-wing-doordash/831233/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "Retail Dive",
+   "source_id": "retaildive",
+   "region": "global",
+   "summary": "The initial rollout at a North Carolina store involves over 100 SKUs and could later expand to other locations.",
+   "cat": "product",
+   "tags": [
+    "即时零售",
+    "外卖"
+   ],
+   "brands": [
+    "DoorDash"
+   ],
+   "bcats": [
+    "delivery"
+   ],
+   "scales": [],
+   "score": 5.6,
+   "id": "4737fed355643bf5",
+   "no": 14,
+   "tr": {
+    "zh": {
+     "t": "Lowe’s 与 Wing、DoorDash 合作推出无人机配送试点",
+     "s": "在北卡罗来纳州一家门店的初步推广涉及100多个SKU，之后可能会扩展到其他地点。"
+    }
+   }
+  },
+  {
+   "title": "からやま、黒胡椒×ニンニク×レモンの限定メニュー「黒胡椒とり天のレモンステーキ定食」発売",
+   "url": "https://www.ssnp.co.jp/foodservice/703740/",
+   "published": "2026-09-25T00:00:00+08:00",
+   "source": "食品産業新聞（日）",
+   "source_id": "ssnp",
+   "region": "global",
+   "summary": "からあげ専門店「からやま」は9月25日から、期間限定メニュー「黒胡椒とり天のレモンステーキ定食」を販売している。価格は税込1,089円。テイクアウトにも対応する。食材がなくなり次第、販売を終了する。",
+   "cat": "product",
+   "tags": [
+    "供应链"
+   ],
+   "brands": [],
+   "bcats": [
+    "fastfood_cn",
+    "supply",
+    "delivery"
+   ],
+   "scales": [],
+   "score": 5.2,
+   "id": "114a1670d1ac299d",
+   "no": 15,
+   "tr": {
+    "zh": {
+     "t": "からやま推出黑胡椒×大蒜×柠檬限定菜单「黑胡椒鸡天柠檬牛排定食」",
+     "s": "炸鸡专门店「からやま」从9月25日起销售期间限定菜单「黑胡椒鸡天柠檬牛排定食」。价格为含税1,089日元。也支持外带。食材售完即止。"
+    }
+   }
+  },
+  {
+   "title": "タリーズ、「コーヒーの日」に合わせ「エアロカーノ」期間限定で展開 “ベルベットのような” 質感のエスプレッソビバレッジ",
+   "url": "https://www.ssnp.co.jp/beverage/703723/",
+   "published": "2026-09-25T00:00:00+08:00",
+   "source": "食品産業新聞（日）",
+   "source_id": "ssnp",
+   "region": "global",
+   "summary": "タリーズコーヒージャパンは9月28日から、エスプレッソビバレッジ「エアロカーノ」をコーヒーショップ「タリーズコーヒー」にて期間限定で販売する。力強いコクと香りを備えたエスプレッソを、きめ細かな泡で軽やかな口あたりに仕上...",
+   "cat": "product",
+   "tags": [],
+   "brands": [
+    "タリーズコーヒー"
+   ],
+   "bcats": [
+    "coffee"
+   ],
+   "scales": [],
+   "score": 5.2,
+   "id": "f50464bb9c8a4586",
+   "no": 16,
+   "tr": {
+    "zh": {
+     "t": "タリーズ配合“咖啡日”期间限定推出「エアロカーノ」 具有“天鹅绒般”质感的浓缩咖啡饮品",
+     "s": "タリーズコーヒージャパン将于9月28日起，在咖啡店「タリーズコーヒー」期间限定销售浓缩咖啡饮品「エアロカーノ」。将兼具强劲醇厚与香气的浓缩咖啡，以细腻泡沫打造出轻盈口感..."
+    }
+   }
+  },
+  {
+   "title": "ビアードパパ、秋限定「渋皮栗のモンブランシュー」とゴディバ監修「ショコラ ラングドシャシュー」が登場",
+   "url": "https://www.ssnp.co.jp/snack/703582/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "食品産業新聞（日）",
+   "source_id": "ssnp",
+   "region": "global",
+   "summary": "シュークリーム専門店「ビアードパパ」は、秋限定商品として「渋皮栗のモンブランシュー」と、ゴディバ監修の「ショコラ ラングドシャシュー」を販売する。「渋皮栗のモンブランシュー」は現在販売中で10月31日までの期間限定。",
+   "cat": "product",
+   "tags": [],
+   "brands": [
+    "ビアードパパ"
+   ],
+   "bcats": [
+    "bakery"
+   ],
+   "scales": [],
+   "score": 5.2,
+   "id": "0a2a16c4a25edfdc",
+   "no": 17,
+   "tr": {
+    "zh": {
+     "t": "ビアードパパ推出秋季限定「涩皮栗蒙布朗泡芙」与ゴディバ监修「ショコラ ラングドシャシュー」",
+     "s": "泡芙专门店「ビアードパパ」将销售秋季限定商品「涩皮栗蒙布朗泡芙」和由ゴディバ监修的「ショコラ ラングドシャシュー」。「涩皮栗蒙布朗泡芙」目前正在销售，限期至10月31日。"
+    }
+   }
+  },
+  {
+   "title": "Dave Shula returns to lead Shula’s Restaurant Group",
+   "url": "https://www.nrn.com/independent-restaurants/dave-shula-returns-to-lead-shula-s-restaurant-group",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "The son of founder Don Shula returned to football coaching after two decades with the multi-concept group.",
+   "cat": "product",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 4.9,
+   "id": "ae655dea72e8c6a9",
+   "no": 18,
+   "tr": {
+    "zh": {
+     "t": "Dave Shula回归领导Shula’s Restaurant Group",
+     "s": "创始人Don Shula之子在这家多概念餐饮集团任职二十年后，重返橄榄球教练岗位。"
+    }
+   }
+  },
+  {
+   "title": "便利店巨头“变身”快餐厅！现蒸饭、现煮面，加速抢食餐饮生意？",
+   "url": "http://www.canyin168.com/Article/xw/81378.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "region": "cn",
+   "summary": "日前，在中国大陆拥有3226家店的便利店巨头--全家，第六代店型在上海亮相。相比过去，这次升级最明显的变化，就是餐饮的分量更重了。",
+   "cat": "product",
+   "tags": [
+    "快餐"
+   ],
+   "brands": [],
+   "bcats": [
+    "fastfood_cn"
+   ],
+   "scales": [
+    {
+     "kind": "门店数",
+     "value": "3226家"
+    }
+   ],
+   "score": 4.5,
+   "id": "7a9bf775670690d1",
+   "no": 19
+  },
+  {
+   "title": "双节团圆经济释放消费活力 餐饮后厨煎炸用油迎来品质升级",
+   "url": "https://www.canyinj.com/news/24697.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "中秋、国庆双节临近，国内短途游、返乡探亲、家庭家宴消费持续升温，文旅餐饮、社区家宴、预制半成品订单同步走高。节日集中出餐模式下，高频煎炸场景大幅增加，餐饮行业对煎炸用油的选择逻辑正在发生转变，耐炸、稳定、合规逐步成为行业新的评判标尺。",
+   "cat": "product",
+   "tags": [
+    "预制菜"
+   ],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 4.35,
+   "id": "40b5548f90ce9b2d",
+   "no": 20
+  },
+  {
+   "title": "销售额暴涨730%！黄精，药食同源的下一个“顶流”？",
+   "url": "https://www.foodaily.com/articles/42336",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "region": "cn",
+   "summary": "魔镜洞察数据显示，近12个月主流电商平台黄精品类总销售额突破24.84亿元，同比暴涨730.2%，销量同比攀升621.6%，在一众药食同源食材中跑出断层式增长[1]。",
+   "cat": "trend",
+   "tags": [
+    "供应链"
+   ],
+   "brands": [],
+   "bcats": [
+    "supply",
+    "delivery"
+   ],
+   "scales": [
+    {
+     "kind": "营收",
+     "value": "24.84亿元"
+    }
+   ],
+   "score": 12.9,
+   "id": "1822348e70df6911",
+   "no": 21
+  },
+  {
+   "title": "聂大可：深化全链条监管 凝聚食品安全社会共治合力",
+   "url": "http://www.news.cn/food/20260924/19da9d8dd06641529db6c5c20b10fec7/c.html",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "region": "cn",
+   "summary": "市场监管总局食品协调司副司长聂大可在致辞时表示，要坚持尚德守法，深化全链条监管，凝聚共治共享合力，共同守护人民群众“舌尖上的安全”。\"",
+   "cat": "trend",
+   "tags": [
+    "食品安全",
+    "政策"
+   ],
+   "brands": [],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 8.7,
+   "id": "47923956c22d1cd6",
+   "no": 22
+  },
+  {
+   "title": "珍奥集团徐斌：以全链条循证体系，筑牢食品安全底线",
+   "url": "http://www.news.cn/food/20260924/784358e7ecd1440488530de40c0f63ef/c.html",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "region": "cn",
+   "summary": "对于珍奥而言，答案就是三十年深耕一件事——聚焦5'-核苷酸，搭建完整循证研究体系，以硬核科研数据作为底气。",
+   "cat": "trend",
+   "tags": [
+    "食品安全"
+   ],
+   "brands": [],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 7.7,
+   "id": "48d66edb735e8b7b",
+   "no": 23
+  },
+  {
+   "title": "抖音生活服务双节前严查食品安全，重点清退高风险餐饮门店",
+   "url": "https://www.canyinj.com/news/24698.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "食品安全方面，围绕中秋聚餐、大闸蟹等时令消费高峰，抖音生活服务加强合规宣教，严控商家入驻和退出，清退问题严重门店，利用AI技术识别高风险餐饮商品，发现异常后及时处置。",
+   "cat": "trend",
+   "tags": [
+    "食品安全",
+    "数字化"
+   ],
+   "brands": [
+    "抖音生活服务"
+   ],
+   "bcats": [
+    "delivery"
+   ],
+   "scales": [],
+   "score": 7.35,
+   "id": "ab9a2cf81983c0db",
+   "no": 24
+  },
+  {
+   "title": "Kikkoman expands US production with $560M soy sauce plant",
+   "url": "https://www.fooddive.com/news/kikkoman-us-production-facility-soy-sauce-wisonsin/831117/",
+   "published": "2026-09-23T00:00:00+08:00",
+   "source": "Food Dive",
+   "source_id": "fooddive",
+   "region": "global",
+   "summary": "The Japanese food manufacturer is growing in the states in response to intensifying consumer demand for international flavors an…",
+   "cat": "trend",
+   "tags": [],
+   "brands": [
+    "Kikkoman"
+   ],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 6.9,
+   "id": "e2d2d09880023d91",
+   "no": 25,
+   "tr": {
+    "zh": {
+     "t": "Kikkoman以5.6亿美元酱油工厂扩大美国生产",
+     "s": "这家日本食品制造商正在美国扩张，以应对消费者对国际风味日益增长的需求，并……"
+    }
+   }
+  },
+  {
+   "title": "Starbucks closures, Burger King AI, Olive Garden sales",
+   "url": "https://www.nrn.com/quick-service/starbucks-closures-burger-king-ai-olive-garden-sales",
+   "published": "2026-09-25T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "Get all the headlines in today's Restaurant Daily podcast.",
+   "cat": "trend",
+   "tags": [
+    "数字化",
+    "快餐"
+   ],
+   "brands": [
+    "星巴克",
+    "汉堡王",
+    "Olive Garden"
+   ],
+   "bcats": [
+    "coffee",
+    "fastfood_west",
+    "western"
+   ],
+   "scales": [],
+   "score": 5.9,
+   "id": "b973e5fda2535020",
+   "no": 26,
+   "tr": {
+    "zh": {
+     "t": "Starbucks 关闭门店、Burger King AI、Olive Garden 销售",
+     "s": "在今天的 Restaurant Daily 播客中获取所有头条新闻。"
+    }
+   }
+  },
+  {
+   "title": "Adjusting to the modern B2B buyer journey",
+   "url": "https://www.nrn.com/expert-opinions/adjusting-to-the-modern-b2b-buyer-journey",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "Why foodservice brands must build trust before the sales call.",
+   "cat": "trend",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 5.9,
+   "id": "022eddbde9cc2dea",
+   "no": 27,
+   "tr": {
+    "zh": {
+     "t": "适应现代 B2B 买家旅程",
+     "s": "为什么餐饮服务品牌必须在销售拜访前建立信任。"
+    }
+   }
+  },
+  {
+   "title": "从长城到华山，温氏股份引领中国高端土鸡产业升级",
+   "url": "https://www.canyinj.com/news/24702.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "温氏股份董事、肉食事业部总裁温蛟龙作《中华土鸡消费新趋势下的温氏实践路径》主题发言。他指出，当前中华土鸡消费正呈现场景多元化、形态精细化、品质高端化、渠道线上化四大新趋势，产业利润呈“两端高、中间低”的U型曲线。",
+   "cat": "trend",
+   "tags": [
+    "财报",
+    "人事"
+   ],
+   "brands": [
+    "温氏股份"
+   ],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 5.85,
+   "id": "9a46e5af942e1c14",
+   "no": 28
+  },
+  {
+   "title": "卡夫亨氏任婧：让创新跑得更快，同时坚守住食品安全底线",
+   "url": "http://www.news.cn/food/20260924/987eb8944f7340b787dc8d811984fb08/c.html",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "region": "cn",
+   "summary": "会上，在“科技创新与食品安全的边界探索”的圆桌会议上，卡夫亨氏中国区食品安全与质量副总裁任婧根据企业实践作了相关的内容分享。\"",
+   "cat": "trend",
+   "tags": [
+    "食品安全",
+    "人事"
+   ],
+   "brands": [
+    "Kraft Heinz"
+   ],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 5.7,
+   "id": "8f69627f183891fa",
+   "no": 29
+  },
+  {
+   "title": "行业大咖共探科技创新与食品安全的边界探索",
+   "url": "http://www.news.cn/food/20260924/4b8eb830a6d44cb7a82d784a6b4cb3be/c.html",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "region": "cn",
+   "summary": "平衡创新与风控：探索产业高质量发展最优尺度食品产业科技创新的可持续发展，离不开系统化、常态化的安全管控体系支撑。\"",
+   "cat": "trend",
+   "tags": [
+    "食品安全",
+    "数字化"
+   ],
+   "brands": [],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 5.7,
+   "id": "d6edc689594d7b27",
+   "no": 30
+  },
+  {
+   "title": "圆桌对话 | 食品行业的安全能力如何从传统管控走向系统升级",
+   "url": "http://www.news.cn/food/20260924/bebf893756c0491d9df2eeb9c46787fd/c.html",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "region": "cn",
+   "summary": "食品安全本身就是信任的基石，行业需要携手共建全链条管控能力，把可视的安心转化为消费者的放心。\"",
+   "cat": "trend",
+   "tags": [
+    "食品安全",
+    "数字化"
+   ],
+   "brands": [],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 5.7,
+   "id": "307e1b6b61bbb1ee",
+   "no": 31
+  },
+  {
+   "title": "从5万亩订单农业到7道品控：永辉新米季的供应链答卷",
+   "url": "http://www.ccfa.org.cn/xiangxi.jsp?id=447459&type=2",
+   "published": "",
+   "source": "中国连锁经营协会",
+   "source_id": "ccfa",
+   "region": "cn",
+   "summary": "",
+   "cat": "trend",
+   "tags": [
+    "供应链"
+   ],
+   "brands": [],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 5.45,
+   "id": "a02b70c8902aa15c",
+   "no": 32
+  },
+  {
+   "title": "Good Culture names COO to scale supply chain",
+   "url": "https://www.fooddive.com/news/good-culture-coo-supply-chain/830770/",
+   "published": "2026-09-23T00:00:00+08:00",
+   "source": "Food Dive",
+   "source_id": "fooddive",
+   "region": "global",
+   "summary": "Kirk Jensen is joining the cottage cheese maker with a focus on improving availability and speed to shelf for retail partners, C…",
+   "cat": "trend",
+   "tags": [
+    "供应链"
+   ],
+   "brands": [],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 5.4,
+   "id": "6150dd97b7454638",
+   "no": 33,
+   "tr": {
+    "zh": {
+     "t": "Good Culture 任命首席运营官以扩大供应链规模",
+     "s": "Kirk Jensen 将加入这家白软干酪制造商，专注于提高零售合作伙伴的供货可用性和上架速度，C…"
+    }
+   }
+  },
+  {
+   "title": "Grocery inflation is primed to rise",
+   "url": "https://www.fooddive.com/news/grocery-inflation-fuel-prices-fmi/831249/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "Food Dive",
+   "source_id": "fooddive",
+   "region": "global",
+   "summary": "Elevated fuel costs could soon wear down food companies that have so far kept price increases contained, industry experts said a…",
+   "cat": "trend",
+   "tags": [],
+   "brands": [],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 5.4,
+   "id": "56fb63a9cd841324",
+   "no": 34,
+   "tr": {
+    "zh": {
+     "t": "食品杂货通胀蓄势待涨",
+     "s": "行业专家表示，高企的燃料成本可能很快就会拖累那些迄今一直控制住价格上涨的食品公司，……"
+    }
+   }
+  },
+  {
+   "title": "守护国民膳食健康｜澳佳宝以标准共建与循证科研助力鱼油行业高质量发展",
+   "url": "https://www.foodaily.com/articles/42338",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "region": "cn",
+   "summary": "面向即将到来的中秋国庆消费季，澳佳宝也倡导广大消费者树立膳食优先的理念，优先通过富含脂肪酸的鱼类获取Omega-3营养，膳食摄入不足时再按需选择膳食补充产品，选购时重点关注产品标签上EPA+DHA的实际含量，理性看待各类营销概念。",
+   "cat": "trend",
+   "tags": [
+    "健康化",
+    "政策"
+   ],
+   "brands": [
+    "Blackmores"
+   ],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 4.9,
+   "id": "d023b63db4a9b00f",
+   "no": 35
+  },
+  {
+   "title": "蜀海供应链获评五星级冷链物流企业（综合型）",
+   "url": "https://www.canyinj.com/news/24701.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "2026年9月22日，在第42届物流产业高质量发展大会上，蜀海供应链荣获「五星级冷链物流企业（综合型）」资质认证。",
+   "cat": "trend",
+   "tags": [
+    "供应链"
+   ],
+   "brands": [],
+   "bcats": [
+    "supply"
+   ],
+   "scales": [],
+   "score": 4.85,
+   "id": "cbf72a44a636f3ea",
+   "no": 36
+  },
+  {
+   "title": "Hoy Is Bringing Night-Market Energy to NYC",
+   "url": "https://www.eater.com/pre-shift/986732/hoy-filipino-restaurant-nyc-design-pre-shift",
+   "published": "2026-09-16T00:00:00+08:00",
+   "source": "Eater",
+   "source_id": "eater",
+   "region": "global",
+   "summary": "This excerpt was originally published in Pre Shift, our newsletter for the hospitality industry.",
+   "cat": "trend",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 4.65,
+   "id": "cb80111826e941f3",
+   "no": 37,
+   "tr": {
+    "zh": {
+     "t": "Hoy 正把夜市活力带到 NYC",
+     "s": "本文节选自 Pre Shift，我们面向酒店餐饮行业的新闻通讯。"
+    }
+   }
+  },
+  {
+   "title": "McDonald’s turns to AI for drive-thru, inventory management, order accuracy",
+   "url": "https://www.restaurantdive.com/news/mcdonalds-archiq-drive-thru-artificial-intelligence-next-strategy/831256/",
+   "published": "2026-09-25T00:00:00+08:00",
+   "source": "Restaurant Dive",
+   "source_id": "restaurantdive",
+   "region": "global",
+   "summary": "McDonald’s will roll out ArchIQ, an artificial intelligence platform to power restaurant operations, as part of its Next strateg…",
+   "cat": "trend",
+   "tags": [
+    "数字化"
+   ],
+   "brands": [
+    "麦当劳"
+   ],
+   "bcats": [
+    "fastfood_west"
+   ],
+   "scales": [],
+   "score": 4.45,
+   "id": "fab31677714e3571",
+   "no": 38,
+   "tr": {
+    "zh": {
+     "t": "麦当劳借助人工智能优化得来速、库存管理和订单准确性",
+     "s": "麦当劳将推出 ArchIQ——一个为餐厅运营提供支持的人工智能平台，作为其 Next 战略的一部分……"
+    }
+   }
+  },
+  {
+   "title": "Burger King rethinks its drive-thru AI strategy",
+   "url": "https://www.nrn.com/quick-service/burger-king-rethinks-its-drive-thru-ai-strategy",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "The chain has found that some customers don’t like talking to a robot, and is planning to make it easier to request a human orde…",
+   "cat": "trend",
+   "tags": [
+    "数字化",
+    "快餐"
+   ],
+   "brands": [
+    "汉堡王"
+   ],
+   "bcats": [
+    "fastfood_west"
+   ],
+   "scales": [],
+   "score": 4.4,
+   "id": "8deba2e158a8c078",
+   "no": 39,
+   "tr": {
+    "zh": {
+     "t": "汉堡王重新思考其得来速人工智能战略",
+     "s": "该连锁品牌发现一些顾客不喜欢和机器人交谈，并计划让顾客更容易要求由人工点单……"
+    }
+   }
+  },
+  {
+   "title": "CCFA举办连锁企业用工状况专题座谈会",
+   "url": "http://www.ccfa.org.cn/portal/cn/xiangxi.jsp?id=447373&type=1&sharetype=1",
+   "published": "",
+   "source": "中国连锁经营协会",
+   "source_id": "ccfa",
+   "region": "cn",
+   "summary": "8月11日，中国连锁经营协会（以下简称CCFA）在北京召开了“2026连锁企业用工状况专题座谈会\"。会议邀请人力资源和社会保障部就业促进司、全国总工会财贸轻纺烟草工会的相关部门负责同志出席。",
+   "cat": "trend",
+   "tags": [
+    "劳工"
+   ],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 4.25,
+   "id": "4e025ddbb9512ecb",
+   "no": 40
+  },
+  {
+   "title": "蜜雪被“投毒”、霸王变“准毒品”、东鹏遭“换脸”，“黑流量”正围猎餐饮业",
+   "url": "https://www.canyinj.com/news/24509.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "01、“流量生意”围猎餐饮人，从AI投毒到造梗污名，谁在为谣言买单？",
+   "cat": "trend",
+   "tags": [
+    "数字化"
+   ],
+   "brands": [
+    "蜜雪冰城"
+   ],
+   "bcats": [
+    "tea"
+   ],
+   "scales": [],
+   "score": 3.55,
+   "id": "115d933de644e017",
+   "no": 41
+  },
+  {
+   "title": "AI赋能餐饮 智启未来",
+   "url": "http://www.ccfa.org.cn/xiangxi.jsp?id=447349&type=1&sharetype=1",
+   "published": "",
+   "source": "中国连锁经营协会",
+   "source_id": "ccfa",
+   "region": "cn",
+   "summary": "",
+   "cat": "trend",
+   "tags": [
+    "数字化"
+   ],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 2.65,
+   "id": "457e6a23654cde98",
+   "no": 42
+  },
+  {
+   "title": "Starbucks shutters 250 underperforming stores",
+   "url": "https://www.restaurantdive.com/news/starbucks-250-store-closures-fiscal-2026-underperforming/831253/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "Restaurant Dive",
+   "source_id": "restaurantdive",
+   "region": "global",
+   "summary": "The brand said the closures would impact locations that can’t deliver the coffeehouse experience or financial performance it exp…",
+   "cat": "brand",
+   "tags": [
+    "关店"
+   ],
+   "brands": [
+    "星巴克"
+   ],
+   "bcats": [
+    "coffee"
+   ],
+   "scales": [],
+   "score": 7.45,
+   "id": "e09d0123d0da5aa3",
+   "no": 43,
+   "tr": {
+    "zh": {
+     "t": "星巴克关闭 250 家业绩不佳的门店",
+     "s": "该品牌表示，关店将影响那些无法提供其所期望的咖啡馆体验或财务表现的门店……"
+    }
+   }
+  },
+  {
+   "title": "Starbucks is closing another 250 coffee shops",
+   "url": "https://www.nrn.com/quick-service/starbucks-is-closing-another-250-coffee-shops",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "The coffee shop giant is shedding more underperforming locations amid an ongoing review of its portfolio.",
+   "cat": "brand",
+   "tags": [
+    "关店",
+    "咖啡"
+   ],
+   "brands": [
+    "星巴克"
+   ],
+   "bcats": [
+    "coffee"
+   ],
+   "scales": [],
+   "score": 7.4,
+   "id": "4ee43b0c7f82b0f9",
+   "no": 44,
+   "tr": {
+    "zh": {
+     "t": "星巴克再关闭 250 家咖啡门店",
+     "s": "这家咖啡连锁巨头在持续评估其门店组合之际，正在剥离更多业绩不佳的门店。"
+    }
+   }
+  },
+  {
+   "title": "Starbucks to Close 250 North America Locations This Week",
+   "url": "https://www.qsrmagazine.com/story/starbucks-to-close-250-north-america-locations-this-week/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "Starbucks announced Thursday it’s closing about 250 North America locations later this week, or roughly 1 percent of the company…",
+   "cat": "brand",
+   "tags": [
+    "关店"
+   ],
+   "brands": [
+    "星巴克"
+   ],
+   "bcats": [
+    "coffee"
+   ],
+   "scales": [],
+   "score": 7.3,
+   "id": "88727957c929d674",
+   "no": 45,
+   "tr": {
+    "zh": {
+     "t": "星巴克本周将关闭 250 家北美门店",
+     "s": "Starbucks周四宣布，将于本周晚些时候关闭约250家北美门店，约占公司的1%……"
+    }
+   }
+  },
+  {
+   "title": "月销400万的新鲜零食，为什么越做越像一场“新鲜感骗局”？",
+   "url": "https://www.foodaily.com/articles/42334",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "region": "cn",
+   "summary": "这些零食店主打短保、现烤、鲜卤、少添加，有一些甚至被称为“平价小山姆”。原生品牌们率先验证了新鲜零食的商业模式：金粒门平均单店月销150万，优质门店达400万；在首店效应加持下，一栗合生汇首月销售额超620万，几多全合肥首店更是突破600万。",
+   "cat": "brand",
+   "tags": [
+    "开店"
+   ],
+   "brands": [
+    "山姆会员店"
+   ],
+   "bcats": [
+    "delivery"
+   ],
+   "scales": [],
+   "score": 7.0,
+   "id": "614b4278a73ff068",
+   "no": 46
+  },
+  {
+   "title": "McDonald’s to invest $8.5B as part of Next strategy",
+   "url": "https://www.restaurantdive.com/news/mcdonalds-investing-8-billion-next-strategy/831111/",
+   "published": "2026-09-23T00:00:00+08:00",
+   "source": "Restaurant Dive",
+   "source_id": "restaurantdive",
+   "region": "global",
+   "summary": "The funding will be used to support restaurant modernization, tech deployments and operational improvements through 2036.",
+   "cat": "brand",
+   "tags": [
+    "资本"
+   ],
+   "brands": [
+    "麦当劳"
+   ],
+   "bcats": [
+    "fastfood_west"
+   ],
+   "scales": [],
+   "score": 6.95,
+   "id": "32e8fa0ccd4355cf",
+   "no": 47,
+   "tr": {
+    "zh": {
+     "t": "McDonald’s将投资85亿美元，作为Next战略的一部分",
+     "s": "这笔资金将用于支持餐厅现代化、技术部署和运营改进，直至2036年。"
+    }
+   }
+  },
+  {
+   "title": "Cracker Barrel sees traffic improvement as strategy is ‘on the right track’",
+   "url": "https://www.nrn.com/family-dining/cracker-barrel-sees-traffic-improvement-as-strategy-is-on-the-right-track-",
+   "published": "2026-09-23T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "New CEO David Deno, who joined the company just six weeks ago, said the company is \"already focused on the right areas and has a…",
+   "cat": "brand",
+   "tags": [
+    "人事"
+   ],
+   "brands": [
+    "Cracker Barrel"
+   ],
+   "bcats": [
+    "western"
+   ],
+   "scales": [],
+   "score": 6.5,
+   "id": "7618d75bfd88d39e",
+   "no": 48,
+   "tr": {
+    "zh": {
+     "t": "Cracker Barrel认为客流量有所改善，表明战略“走在正确轨道上”",
+     "s": "新任CEO David Deno在六周前刚加入公司，他表示公司“已经专注于正确的领域，并有一个……”"
+    }
+   }
+  },
+  {
+   "title": "Dave’s Hot Chicken Franchisee Rackson Restaurants Opens 13th Restaurant",
+   "url": "https://www.qsrmagazine.com/news/daves-hot-chicken-franchisee-rackson-restaurants-opens-13th-restaurant/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "Rackson Restaurants has opened its 13th Dave’s Hot Chicken restaurant in Mohegan Lake, New York, expanding the multi-brand franc…",
+   "cat": "brand",
+   "tags": [
+    "开店",
+    "加盟",
+    "快餐"
+   ],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 6.3,
+   "id": "3b01115061512857",
+   "no": 49,
+   "tr": {
+    "zh": {
+     "t": "Dave’s Hot Chicken加盟商Rackson Restaurants开设第13家餐厅",
+     "s": "Rackson Restaurants已在纽约州Mohegan Lake开设第13家Dave’s Hot Chicken餐厅，扩大其多品牌加盟……"
+    }
+   }
+  },
+  {
+   "title": "PJ’s Coffee Ranks No. 89 on Entrepreneur’s Multi-Unit Franchise List",
+   "url": "https://www.qsrmagazine.com/news/pjs-coffee-ranks-no-89-on-entrepreneurs-multi-unit-franchise-list/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "PJ’s Coffee of New Orleans has been ranked #89 on Entrepreneur’s 2026 Top 150 Franchise Brands for Multi-Unit Owners list, as a…",
+   "cat": "brand",
+   "tags": [
+    "加盟",
+    "咖啡"
+   ],
+   "brands": [],
+   "bcats": [
+    "coffee"
+   ],
+   "scales": [],
+   "score": 6.3,
+   "id": "f0df5bcc8d93e592",
+   "no": 50,
+   "tr": {
+    "zh": {
+     "t": "PJ’s Coffee在Entrepreneur的多单元加盟榜单中排名第89位",
+     "s": "PJ’s Coffee of New Orleans在Entrepreneur的2026年多单元经营者150大加盟品牌榜单中排名第89位，作为……"
+    }
+   }
+  },
+  {
+   "title": "CAVA Announces Milestone Restaurant No. 500",
+   "url": "https://www.qsrmagazine.com/news/cava-announces-milestone-restaurant-no-500/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "CAVA announced a significant achievement in the company’s continued national expansion as it commemorates its 500-restaurant foo…",
+   "cat": "brand",
+   "tags": [
+    "开店"
+   ],
+   "brands": [
+    "CAVA",
+    "Cava"
+   ],
+   "bcats": [
+    "western"
+   ],
+   "scales": [],
+   "score": 6.3,
+   "id": "eff8d1e5e326c6e5",
+   "no": 51,
+   "tr": {
+    "zh": {
+     "t": "CAVA宣布迎来第500家餐厅里程碑",
+     "s": "CAVA 宣布在公司的持续全国扩张中取得一项重大成就，并庆祝其 500 家餐厅的版图…"
+    }
+   }
+  },
+  {
+   "title": "Potbelly Franchisee Jignesh Patel Named 2026 IFA Franchisee of the Year",
+   "url": "https://www.qsrmagazine.com/news/potbelly-franchisee-jignesh-patel-named-2026-ifa-franchisee-of-the-year/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "Potbelly announced today that the International Franchise Association (IFA) named franchisee Jignesh Patel a 2026 Franchisee of…",
+   "cat": "brand",
+   "tags": [
+    "加盟"
+   ],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 6.3,
+   "id": "50cb1305c926ec0f",
+   "no": 52,
+   "tr": {
+    "zh": {
+     "t": "Potbelly 加盟商 Jignesh Patel 获评 2026 IFA 年度加盟商",
+     "s": "Potbelly 今日宣布，International Franchise Association（IFA）将加盟商 Jignesh Patel 评为 2026 年度加盟商…"
+    }
+   }
+  },
+  {
+   "title": "Corner Bakery Cafe Offers Choose 2 Meals Starting at $8.99",
+   "url": "https://www.qsrmagazine.com/news/corner-bakery-cafe-offers-choose-2-meals-starting-at-8-99/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "Corner Bakery Cafe is giving customers more ways to build a complete meal with its Choose 2 deal, available for $8.99 at partici…",
+   "cat": "brand",
+   "tags": [
+    "烘焙"
+   ],
+   "brands": [],
+   "bcats": [
+    "bakery"
+   ],
+   "scales": [],
+   "score": 5.8,
+   "id": "a991ed59a2c5a5e0",
+   "no": 53,
+   "tr": {
+    "zh": {
+     "t": "Corner Bakery Cafe 推出 Choose 2 套餐，起价 8.99 美元",
+     "s": "Corner Bakery Cafe 通过其 Choose 2 优惠为顾客提供更多打造完整餐点的方式，该优惠在参与…售价 8.99 美元"
+    }
+   }
+  },
+  {
+   "title": "餐饮年度盛会，超两万人齐聚广州！“第36届红餐博览会”圆满落幕",
+   "url": "https://www.foodaily.com/articles/42340",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "region": "cn",
+   "summary": "9月23日，为期三天的“红餐·第36届全球餐饮产业博览会暨2026中国餐饮品牌节”（简称：第36届红餐博览会）在广州圆满落幕！",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 5.0,
+   "id": "e20c0abe33cc7ffc",
+   "no": 54
+  },
+  {
+   "title": "门店月销超600万，赵一鸣、绝味都在抢，新鲜零食是风口还是泡沫？",
+   "url": "https://www.canyinj.com/news/24435.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "社交平台上，几乎“全网都在排队金粒门”，几多全、一栗等品牌持续攻城略地，还有赵一鸣、绝味、茶颜悦色等跨界玩家集体入局……2026年，新鲜零食“杀疯了”。",
+   "cat": "brand",
+   "tags": [
+    "联名"
+   ],
+   "brands": [
+    "茶颜悦色",
+    "绝味鸭脖"
+   ],
+   "bcats": [
+    "tea",
+    "snack"
+   ],
+   "scales": [],
+   "score": 4.95,
+   "id": "9fbf9f22e1db738a",
+   "no": 55
+  },
+  {
+   "title": "冰淇淋的热战场 DQ开出2000家门店之后",
+   "url": "http://news.winshang.com/html/074/2338.html",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "赢商网",
+   "source_id": "winshang",
+   "region": "cn",
+   "summary": "伴随新锐品牌的跑马圈地，DQ于中国市场实现2000家门店的突破，为行业的升温再添一把火。",
+   "cat": "brand",
+   "tags": [],
+   "brands": [
+    "DQ冰雪皇后"
+   ],
+   "bcats": [
+    "bakery"
+   ],
+   "scales": [
+    {
+     "kind": "门店数",
+     "value": "2000家"
+    }
+   ],
+   "score": 4.9,
+   "id": "8c7aab84e3e4fc1a",
+   "no": 56
+  },
+  {
+   "title": "Hawaiian Bros Opens in Noblesville, Indiana",
+   "url": "https://www.qsrmagazine.com/news/hawaiian-bros-opens-in-noblesville-indiana/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "Hawaiian Bros Island Grill, the fast-growing, island-inspired brand known for its Hawaiian plate lunch and Aloha Spirit, is open…",
+   "cat": "brand",
+   "tags": [
+    "开店"
+   ],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 4.8,
+   "id": "dde0f9441cac01df",
+   "no": 57,
+   "tr": {
+    "zh": {
+     "t": "Hawaiian Bros 在 Noblesville, Indiana 开业",
+     "s": "Hawaiian Bros Island Grill，这个快速增长、以岛屿风情为灵感、以夏威夷盘餐和 Aloha Spirit 闻名的品牌，已开业…"
+    }
+   }
+  },
+  {
+   "title": "Pretzelmaker Opens New Location in Poughkeepsie",
+   "url": "https://www.qsrmagazine.com/news/pretzelmaker-opens-new-location-in-poughkeepsie/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "Pretzelmaker, the creator of Pretzel Bites owned by FAT Brands Inc., has officially opened a new location in Poughkeepsie, NY.",
+   "cat": "brand",
+   "tags": [
+    "开店"
+   ],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 4.8,
+   "id": "42df09b5a634e30a",
+   "no": 58,
+   "tr": {
+    "zh": {
+     "t": "Pretzelmaker 在 Poughkeepsie 开设新门店",
+     "s": "Pretzelmaker，FAT Brands Inc. 旗下 Pretzel Bites 的创造者，已在 Poughkeepsie, NY 正式开设新门店。"
+    }
+   }
+  },
+  {
+   "title": "选手招募丨潮饮大赛郑州、临沂分区赛等你来！赛季总奖池12.6万！",
+   "url": "http://www.canyin168.com/Article/xw/81365.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "region": "cn",
+   "summary": "2026世界潮饮大赛中国区选拔赛已经走过成都、长沙两站，进度条已完成1/4！郑州、临沂分区赛选手招募火热进行中！",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 4.5,
+   "id": "09fefe1275957c65",
+   "no": 59
+  },
+  {
+   "title": "How McDonald’s plans to reactivate 150M infrequent guests",
+   "url": "https://www.restaurantdive.com/news/mcdonalds-tiered-loyalty-rollout/831322/",
+   "published": "2026-09-25T00:00:00+08:00",
+   "source": "Restaurant Dive",
+   "source_id": "restaurantdive",
+   "region": "global",
+   "summary": "The Golden Arches will add rewards tiers, tie-ups with other major brands and increased personalization to its loyalty system.",
+   "cat": "brand",
+   "tags": [
+    "数字化"
+   ],
+   "brands": [
+    "麦当劳"
+   ],
+   "bcats": [
+    "fastfood_west"
+   ],
+   "scales": [],
+   "score": 4.45,
+   "id": "59fabdec0be825d1",
+   "no": 60,
+   "tr": {
+    "zh": {
+     "t": "McDonald’s 计划如何重新激活 1.5 亿不常光顾的顾客",
+     "s": "金拱门将为其忠诚度系统增加奖励等级、与其他大品牌的合作以及更高的个性化程度。"
+    }
+   }
+  },
+  {
+   "title": "50 restaurant groups in the Northeast",
+   "url": "https://www.nrn.com/independent-restaurants/50-restaurant-groups-in-the-northeast",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "These groups in New York, Philadelphia, and more span from 7 units to 60.",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [
+    {
+     "kind": "门店数",
+     "value": "7units"
+    }
+   ],
+   "score": 4.4,
+   "id": "f830005cd63aeeb7",
+   "no": 61,
+   "tr": {
+    "zh": {
+     "t": "美国东北部50家餐饮集团",
+     "s": "这些位于纽约、费城等地的集团门店数量从7家到60家不等。"
+    }
+   }
+  },
+  {
+   "title": "America’s Top 200 Restaurant Groups",
+   "url": "https://www.nrn.com/independent-restaurants/america-s-top-200-restaurant-groups",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "From retro diners and nostalgic burger stands to swank steakhouses and luxurious nightclubs, the biggest multi-concept portfolio…",
+   "cat": "brand",
+   "tags": [
+    "快餐"
+   ],
+   "brands": [],
+   "bcats": [
+    "fastfood_west"
+   ],
+   "scales": [],
+   "score": 4.4,
+   "id": "f51ecff14a5ac3e9",
+   "no": 62,
+   "tr": {
+    "zh": {
+     "t": "美国前200家餐饮集团",
+     "s": "从复古小餐馆和怀旧汉堡摊，到时髦牛排馆和豪华夜总会，最大的多概念餐饮组合……"
+    }
+   }
+  },
+  {
+   "title": "California Pizza Kitchen redefined chain pizza in the 80s using a strategy that still works",
+   "url": "https://www.nrn.com/casual-dining/california-pizza-kitchen-redefined-chain-pizza-in-the-80s-using-a-strategy-that-still-works",
+   "published": "2026-09-23T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "Cofounder Rick Rosenfield details the wild ups and downs of CPK over four decades, and points to one key strategy as being the g…",
+   "cat": "brand",
+   "tags": [
+    "快餐"
+   ],
+   "brands": [],
+   "bcats": [
+    "fastfood_west"
+   ],
+   "scales": [],
+   "score": 4.4,
+   "id": "0deb7af066933d41",
+   "no": 63,
+   "tr": {
+    "zh": {
+     "t": "California Pizza Kitchen在80年代用一项至今仍然有效的策略重新定义了连锁披萨",
+     "s": "联合创始人Rick Rosenfield详述了CPK四十年来跌宕起伏的历程，并指出一项关键策略是其制胜关键……"
+    }
+   }
+  },
+  {
+   "title": "Look Who’s Franchising Now: Fall 2026 Edition",
+   "url": "https://www.nrn.com/restaurant-franchising/look-who-s-franchising-now-fall-2026-edition",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "Five early- and mid-stage concepts that have recently announced or expanded franchising.",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 4.4,
+   "id": "4eb73f23c4a917ef",
+   "no": 64,
+   "tr": {
+    "zh": {
+     "t": "看看现在谁在做特许经营：2026年秋季版",
+     "s": "五个近期宣布或扩大特许经营的早期和中期餐饮概念。"
+    }
+   }
+  },
+  {
+   "title": "The Bartolotta Restaurants: A bet on Milwaukee pays off for 2 brothers",
+   "url": "https://www.nrn.com/independent-restaurants/the-bartolotta-restaurants-a-bet-on-milwaukee-pays-off-for-2-brothers",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "Nation's Restaurant News",
+   "source_id": "nrn",
+   "region": "global",
+   "summary": "Founded in 1993, the group helped build the foundation for a thriving local dining scene.",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 4.4,
+   "id": "cae8a0200a072af6",
+   "no": 65,
+   "tr": {
+    "zh": {
+     "t": "The Bartolotta Restaurants：押注密尔沃基让两兄弟获得回报",
+     "s": "该集团成立于1993年，为当地蓬勃发展的餐饮业奠定了基础。"
+    }
+   }
+  },
+  {
+   "title": "月入过万的江浙沪打工人，都抢着花2.9元入“冻门”",
+   "url": "https://www.foodaily.com/articles/42330",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "region": "cn",
+   "summary": "尝到甜头之后，最懂过日子的江浙沪年轻人又多了个新身份：冻门人。除了冻面包，麦当劳汉堡、提前蒸好的米饭，还有“人粮”等，都能打包扔进冰箱。",
+   "cat": "brand",
+   "tags": [
+    "烘焙",
+    "快餐"
+   ],
+   "brands": [
+    "麦当劳"
+   ],
+   "bcats": [
+    "fastfood_west"
+   ],
+   "scales": [],
+   "score": 4.4,
+   "id": "e902e7d511838c6e",
+   "no": 66
+  },
+  {
+   "title": "DoorDash Agrees to $131.5 Million Settlement Over Worker Pay",
+   "url": "https://www.qsrmagazine.com/story/doordash-agrees-to-131-5-million-settlement-over-worker-pay/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "DoorDash agreed to pay $131.5 million to settle allegations that it underpaid or delayed payments to hundreds of thousands of de…",
+   "cat": "brand",
+   "tags": [
+    "外卖"
+   ],
+   "brands": [
+    "DoorDash"
+   ],
+   "bcats": [
+    "delivery"
+   ],
+   "scales": [
+    {
+     "kind": "金额",
+     "value": "131.5Million"
+    },
+    {
+     "kind": "金额",
+     "value": "131.5million"
+    }
+   ],
+   "score": 4.3,
+   "id": "35968041687363d1",
+   "no": 67,
+   "tr": {
+    "zh": {
+     "t": "DoorDash 同意就员工薪酬达成1.315亿美元和解",
+     "s": "DoorDash 同意支付1.315亿美元，以和解有关其少付或延迟支付数十万名送货员报酬的指控…"
+    }
+   }
+  },
+  {
+   "title": "Ziggi’s Coffee Extends National Coffee Day Deal to a Full Week",
+   "url": "https://www.qsrmagazine.com/news/ziggis-coffee-extends-national-coffee-day-deal-to-a-full-week/",
+   "published": "2026-09-24T00:00:00+08:00",
+   "source": "QSR Magazine",
+   "source_id": "qsr",
+   "region": "global",
+   "summary": "National Coffee Day deals usually last for just one day.Ziggi’s Coffee is giving it seven days.",
+   "cat": "brand",
+   "tags": [
+    "咖啡"
+   ],
+   "brands": [],
+   "bcats": [
+    "coffee"
+   ],
+   "scales": [],
+   "score": 4.3,
+   "id": "e55f4c3960774818",
+   "no": 68,
+   "tr": {
+    "zh": {
+     "t": "Ziggi’s Coffee 将全国咖啡日优惠延长至整整一周",
+     "s": "全国咖啡日优惠通常只持续一天。Ziggi’s Coffee 却让它持续七天。"
+    }
+   }
+  },
+  {
+   "title": "顾客点完菜先去了垃圾桶？3人“中毒”倒地索20万，监控还原真相",
+   "url": "https://www.canyinj.com/news/24629.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "3人“中毒”倒地索要20万“了结费”，监控拍下的一幕，让事情彻底反转。",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 3.55,
+   "id": "582e37457cbc76e7",
+   "no": 69
+  },
+  {
+   "title": "新家重逢 | 辛香汇再落镇江，地道川味启新程",
+   "url": "https://www.canyinj.com/news/24436.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "新家赴新味，老友再相逢！7月15日，国民人气川菜品牌、川菜出川标杆餐厅辛香汇再拓新版图，镇江第二家门店、全城首家“辛香汇·四川饭馆”新模式主题店，盛大登陆八佰伴7楼。",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [
+    "chinese"
+   ],
+   "scales": [],
+   "score": 3.45,
+   "id": "b67571f23f88ade6",
+   "no": 70
+  },
+  {
+   "title": "称消费者“像猪一样能吃”，营销界流行“骂街”风了吗？",
+   "url": "https://www.canyinj.com/news/24451.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "站在品牌建设的角度，当你把这碗端到消费者面前时，碗上的每一个字，都代表着你的态度；而事发后探讨的焦点，也不应该是“用户是否玻璃心”，而是一旦“翻车”可能对形象造成的影响。",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 3.45,
+   "id": "6f340e00c95438fc",
+   "no": 71
+  },
+  {
+   "title": "年终盘点 | 2025年中国特殊食品行业十大热点发布",
+   "url": "http://www.xinhuanet.com/food/20251231/e71822fa4bf64bad8ee98f84fda28317/c.html",
+   "published": "2026-01-01T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "region": "cn",
+   "summary": "年终盘点 | 2025年中国特殊食品行业十大热点发布-",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 3.4,
+   "id": "f3846c7c09c24526",
+   "no": 72
+  },
+  {
+   "title": "经济下行期，星巴克的取单码都玩“玄学”了？",
+   "url": "https://www.foodaily.com/articles/42318",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "region": "cn",
+   "summary": "小红书上有条热帖叫“经济下行期星巴克的取单口令”，帖主拍下门店取餐提示屏幕，上面呈现着这样的词条：73.别想太多、74.快乐满格、75.得失看淡、76.厚积薄发、77.静待花开、79.别放弃、80.拥抱自己……",
+   "cat": "brand",
+   "tags": [],
+   "brands": [
+    "星巴克"
+   ],
+   "bcats": [
+    "coffee"
+   ],
+   "scales": [],
+   "score": 2.9,
+   "id": "df040eedae00b4ac",
+   "no": 73
+  },
+  {
+   "title": "臭宝全程助力原创音乐剧《黑旗令》全国巡演 广西美食IP携手文艺IP双向出圈",
+   "url": "https://www.canyinj.com/news/24699.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "作为广西壮族自治区重点文艺精品项目，原创音乐剧《黑旗令》全国巡演进行得如火如荼。",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 2.85,
+   "id": "b288fb9246ad4872",
+   "no": 74
+  },
+  {
+   "title": "辣妹子全链条参与味道湖南湘菜国际化促进大会 助力湘味走向世界",
+   "url": "https://www.canyinj.com/news/24675.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "9月19-20日，味道湖南•2026湘菜国际化促进大会于长沙国际会展中心隆重举行。",
+   "cat": "brand",
+   "tags": [
+    "出海"
+   ],
+   "brands": [],
+   "bcats": [
+    "chinese"
+   ],
+   "scales": [],
+   "score": 2.85,
+   "id": "b089348e9d4c8fbb",
+   "no": 75
+  },
+  {
+   "title": "从“大叔补酒”到“姨妈神仙水”，劲酒的网感密码到底是什么？",
+   "url": "https://www.canyinj.com/news/24546.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "一个37岁的保健酒品牌，过去两年突然成了社交平台的常客。",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [
+    "delivery"
+   ],
+   "scales": [],
+   "score": 2.65,
+   "id": "821e7c25294d8f25",
+   "no": 76
+  },
+  {
+   "title": "从糖水界黑马到“众叛亲离”，麦记牛奶到底栽到了哪里？",
+   "url": "https://www.canyinj.com/news/24412.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "作为一个站在糖水风口上一路狂飙跑出来的品牌，麦记牛奶到底怎么了？",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 2.65,
+   "id": "013caeb541f0f981",
+   "no": 77
+  },
+  {
+   "title": "新一代“甜味之王”？全球首条甜蛋白产线竣工，减糖难题又有新解！",
+   "url": "https://www.foodaily.com/articles/42335",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "region": "cn",
+   "summary": "9月17日，全球首条专为甜蛋白设计的智能化产线在济南竣工。",
+   "cat": "brand",
+   "tags": [
+    "数字化"
+   ],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 2.1,
+   "id": "8c7fdc573ac5890c",
+   "no": 78
+  },
+  {
+   "title": "第一个十年，交卷！嘉吉如何让中国食品创新“持续生长”？",
+   "url": "https://www.foodaily.com/articles/42326",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "region": "cn",
+   "summary": "面对这些变化，在嘉吉上海创新中心成立十周年之际，嘉吉核心研发副总裁Dr.",
+   "cat": "brand",
+   "tags": [
+    "人事"
+   ],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 2.1,
+   "id": "1256c2e74d51007f",
+   "no": 79
+  },
+  {
+   "title": "十载耕耘，向新而行：嘉吉上海创新中心迎十周年",
+   "url": "https://www.canyinj.com/news/24674.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "region": "cn",
+   "summary": "2026年9月17日，上海 ——近日，嘉吉上海创新中心迎来成立十周年。",
+   "cat": "brand",
+   "tags": [],
+   "brands": [],
+   "bcats": [],
+   "scales": [],
+   "score": 2.05,
+   "id": "10211fd2fd3d491f",
+   "no": 80
+  }
+ ],
+ "sections": {
+  "all": {
+   "total": 80,
+   "counts": {
+    "product": 20,
+    "trend": 22,
+    "brand": 38
+   },
+   "keywords": [
+    "数字化",
+    "快餐",
+    "开店",
+    "食品安全",
+    "咖啡",
+    "人事"
+   ],
+   "brief": [
+    {
+     "cat": "product",
+     "text": "Toastique, the vibrant national gourmet toast, juice and…",
+     "id": "8736ba38c55bdf1f",
+     "region": "global",
+     "source": "QSR Magazine",
+     "url": "https://www.qsrmagazine.com/news/toastique-adds-raspberry-crumble-smoothie-and-cannoli-cloud-coffee/"
+    },
+    {
+     "cat": "trend",
+     "text": "魔镜洞察数据显示，近12个月主流电商平台黄精品类总销售额突破24.84亿元，同比暴涨730.2%，销量同比攀升6…",
+     "id": "1822348e70df6911",
+     "region": "cn",
+     "source": "Foodaily每日食品",
+     "url": "https://www.foodaily.com/articles/42336"
+    },
+    {
+     "cat": "brand",
+     "text": "Starbucks announced Thursday it’s closing about 250 Nort…",
+     "id": "88727957c929d674",
+     "region": "global",
+     "source": "QSR Magazine",
+     "url": "https://www.qsrmagazine.com/story/starbucks-to-close-250-north-america-locations-this-week/"
+    },
+    {
+     "cat": "product",
+     "text": "9月12日，头部烤鱼品牌探鱼在深圳光明大仟里店官宣：明星主厨林述巍担任探鱼焦香严选推荐官，并以\"一日店长\"的身份…",
+     "id": "26c0d1c3d63cadfe",
+     "region": "cn",
+     "source": "红餐网",
+     "url": "http://www.canyin168.com/Article/xw/81379.html"
+    },
+    {
+     "cat": "product",
+     "text": "2026年9月22日,国民民生品牌金龙鱼官宣全新品牌合作,新生代短剧演员申浩男正式出任品牌调味品产品首位品牌大使",
+     "id": "0d3ee800b56acb39",
+     "region": "cn",
+     "source": "餐饮界",
+     "url": "https://www.canyinj.com/news/24700.html"
+    }
+   ],
+   "market": {
+    "formula": "综合占比 = 0.6 × 资讯热度占比 + 0.4 × 已披露门店规模占比（仅统计本次采集到的公开信息）",
+    "cats": [
+     {
+      "id": "tea",
+      "label": "茶饮",
+      "color": "#2F9E6B",
+      "items": 3,
+      "brands": 5,
+      "stores": 3500,
+      "heat": 0.0484,
+      "stores_share": 0.4011,
+      "composite": 0.1895
+     },
+     {
+      "id": "fastfood_cn",
+      "label": "中式快餐",
+      "color": "#E08A1E",
+      "items": 3,
+      "brands": 1,
+      "stores": 3226,
+      "heat": 0.0484,
+      "stores_share": 0.3697,
+      "composite": 0.1769
+     },
+     {
+      "id": "supply",
+      "label": "食品供应链",
+      "color": "#6B7280",
+      "items": 16,
+      "brands": 7,
+      "stores": 0,
+      "heat": 0.2581,
+      "stores_share": 0.0,
+      "composite": 0.1548
+     },
+     {
+      "id": "bakery",
+      "label": "烘焙甜品",
+      "color": "#C77DBB",
+      "items": 4,
+      "brands": 2,
+      "stores": 2000,
+      "heat": 0.0645,
+      "stores_share": 0.2292,
+      "composite": 0.1304
+     },
+     {
+      "id": "coffee",
+      "label": "咖啡",
+      "color": "#8A5A2B",
+      "items": 10,
+      "brands": 4,
+      "stores": 0,
+      "heat": 0.1613,
+      "stores_share": 0.0,
+      "composite": 0.0968
+     },
+     {
+      "id": "fastfood_west",
+      "label": "西式快餐",
+      "color": "#C0392B",
+      "items": 9,
+      "brands": 5,
+      "stores": 0,
+      "heat": 0.1452,
+      "stores_share": 0.0,
+      "composite": 0.0871
+     },
+     {
+      "id": "delivery",
+      "label": "平台与配送",
+      "color": "#1B5FC1",
+      "items": 7,
+      "brands": 3,
+      "stores": 0,
+      "heat": 0.1129,
+      "stores_share": 0.0,
+      "composite": 0.0677
+     },
+     {
+      "id": "bar",
+      "label": "酒馆酒吧",
+      "color": "#5B6BB5",
+      "items": 3,
+      "brands": 3,
+      "stores": 0,
+      "heat": 0.0484,
+      "stores_share": 0.0,
+      "composite": 0.029
+     },
+     {
+      "id": "chinese",
+      "label": "中式正餐",
+      "color": "#B4740B",
+      "items": 3,
+      "brands": 1,
+      "stores": 0,
+      "heat": 0.0484,
+      "stores_share": 0.0,
+      "composite": 0.029
+     },
+     {
+      "id": "western",
+      "label": "西餐轻食",
+      "color": "#3E8E8E",
+      "items": 3,
+      "brands": 6,
+      "stores": 0,
+      "heat": 0.0484,
+      "stores_share": 0.0,
+      "composite": 0.029
+     },
+     {
+      "id": "snack",
+      "label": "小吃卤味",
+      "color": "#B08A2E",
+      "items": 1,
+      "brands": 2,
+      "stores": 0,
+      "heat": 0.0161,
+      "stores_share": 0.0,
+      "composite": 0.0097
+     }
+    ],
+    "brand_top": [
+     {
+      "name": "星巴克",
+      "cat": "coffee",
+      "count": 5,
+      "latest": "Starbucks closures, Burger King AI, Olive Garden sales",
+      "url": "https://www.nrn.com/quick-service/starbucks-closures-burger-king-ai-olive-garden-sales"
+     },
+     {
+      "name": "麦当劳",
+      "cat": "fastfood_west",
+      "count": 4,
+      "latest": "McDonald’s turns to AI for drive-thru, inventory management, order accuracy",
+      "url": "https://www.restaurantdive.com/news/mcdonalds-archiq-drive-thru-artificial-intelligence-next-strategy/831256/"
+     },
+     {
+      "name": "DoorDash",
+      "cat": "delivery",
+      "count": 2,
+      "latest": "Lowe’s debuts drone delivery pilot with Wing, DoorDash",
+      "url": "https://www.retaildive.com/news/lowes-drone-delivery-pilot-wing-doordash/831233/"
+     },
+     {
+      "name": "汉堡王",
+      "cat": "fastfood_west",
+      "count": 2,
+      "latest": "Starbucks closures, Burger King AI, Olive Garden sales",
+      "url": "https://www.nrn.com/quick-service/starbucks-closures-burger-king-ai-olive-garden-sales"
+     },
+     {
+      "name": "蜜雪冰城",
+      "cat": "tea",
+      "count": 2,
+      "latest": "蜜雪冰城、京东都盯上了！这门千亿生意火了，有人已开店3500家......",
+      "url": "http://www.canyin168.com/Article/xw/81375.html"
+     },
+     {
+      "name": "Blackmores",
+      "cat": "supply",
+      "count": 1,
+      "latest": "守护国民膳食健康｜澳佳宝以标准共建与循证科研助力鱼油行业高质量发展",
+      "url": "https://www.foodaily.com/articles/42338"
+     },
+     {
+      "name": "CAVA",
+      "cat": "western",
+      "count": 1,
+      "latest": "CAVA Announces Milestone Restaurant No. 500",
+      "url": "https://www.qsrmagazine.com/news/cava-announces-milestone-restaurant-no-500/"
+     },
+     {
+      "name": "Cava",
+      "cat": "western",
+      "count": 1,
+      "latest": "CAVA Announces Milestone Restaurant No. 500",
+      "url": "https://www.qsrmagazine.com/news/cava-announces-milestone-restaurant-no-500/"
+     },
+     {
+      "name": "Cracker Barrel",
+      "cat": "western",
+      "count": 1,
+      "latest": "Cracker Barrel sees traffic improvement as strategy is ‘on the right track’",
+      "url": "https://www.nrn.com/family-dining/cracker-barrel-sees-traffic-improvement-as-strategy-is-on-the-right-track-"
+     },
+     {
+      "name": "DQ冰雪皇后",
+      "cat": "bakery",
+      "count": 1,
+      "latest": "冰淇淋的热战场 DQ开出2000家门店之后",
+      "url": "http://news.winshang.com/html/074/2338.html"
+     },
+     {
+      "name": "Hidden Valley Ranch",
+      "cat": "supply",
+      "count": 1,
+      "latest": "Leftovers: Hidden Valley Ranch goes dark for Halloween | V8 energizes with electrolytes",
+      "url": "https://www.fooddive.com/news/hidden-valley-spooky-ranch-v8-electrolytes-ocean-spray-cranberry-fall-season/831354/"
+     },
+     {
+      "name": "Kikkoman",
+      "cat": "supply",
+      "count": 1,
+      "latest": "Kikkoman expands US production with $560M soy sauce plant",
+      "url": "https://www.fooddive.com/news/kikkoman-us-production-facility-soy-sauce-wisonsin/831117/"
+     },
+     {
+      "name": "Kraft Heinz",
+      "cat": "supply",
+      "count": 1,
+      "latest": "卡夫亨氏任婧：让创新跑得更快，同时坚守住食品安全底线",
+      "url": "http://www.news.cn/food/20260924/987eb8944f7340b787dc8d811984fb08/c.html"
+     },
+     {
+      "name": "Ocean Spray",
+      "cat": "supply",
+      "count": 1,
+      "latest": "Leftovers: Hidden Valley Ranch goes dark for Halloween | V8 energizes with electrolytes",
+      "url": "https://www.fooddive.com/news/hidden-valley-spooky-ranch-v8-electrolytes-ocean-spray-cranberry-fall-season/831354/"
+     },
+     {
+      "name": "Olive Garden",
+      "cat": "western",
+      "count": 1,
+      "latest": "Starbucks closures, Burger King AI, Olive Garden sales",
+      "url": "https://www.nrn.com/quick-service/starbucks-closures-burger-king-ai-olive-garden-sales"
+     },
+     {
+      "name": "V8",
+      "cat": "supply",
+      "count": 1,
+      "latest": "Leftovers: Hidden Valley Ranch goes dark for Halloween | V8 energizes with electrolytes",
+      "url": "https://www.fooddive.com/news/hidden-valley-spooky-ranch-v8-electrolytes-ocean-spray-cranberry-fall-season/831354/"
+     },
+     {
+      "name": "ほっともっと",
+      "cat": "fastfood_cn",
+      "count": 1,
+      "latest": "ほっともっと、新登場あったかスイーツ「カスタードパイ」「あんバターパイ」190円 10月1日から数量限定",
+      "url": "https://www.ssnp.co.jp/foodservice/703673/"
+     },
+     {
+      "name": "タリーズコーヒー",
+      "cat": "coffee",
+      "count": 1,
+      "latest": "タリーズ、「コーヒーの日」に合わせ「エアロカーノ」期間限定で展開 “ベルベットのような” 質感のエスプレッソビバレッジ",
+      "url": "https://www.ssnp.co.jp/beverage/703723/"
+     },
+     {
+      "name": "ビアードパパ",
+      "cat": "bakery",
+      "count": 1,
+      "latest": "ビアードパパ、秋限定「渋皮栗のモンブランシュー」とゴディバ監修「ショコラ ラングドシャシュー」が登場",
+      "url": "https://www.ssnp.co.jp/snack/703582/"
+     },
+     {
+      "name": "古茗",
+      "cat": "tea",
+      "count": 1,
+      "latest": "蜜雪冰城、京东都盯上了！这门千亿生意火了，有人已开店3500家......",
+      "url": "http://www.canyin168.com/Article/xw/81375.html"
+     }
+    ],
+    "scales": [
+     {
+      "kind": "门店数",
+      "value": "3500家",
+      "brand": "蜜雪冰城",
+      "cat": "tea",
+      "source": "红餐网",
+      "url": "http://www.canyin168.com/Article/xw/81375.html",
+      "date": ""
+     },
+     {
+      "kind": "门店数",
+      "value": "3226家",
+      "brand": "",
+      "cat": "fastfood_cn",
+      "source": "红餐网",
+      "url": "http://www.canyin168.com/Article/xw/81378.html",
+      "date": ""
+     },
+     {
+      "kind": "门店数",
+      "value": "2000家",
+      "brand": "DQ冰雪皇后",
+      "cat": "bakery",
+      "source": "赢商网",
+      "url": "http://news.winshang.com/html/074/2338.html",
+      "date": "2026-09-24"
+     },
+     {
+      "kind": "门店数",
+      "value": "7units",
+      "brand": "",
+      "cat": "",
+      "source": "Nation's Restaurant News",
+      "url": "https://www.nrn.com/independent-restaurants/50-restaurant-groups-in-the-northeast",
+      "date": "2026-09-24"
+     },
+     {
+      "kind": "营收",
+      "value": "24.84亿元",
+      "brand": "",
+      "cat": "supply",
+      "source": "Foodaily每日食品",
+      "url": "https://www.foodaily.com/articles/42336",
+      "date": ""
+     },
+     {
+      "kind": "金额",
+      "value": "131.5Million",
+      "brand": "DoorDash",
+      "cat": "delivery",
+      "source": "QSR Magazine",
+      "url": "https://www.qsrmagazine.com/story/doordash-agrees-to-131-5-million-settlement-over-worker-pay/",
+      "date": "2026-09-24"
+     },
+     {
+      "kind": "金额",
+      "value": "131.5million",
+      "brand": "DoorDash",
+      "cat": "delivery",
+      "source": "QSR Magazine",
+      "url": "https://www.qsrmagazine.com/story/doordash-agrees-to-131-5-million-settlement-over-worker-pay/",
+      "date": "2026-09-24"
+     }
+    ],
+    "total_stores": 8726,
+    "unclassified": 27
+   },
+   "headline": "80 条：产品上新 20 · 行业趋势 22 · 品牌动作 38；高频词 《数字化》、《快餐》、《开店》"
+  },
+  "cn": {
+   "total": 40,
+   "counts": {
+    "product": 8,
+    "trend": 14,
+    "brand": 18
+   },
+   "keywords": [
+    "食品安全",
+    "数字化",
+    "人事",
+    "供应链",
+    "开店",
+    "快餐"
+   ],
+   "brief": [
+    {
+     "cat": "product",
+     "text": "9月12日，头部烤鱼品牌探鱼在深圳光明大仟里店官宣：明星主厨林述巍担任探鱼焦香严选推荐官，并以\"一日店长\"的身份…",
+     "id": "26c0d1c3d63cadfe",
+     "region": "cn",
+     "source": "红餐网",
+     "url": "http://www.canyin168.com/Article/xw/81379.html"
+    },
+    {
+     "cat": "trend",
+     "text": "魔镜洞察数据显示，近12个月主流电商平台黄精品类总销售额突破24.84亿元，同比暴涨730.2%，销量同比攀升6…",
+     "id": "1822348e70df6911",
+     "region": "cn",
+     "source": "Foodaily每日食品",
+     "url": "https://www.foodaily.com/articles/42336"
+    },
+    {
+     "cat": "brand",
+     "text": "这些零食店主打短保、现烤、鲜卤、少添加，有一些甚至被称为“平价小山姆”",
+     "id": "614b4278a73ff068",
+     "region": "cn",
+     "source": "Foodaily每日食品",
+     "url": "https://www.foodaily.com/articles/42334"
+    },
+    {
+     "cat": "product",
+     "text": "2026年9月22日,国民民生品牌金龙鱼官宣全新品牌合作,新生代短剧演员申浩男正式出任品牌调味品产品首位品牌大使",
+     "id": "0d3ee800b56acb39",
+     "region": "cn",
+     "source": "餐饮界",
+     "url": "https://www.canyinj.com/news/24700.html"
+    },
+    {
+     "cat": "trend",
+     "text": "对于珍奥而言，答案就是三十年深耕一件事——聚焦5'-核苷酸，搭建完整循证研究体系，以硬核科研数据作为底气",
+     "id": "48d66edb735e8b7b",
+     "region": "cn",
+     "source": "新华网·食品",
+     "url": "http://www.news.cn/food/20260924/784358e7ecd1440488530de40c0f63ef/c.html"
+    }
+   ],
+   "market": {
+    "formula": "综合占比 = 0.6 × 资讯热度占比 + 0.4 × 已披露门店规模占比（仅统计本次采集到的公开信息）",
+    "cats": [
+     {
+      "id": "supply",
+      "label": "食品供应链",
+      "color": "#6B7280",
+      "items": 11,
+      "brands": 3,
+      "stores": 0,
+      "heat": 0.3929,
+      "stores_share": 0.0,
+      "composite": 0.2357
+     },
+     {
+      "id": "tea",
+      "label": "茶饮",
+      "color": "#2F9E6B",
+      "items": 3,
+      "brands": 5,
+      "stores": 3500,
+      "heat": 0.1071,
+      "stores_share": 0.4011,
+      "composite": 0.2247
+     },
+     {
+      "id": "fastfood_cn",
+      "label": "中式快餐",
+      "color": "#E08A1E",
+      "items": 1,
+      "brands": 0,
+      "stores": 3226,
+      "heat": 0.0357,
+      "stores_share": 0.3697,
+      "composite": 0.1693
+     },
+     {
+      "id": "bakery",
+      "label": "烘焙甜品",
+      "color": "#C77DBB",
+      "items": 1,
+      "brands": 1,
+      "stores": 2000,
+      "heat": 0.0357,
+      "stores_share": 0.2292,
+      "composite": 0.1131
+     },
+     {
+      "id": "delivery",
+      "label": "平台与配送",
+      "color": "#1B5FC1",
+      "items": 4,
+      "brands": 2,
+      "stores": 0,
+      "heat": 0.1429,
+      "stores_share": 0.0,
+      "composite": 0.0857
+     },
+     {
+      "id": "chinese",
+      "label": "中式正餐",
+      "color": "#B4740B",
+      "items": 3,
+      "brands": 1,
+      "stores": 0,
+      "heat": 0.1071,
+      "stores_share": 0.0,
+      "composite": 0.0643
+     },
+     {
+      "id": "bar",
+      "label": "酒馆酒吧",
+      "color": "#5B6BB5",
+      "items": 2,
+      "brands": 3,
+      "stores": 0,
+      "heat": 0.0714,
+      "stores_share": 0.0,
+      "composite": 0.0429
+     },
+     {
+      "id": "snack",
+      "label": "小吃卤味",
+      "color": "#B08A2E",
+      "items": 1,
+      "brands": 2,
+      "stores": 0,
+      "heat": 0.0357,
+      "stores_share": 0.0,
+      "composite": 0.0214
+     },
+     {
+      "id": "fastfood_west",
+      "label": "西式快餐",
+      "color": "#C0392B",
+      "items": 1,
+      "brands": 1,
+      "stores": 0,
+      "heat": 0.0357,
+      "stores_share": 0.0,
+      "composite": 0.0214
+     },
+     {
+      "id": "coffee",
+      "label": "咖啡",
+      "color": "#8A5A2B",
+      "items": 1,
+      "brands": 1,
+      "stores": 0,
+      "heat": 0.0357,
+      "stores_share": 0.0,
+      "composite": 0.0214
+     }
+    ],
+    "brand_top": [
+     {
+      "name": "蜜雪冰城",
+      "cat": "tea",
+      "count": 2,
+      "latest": "蜜雪冰城、京东都盯上了！这门千亿生意火了，有人已开店3500家......",
+      "url": "http://www.canyin168.com/Article/xw/81375.html"
+     },
+     {
+      "name": "Blackmores",
+      "cat": "supply",
+      "count": 1,
+      "latest": "守护国民膳食健康｜澳佳宝以标准共建与循证科研助力鱼油行业高质量发展",
+      "url": "https://www.foodaily.com/articles/42338"
+     },
+     {
+      "name": "DQ冰雪皇后",
+      "cat": "bakery",
+      "count": 1,
+      "latest": "冰淇淋的热战场 DQ开出2000家门店之后",
+      "url": "http://news.winshang.com/html/074/2338.html"
+     },
+     {
+      "name": "Kraft Heinz",
+      "cat": "supply",
+      "count": 1,
+      "latest": "卡夫亨氏任婧：让创新跑得更快，同时坚守住食品安全底线",
+      "url": "http://www.news.cn/food/20260924/987eb8944f7340b787dc8d811984fb08/c.html"
+     },
+     {
+      "name": "古茗",
+      "cat": "tea",
+      "count": 1,
+      "latest": "蜜雪冰城、京东都盯上了！这门千亿生意火了，有人已开店3500家......",
+      "url": "http://www.canyin168.com/Article/xw/81375.html"
+     },
+     {
+      "name": "山姆会员店",
+      "cat": "delivery",
+      "count": 1,
+      "latest": "月销400万的新鲜零食，为什么越做越像一场“新鲜感骗局”？",
+      "url": "https://www.foodaily.com/articles/42334"
+     },
+     {
+      "name": "抖音生活服务",
+      "cat": "delivery",
+      "count": 1,
+      "latest": "抖音生活服务双节前严查食品安全，重点清退高风险餐饮门店",
+      "url": "https://www.canyinj.com/news/24698.html"
+     },
+     {
+      "name": "探鱼",
+      "cat": "chinese",
+      "count": 1,
+      "latest": "探鱼新品焦香升级，明星主厨林述巍任“推荐官”现身深圳门店",
+      "url": "http://www.canyin168.com/Article/xw/81379.html"
+     },
+     {
+      "name": "星巴克",
+      "cat": "coffee",
+      "count": 1,
+      "latest": "经济下行期，星巴克的取单码都玩“玄学”了？",
+      "url": "https://www.foodaily.com/articles/42318"
+     },
+     {
+      "name": "温氏股份",
+      "cat": "supply",
+      "count": 1,
+      "latest": "从长城到华山，温氏股份引领中国高端土鸡产业升级",
+      "url": "https://www.canyinj.com/news/24702.html"
+     },
+     {
+      "name": "绝味鸭脖",
+      "cat": "snack",
+      "count": 1,
+      "latest": "门店月销超600万，赵一鸣、绝味都在抢，新鲜零食是风口还是泡沫？",
+      "url": "https://www.canyinj.com/news/24435.html"
+     },
+     {
+      "name": "茶颜悦色",
+      "cat": "tea",
+      "count": 1,
+      "latest": "门店月销超600万，赵一鸣、绝味都在抢，新鲜零食是风口还是泡沫？",
+      "url": "https://www.canyinj.com/news/24435.html"
+     },
+     {
+      "name": "鲜啤福鹿家",
+      "cat": "bar",
+      "count": 1,
+      "latest": "蜜雪冰城、京东都盯上了！这门千亿生意火了，有人已开店3500家......",
+      "url": "http://www.canyin168.com/Article/xw/81375.html"
+     },
+     {
+      "name": "麦当劳",
+      "cat": "fastfood_west",
+      "count": 1,
+      "latest": "月入过万的江浙沪打工人，都抢着花2.9元入“冻门”",
+      "url": "https://www.foodaily.com/articles/42330"
+     }
+    ],
+    "scales": [
+     {
+      "kind": "门店数",
+      "value": "3500家",
+      "brand": "蜜雪冰城",
+      "cat": "tea",
+      "source": "红餐网",
+      "url": "http://www.canyin168.com/Article/xw/81375.html",
+      "date": ""
+     },
+     {
+      "kind": "门店数",
+      "value": "3226家",
+      "brand": "",
+      "cat": "fastfood_cn",
+      "source": "红餐网",
+      "url": "http://www.canyin168.com/Article/xw/81378.html",
+      "date": ""
+     },
+     {
+      "kind": "门店数",
+      "value": "2000家",
+      "brand": "DQ冰雪皇后",
+      "cat": "bakery",
+      "source": "赢商网",
+      "url": "http://news.winshang.com/html/074/2338.html",
+      "date": "2026-09-24"
+     },
+     {
+      "kind": "营收",
+      "value": "24.84亿元",
+      "brand": "",
+      "cat": "supply",
+      "source": "Foodaily每日食品",
+      "url": "https://www.foodaily.com/articles/42336",
+      "date": ""
+     }
+    ],
+    "total_stores": 8726,
+    "unclassified": 15
+   },
+   "headline": "40 条：产品上新 8 · 行业趋势 14 · 品牌动作 18；高频词 《食品安全》、《数字化》、《人事》"
+  },
+  "global": {
+   "total": 40,
+   "counts": {
+    "product": 12,
+    "trend": 8,
+    "brand": 20
+   },
+   "keywords": [
+    "咖啡",
+    "快餐",
+    "数字化",
+    "开店",
+    "关店",
+    "加盟"
+   ],
+   "brief": [
+    {
+     "cat": "product",
+     "text": "Toastique, the vibrant national gourmet toast, juice and…",
+     "id": "8736ba38c55bdf1f",
+     "region": "global",
+     "source": "QSR Magazine",
+     "url": "https://www.qsrmagazine.com/news/toastique-adds-raspberry-crumble-smoothie-and-cannoli-cloud-coffee/"
+    },
+    {
+     "cat": "trend",
+     "text": "The Japanese food manufacturer is growing in the states…",
+     "id": "e2d2d09880023d91",
+     "region": "global",
+     "source": "Food Dive",
+     "url": "https://www.fooddive.com/news/kikkoman-us-production-facility-soy-sauce-wisonsin/831117/"
+    },
+    {
+     "cat": "brand",
+     "text": "Starbucks announced Thursday it’s closing about 250 Nort…",
+     "id": "88727957c929d674",
+     "region": "global",
+     "source": "QSR Magazine",
+     "url": "https://www.qsrmagazine.com/story/starbucks-to-close-250-north-america-locations-this-week/"
+    },
+    {
+     "cat": "brand",
+     "text": "The funding will be used to support restaurant moderniza…",
+     "id": "32e8fa0ccd4355cf",
+     "region": "global",
+     "source": "Restaurant Dive",
+     "url": "https://www.restaurantdive.com/news/mcdonalds-investing-8-billion-next-strategy/831111/"
+    },
+    {
+     "cat": "product",
+     "text": "プレナスが展開する持ち帰り弁当「Hotto Motto（ほっともっと）」は10月1日、全国の2,415店舗で、あ…",
+     "id": "4eefee996fcbfdf6",
+     "region": "global",
+     "source": "食品産業新聞（日）",
+     "url": "https://www.ssnp.co.jp/foodservice/703673/"
+    }
+   ],
+   "market": {
+    "formula": "综合占比 = 0.6 × 资讯热度占比 + 0.4 × 已披露门店规模占比（仅统计本次采集到的公开信息）",
+    "cats": [
+     {
+      "id": "coffee",
+      "label": "咖啡",
+      "color": "#8A5A2B",
+      "items": 9,
+      "brands": 4,
+      "stores": 0,
+      "heat": 0.2647,
+      "stores_share": 0.0,
+      "composite": 0.2647
+     },
+     {
+      "id": "fastfood_west",
+      "label": "西式快餐",
+      "color": "#C0392B",
+      "items": 8,
+      "brands": 5,
+      "stores": 0,
+      "heat": 0.2353,
+      "stores_share": 0.0,
+      "composite": 0.2353
+     },
+     {
+      "id": "supply",
+      "label": "食品供应链",
+      "color": "#6B7280",
+      "items": 5,
+      "brands": 4,
+      "stores": 0,
+      "heat": 0.1471,
+      "stores_share": 0.0,
+      "composite": 0.1471
+     },
+     {
+      "id": "bakery",
+      "label": "烘焙甜品",
+      "color": "#C77DBB",
+      "items": 3,
+      "brands": 1,
+      "stores": 0,
+      "heat": 0.0882,
+      "stores_share": 0.0,
+      "composite": 0.0882
+     },
+     {
+      "id": "delivery",
+      "label": "平台与配送",
+      "color": "#1B5FC1",
+      "items": 3,
+      "brands": 1,
+      "stores": 0,
+      "heat": 0.0882,
+      "stores_share": 0.0,
+      "composite": 0.0882
+     },
+     {
+      "id": "western",
+      "label": "西餐轻食",
+      "color": "#3E8E8E",
+      "items": 3,
+      "brands": 6,
+      "stores": 0,
+      "heat": 0.0882,
+      "stores_share": 0.0,
+      "composite": 0.0882
+     },
+     {
+      "id": "fastfood_cn",
+      "label": "中式快餐",
+      "color": "#E08A1E",
+      "items": 2,
+      "brands": 1,
+      "stores": 0,
+      "heat": 0.0588,
+      "stores_share": 0.0,
+      "composite": 0.0588
+     },
+     {
+      "id": "bar",
+      "label": "酒馆酒吧",
+      "color": "#5B6BB5",
+      "items": 1,
+      "brands": 0,
+      "stores": 0,
+      "heat": 0.0294,
+      "stores_share": 0.0,
+      "composite": 0.0294
+     }
+    ],
+    "brand_top": [
+     {
+      "name": "星巴克",
+      "cat": "coffee",
+      "count": 4,
+      "latest": "Starbucks closures, Burger King AI, Olive Garden sales",
+      "url": "https://www.nrn.com/quick-service/starbucks-closures-burger-king-ai-olive-garden-sales"
+     },
+     {
+      "name": "麦当劳",
+      "cat": "fastfood_west",
+      "count": 3,
+      "latest": "McDonald’s turns to AI for drive-thru, inventory management, order accuracy",
+      "url": "https://www.restaurantdive.com/news/mcdonalds-archiq-drive-thru-artificial-intelligence-next-strategy/831256/"
+     },
+     {
+      "name": "DoorDash",
+      "cat": "delivery",
+      "count": 2,
+      "latest": "Lowe’s debuts drone delivery pilot with Wing, DoorDash",
+      "url": "https://www.retaildive.com/news/lowes-drone-delivery-pilot-wing-doordash/831233/"
+     },
+     {
+      "name": "汉堡王",
+      "cat": "fastfood_west",
+      "count": 2,
+      "latest": "Starbucks closures, Burger King AI, Olive Garden sales",
+      "url": "https://www.nrn.com/quick-service/starbucks-closures-burger-king-ai-olive-garden-sales"
+     },
+     {
+      "name": "CAVA",
+      "cat": "western",
+      "count": 1,
+      "latest": "CAVA Announces Milestone Restaurant No. 500",
+      "url": "https://www.qsrmagazine.com/news/cava-announces-milestone-restaurant-no-500/"
+     },
+     {
+      "name": "Cava",
+      "cat": "western",
+      "count": 1,
+      "latest": "CAVA Announces Milestone Restaurant No. 500",
+      "url": "https://www.qsrmagazine.com/news/cava-announces-milestone-restaurant-no-500/"
+     },
+     {
+      "name": "Cracker Barrel",
+      "cat": "western",
+      "count": 1,
+      "latest": "Cracker Barrel sees traffic improvement as strategy is ‘on the right track’",
+      "url": "https://www.nrn.com/family-dining/cracker-barrel-sees-traffic-improvement-as-strategy-is-on-the-right-track-"
+     },
+     {
+      "name": "Hidden Valley Ranch",
+      "cat": "supply",
+      "count": 1,
+      "latest": "Leftovers: Hidden Valley Ranch goes dark for Halloween | V8 energizes with electrolytes",
+      "url": "https://www.fooddive.com/news/hidden-valley-spooky-ranch-v8-electrolytes-ocean-spray-cranberry-fall-season/831354/"
+     },
+     {
+      "name": "Kikkoman",
+      "cat": "supply",
+      "count": 1,
+      "latest": "Kikkoman expands US production with $560M soy sauce plant",
+      "url": "https://www.fooddive.com/news/kikkoman-us-production-facility-soy-sauce-wisonsin/831117/"
+     },
+     {
+      "name": "Ocean Spray",
+      "cat": "supply",
+      "count": 1,
+      "latest": "Leftovers: Hidden Valley Ranch goes dark for Halloween | V8 energizes with electrolytes",
+      "url": "https://www.fooddive.com/news/hidden-valley-spooky-ranch-v8-electrolytes-ocean-spray-cranberry-fall-season/831354/"
+     },
+     {
+      "name": "Olive Garden",
+      "cat": "western",
+      "count": 1,
+      "latest": "Starbucks closures, Burger King AI, Olive Garden sales",
+      "url": "https://www.nrn.com/quick-service/starbucks-closures-burger-king-ai-olive-garden-sales"
+     },
+     {
+      "name": "V8",
+      "cat": "supply",
+      "count": 1,
+      "latest": "Leftovers: Hidden Valley Ranch goes dark for Halloween | V8 energizes with electrolytes",
+      "url": "https://www.fooddive.com/news/hidden-valley-spooky-ranch-v8-electrolytes-ocean-spray-cranberry-fall-season/831354/"
+     },
+     {
+      "name": "ほっともっと",
+      "cat": "fastfood_cn",
+      "count": 1,
+      "latest": "ほっともっと、新登場あったかスイーツ「カスタードパイ」「あんバターパイ」190円 10月1日から数量限定",
+      "url": "https://www.ssnp.co.jp/foodservice/703673/"
+     },
+     {
+      "name": "タリーズコーヒー",
+      "cat": "coffee",
+      "count": 1,
+      "latest": "タリーズ、「コーヒーの日」に合わせ「エアロカーノ」期間限定で展開 “ベルベットのような” 質感のエスプレッソビバレッジ",
+      "url": "https://www.ssnp.co.jp/beverage/703723/"
+     },
+     {
+      "name": "ビアードパパ",
+      "cat": "bakery",
+      "count": 1,
+      "latest": "ビアードパパ、秋限定「渋皮栗のモンブランシュー」とゴディバ監修「ショコラ ラングドシャシュー」が登場",
+      "url": "https://www.ssnp.co.jp/snack/703582/"
+     },
+     {
+      "name": "肯德基",
+      "cat": "fastfood_west",
+      "count": 1,
+      "latest": "KFC unveils 'Open House' prototype as a centerpiece of its U.S. comeback plan",
+      "url": "https://www.nrn.com/quick-service/kfc-unveils-open-house-prototype-as-a-centerpiece-of-its-u-s-comeback-plan"
+     }
+    ],
+    "scales": [
+     {
+      "kind": "门店数",
+      "value": "7units",
+      "brand": "",
+      "cat": "",
+      "source": "Nation's Restaurant News",
+      "url": "https://www.nrn.com/independent-restaurants/50-restaurant-groups-in-the-northeast",
+      "date": "2026-09-24"
+     },
+     {
+      "kind": "金额",
+      "value": "131.5Million",
+      "brand": "DoorDash",
+      "cat": "delivery",
+      "source": "QSR Magazine",
+      "url": "https://www.qsrmagazine.com/story/doordash-agrees-to-131-5-million-settlement-over-worker-pay/",
+      "date": "2026-09-24"
+     },
+     {
+      "kind": "金额",
+      "value": "131.5million",
+      "brand": "DoorDash",
+      "cat": "delivery",
+      "source": "QSR Magazine",
+      "url": "https://www.qsrmagazine.com/story/doordash-agrees-to-131-5-million-settlement-over-worker-pay/",
+      "date": "2026-09-24"
+     }
+    ],
+    "total_stores": 0,
+    "unclassified": 12
+   },
+   "headline": "40 条：产品上新 12 · 行业趋势 8 · 品牌动作 20；高频词 《咖啡》、《快餐》、《数字化》",
+   "tr": {
+    "zh": [
+     "Toastique，这家充满活力的全国性精品吐司、果汁和…",
+     "这家日本食品制造商正在美国扩张…",
+     "Starbucks 周四宣布，将关闭约250家北美…",
+     "这笔资金将用于支持餐厅现代化…",
+     "Plenus 经营的外带便当「Hotto Motto（ほっともっと）」将于10月1日在全国2,415家门店…"
+    ]
+   }
+  }
+ },
+ "llm": false,
+ "issue": 5
+}
