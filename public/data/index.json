@@ -1,0 +1,27 @@
+{
+ "latest": "2026-09-25",
+ "history": [
+  {
+   "date": "2026-09-25",
+   "total": 80,
+   "counts": {
+    "product": 20,
+    "trend": 20,
+    "brand": 40
+   },
+   "issue": 5,
+   "headline": "今日 80 条：产品上新 20 · 行业趋势 20 · 品牌动作 40"
+  },
+  {
+   "date": "2026-09-21",
+   "total": 60,
+   "counts": {
+    "product": 7,
+    "trend": 26,
+    "brand": 27
+   },
+   "issue": 1,
+   "headline": "今日 60 条：产品上新 7 · 行业趋势 26 · 品牌动作 27"
+  }
+ ]
+}
