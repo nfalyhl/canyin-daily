@@ -1,0 +1,227 @@
+{
+  "settings": {
+    "max_items_per_source": 30,
+    "max_items_total": 80,
+    "article_fetch_limit": 80,
+    "html_timeout": 15,
+    "workers": 8,
+    "keep_raw_days": 3
+  },
+  "_region 说明": "cn = 内网（国内信息源），global = 外网（海外信息源）；界面上分两个板块展示。",
+  "_needs_proxy 说明": "该源在国内直连不通，只有配了 --proxy（本地代理）时才会抓取。",
+  "sources": [
+    {
+      "id": "hongcan",
+      "name": "红餐网",
+      "region": "cn",
+      "type": "html",
+      "url": "http://www.canyin168.com/",
+      "link_regex": "/Article/[a-z]+/\\d+\\.html",
+      "weight": 1.4,
+      "niche": true,
+      "enabled": true
+    },
+    {
+      "id": "canyinj",
+      "name": "餐饮界",
+      "region": "cn",
+      "type": "html",
+      "url": "https://www.canyinj.com/",
+      "link_regex": "/news/\\d+\\.html$",
+      "weight": 1.25,
+      "niche": true,
+      "enabled": true
+    },
+    {
+      "id": "foodaily",
+      "name": "Foodaily每日食品",
+      "region": "cn",
+      "type": "html",
+      "url": "https://www.foodaily.com/",
+      "link_regex": "/articles/\\d+$",
+      "weight": 1.3,
+      "niche": true,
+      "enabled": true
+    },
+    {
+      "id": "winshang",
+      "name": "赢商网",
+      "region": "cn",
+      "type": "html",
+      "url": "https://news.winshang.com/",
+      "link_regex": "/html/\\d{3}/\\d+\\.html$",
+      "weight": 1.2,
+      "niche": false,
+      "enabled": true
+    },
+    {
+      "id": "xinhua_food",
+      "name": "新华网·食品",
+      "region": "cn",
+      "type": "html",
+      "url": "http://www.news.cn/food/",
+      "link_regex": "/food/\\d{8}/[0-9a-f]+/c\\.html$",
+      "weight": 1.1,
+      "niche": false,
+      "enabled": true
+    },
+    {
+      "id": "ccfa",
+      "name": "中国连锁经营协会",
+      "region": "cn",
+      "type": "html",
+      "url": "http://www.ccfa.org.cn/",
+      "link_regex": "xiangxi\\.jsp\\?id=\\d+|mp\\.weixin\\.qq\\.com/s/",
+      "weight": 1.15,
+      "niche": false,
+      "enabled": true
+    },
+    {
+      "id": "canyincha",
+      "name": "职业餐饮网",
+      "region": "cn",
+      "type": "html",
+      "url": "https://www.canyincha.com/",
+      "link_regex": "/news/info/\\d+\\.html$",
+      "weight": 0.5,
+      "niche": true,
+      "enabled": true
+    },
+    {
+      "id": "tmtpost",
+      "name": "钛媒体",
+      "region": "cn",
+      "type": "rss",
+      "url": "https://www.tmtpost.com/rss.xml",
+      "weight": 1.0,
+      "niche": false,
+      "enabled": true
+    },
+    {
+      "id": "jiemian",
+      "name": "界面新闻",
+      "region": "cn",
+      "type": "rss",
+      "url": "https://a.jiemian.com/index.php?m=article&a=rss",
+      "weight": 1.0,
+      "niche": false,
+      "enabled": true
+    },
+    {
+      "id": "nbd",
+      "name": "每日经济新闻",
+      "region": "cn",
+      "type": "html",
+      "url": "https://www.nbd.com.cn/",
+      "link_regex": "/articles/\\d{4}-\\d{2}-\\d{2}/\\d+\\.html$",
+      "weight": 0.95,
+      "niche": false,
+      "enabled": true
+    },
+
+    {
+      "id": "restaurantdive",
+      "name": "Restaurant Dive",
+      "region": "global",
+      "type": "rss",
+      "url": "https://www.restaurantdive.com/feeds/news/",
+      "weight": 1.35,
+      "niche": true,
+      "enabled": true
+    },
+    {
+      "id": "fooddive",
+      "name": "Food Dive",
+      "region": "global",
+      "type": "rss",
+      "url": "https://www.fooddive.com/feeds/news/",
+      "weight": 1.3,
+      "niche": true,
+      "enabled": true
+    },
+    {
+      "id": "nrn",
+      "name": "Nation's Restaurant News",
+      "region": "global",
+      "type": "rss",
+      "url": "https://www.nrn.com/rss.xml",
+      "weight": 1.3,
+      "niche": true,
+      "enabled": true
+    },
+    {
+      "id": "thespoon",
+      "name": "The Spoon",
+      "region": "global",
+      "type": "rss",
+      "url": "https://thespoon.tech/feed/",
+      "weight": 1.15,
+      "niche": true,
+      "enabled": true
+    },
+    {
+      "id": "eater",
+      "name": "Eater",
+      "region": "global",
+      "type": "rss",
+      "url": "https://www.eater.com/rss/index.xml",
+      "weight": 1.05,
+      "niche": true,
+      "enabled": true
+    },
+    {
+      "id": "ssnp",
+      "name": "食品産業新聞（日）",
+      "region": "global",
+      "type": "rss",
+      "url": "https://www.ssnp.co.jp/feed/",
+      "weight": 1.1,
+      "niche": true,
+      "enabled": true
+    },
+    {
+      "id": "techcrunch",
+      "name": "TechCrunch",
+      "region": "global",
+      "type": "rss",
+      "url": "https://techcrunch.com/feed/",
+      "weight": 0.85,
+      "niche": false,
+      "enabled": true
+    },
+
+    {
+      "id": "qsr",
+      "name": "QSR Magazine",
+      "region": "global",
+      "type": "rss",
+      "url": "https://www.qsrmagazine.com/rss.xml",
+      "weight": 1.2,
+      "niche": true,
+      "needs_proxy": true,
+      "enabled": true
+    },
+    {
+      "id": "retaildive",
+      "name": "Retail Dive",
+      "region": "global",
+      "type": "rss",
+      "url": "https://www.retaildive.com/feeds/news/",
+      "weight": 1.0,
+      "niche": false,
+      "needs_proxy": true,
+      "enabled": true
+    },
+    {
+      "id": "resthospitality",
+      "name": "Restaurant Hospitality",
+      "region": "global",
+      "type": "rss",
+      "url": "https://www.restaurant-hospitality.com/rss.xml",
+      "weight": 1.05,
+      "niche": true,
+      "needs_proxy": true,
+      "enabled": true
+    }
+  ]
+}
