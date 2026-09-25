@@ -1,0 +1,28 @@
+# ==========================================================================
+# 本地私有文件 —— 绝对不要提交到 Git / GitHub！
+# 这个项目后面要推到 GitHub（iOS 的 TestFlight 工作流需要），
+# 所以必须先把这些挡在外面，否则 API Key、密码哈希、会话密钥会一起被公开。
+# ==========================================================================
+
+# 账号、会话密钥、翻译缓存、外网节点、大模型 API Key 都在这里
+config/          # users.json / secret.key / settings.json / translations.json
+
+# 采集日志
+logs/
+
+# 签名密钥（APK 用；泄露的可被冒名签名）
+android/keystore/
+
+# 运行时产物
+__pycache__/
+*.pyc
+*.pyo
+android/build/
+dist/*.idsig
+public/data/seen.json
+public/data/meta.json
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
