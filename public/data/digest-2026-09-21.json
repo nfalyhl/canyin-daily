@@ -1,0 +1,967 @@
+{
+ "date": "2026-09-21",
+ "generated_at": "2026-09-21T22:48:15+08:00",
+ "headline": "今日 60 条：产品上新 7 · 行业趋势 26 · 品牌动作 27；高频词 《食品安全》、《茶饮》、《政策》",
+ "brief": [
+  {
+   "cat": "product",
+   "text": "古方食补融入日常：农夫山泉养生堂依据明代“百合固金汤”、北宋“酸枣仁汤”古方推出本草饮料",
+   "id": "8004774c459a5f05",
+   "source": "Foodaily每日食品",
+   "url": "https://www.foodaily.com/articles/42324"
+  },
+  {
+   "cat": "trend",
+   "text": "数据显示，高德扫街榜上线一年来，已累计服务超过8.8亿用户，导航至上榜商家年度总里程366亿公里，带动上榜烟火小…",
+   "id": "49f18049914a855b",
+   "source": "红餐网",
+   "url": "http://www.canyin168.com/Article/xw/81368.html"
+  },
+  {
+   "cat": "brand",
+   "text": "蜜雪是“烦恼的巨头”。营收152亿，体量是其他品牌的总和还多，但增速只有2.3%，利润反而下滑14.7%",
+   "id": "1d911d33eaebe930",
+   "source": "红餐网",
+   "url": "http://www.canyin168.com/Article/xw/81361.html"
+  },
+  {
+   "cat": "trend",
+   "text": "近日，国务院食安办等28个部门联合印发《关于开展2026年全国食品安全宣传周活动的通知》（以下简称《通知》），明…",
+   "id": "aeffdb436c17903f",
+   "source": "新华网·食品",
+   "url": "http://www.news.cn/food/20260918/1de9031a841044f48faac916928130d4/c.html"
+  }
+ ],
+ "keywords": [
+  "食品安全",
+  "茶饮",
+  "政策",
+  "开店",
+  "资本",
+  "关店"
+ ],
+ "counts": {
+  "product": 7,
+  "trend": 26,
+  "brand": 27
+ },
+ "total": 60,
+ "labels": {
+  "product": "产品上新",
+  "trend": "行业趋势",
+  "brand": "品牌动作"
+ },
+ "items": [
+  {
+   "title": "周周上新|农夫山泉进军本草饮料，盒马上新冻干方便面，小象超市推出联名西红柿蛋挞...... 本周20+新品谁最让你想不到?",
+   "url": "https://www.foodaily.com/articles/42324",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "summary": "古方食补融入日常：农夫山泉养生堂依据明代“百合固金汤”、北宋“酸枣仁汤”古方推出本草饮料；渠道自有品牌加速扩品类：盒马推出一日电解质水和冻干方便面，小象超市联名一饭封神做西红柿蛋挞；",
+   "cat": "product",
+   "tags": [
+    "联名"
+   ],
+   "score": 17.4,
+   "id": "8004774c459a5f05",
+   "no": 1
+  },
+  {
+   "title": "餐饮大事件487期｜京东七鲜小厨推出首个智能移动餐车、袁记食品被指已通过港交所上市聆讯",
+   "url": "https://www.canyinj.com/news/24646.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "",
+   "cat": "product",
+   "tags": [
+    "资本",
+    "数字化"
+   ],
+   "score": 8.55,
+   "id": "dc6fde61ee5a72a7",
+   "no": 2
+  },
+  {
+   "title": "90后湖南小伙首创快餐新品类“擂饭” ，凭何两年狂飙至800家店？",
+   "url": "http://www.canyin168.com/Article/xw/81370.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "这个创立于2017年的米饭快餐品牌，主打擂饭、湘菜小炒。前5年，它一直卡在百店关口徘徊，迟迟难以突破。但近两年，那层阻碍突然被打破——200家、400家、600家，一路狂飙到全国开出800家店。",
+   "cat": "product",
+   "tags": [
+    "快餐"
+   ],
+   "score": 8.0,
+   "id": "9d28c30472d19c97",
+   "no": 3
+  },
+  {
+   "title": "探鱼新品焦香升级，明星主厨林述巍任“推荐官”现身深圳门店",
+   "url": "https://www.canyinj.com/news/24663.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "9月12日，头部烤鱼品牌探鱼在深圳光明大仟里店官宣：明星主厨林述巍担任探鱼焦香严选推荐官，并以\"一日店长\"的身份出席当天活动。活动现场，林述巍围绕腌、烤、炖三道工艺进行讲解并邀请顾客品鉴，为本次焦香升级盖章认证。",
+   "cat": "product",
+   "tags": [],
+   "score": 7.85,
+   "id": "6dde366a908f4e62",
+   "no": 4
+  },
+  {
+   "title": "温氏727节｜当食材供应链开始造节，“幕后玩家”正在走向台前",
+   "url": "https://www.canyinj.com/news/24493.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "727节是温氏于2022年推出的主题节日，也是食材供应链领域为数不多兼具声量与销量的IP。",
+   "cat": "product",
+   "tags": [
+    "供应链"
+   ],
+   "score": 7.35,
+   "id": "76a7da8b0b5c2f48",
+   "no": 5
+  },
+  {
+   "title": "古茗也开卖冰淇淋了！全国首家鲜享店开业，要做“茶饮界711”？",
+   "url": "https://www.foodaily.com/articles/42311",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "summary": "昨日（9月19日），古茗全国首家鲜享店一经开业，便迅速引爆热度！",
+   "cat": "product",
+   "tags": [
+    "茶饮"
+   ],
+   "score": 6.1,
+   "id": "dc893b849841c3d4",
+   "no": 6
+  },
+  {
+   "title": "西贝回应新品牌多家门店暂停营业 称属单店规划调整",
+   "url": "http://news.winshang.com/html/074/2205.html",
+   "published": "2026-09-18T00:00:00+08:00",
+   "source": "赢商网",
+   "source_id": "winshang",
+   "summary": "西贝方面回应新品牌多家门店暂停营业属于单店规划调整。",
+   "cat": "product",
+   "tags": [],
+   "score": 5.5,
+   "id": "13acdbdb4ebd3c09",
+   "no": 7
+  },
+  {
+   "title": "高德扫街榜全面AI化，一年累计服务超8.8亿用户",
+   "url": "http://www.canyin168.com/Article/xw/81368.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "数据显示，高德扫街榜上线一年来，已累计服务超过8.8亿用户，导航至上榜商家年度总里程366亿公里，带动上榜烟火小店订单量同比增长424%，并获得最多用户真实到店的吉尼斯世界纪录认证，成为全球最大规模用脚投票的真实榜单。",
+   "cat": "trend",
+   "tags": [
+    "数字化"
+   ],
+   "score": 13.5,
+   "id": "49f18049914a855b",
+   "no": 8
+  },
+  {
+   "title": "20万家门店的烟火江湖：2026年包子行业竞争格局与趋势洞察",
+   "url": "https://www.canyinj.com/news/24491.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "包子这个品类，大概是中式快餐里最不起眼又最不可或缺的存在。但正是这种“不起眼”，让包子成了一个真正意义上的国民品类——南北通吃，老少皆宜，贵贱不论。然而，当我们把目光从一只包子出发看向整个行业时，会发现一个有意思的现象：这个传统、分散的赛道，也在经历重构。",
+   "cat": "trend",
+   "tags": [
+    "快餐"
+   ],
+   "score": 13.35,
+   "id": "2074264646c3003d",
+   "no": 9
+  },
+  {
+   "title": "2026年全国食品安全宣传周将于近日启动",
+   "url": "http://www.news.cn/food/20260918/1de9031a841044f48faac916928130d4/c.html",
+   "published": "2026-09-18T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "summary": "近日，国务院食安办等28个部门联合印发《关于开展2026年全国食品安全宣传周活动的通知》（以下简称《通知》），明确2026年全国食品安全宣传周以“尚德守法 共享食安——深化全链条监管”为主题，将于近日在北京正式启动。",
+   "cat": "trend",
+   "tags": [
+    "食品安全",
+    "政策"
+   ],
+   "score": 11.7,
+   "id": "aeffdb436c17903f",
+   "no": 10
+  },
+  {
+   "title": "2026预制菜行业市场报告：增长市场VS信任崩塌，预制菜何去何从？",
+   "url": "https://www.canyinj.com/news/24490.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "2025年至2026年，预制菜反复被推上舆论的风口浪尖。",
+   "cat": "trend",
+   "tags": [
+    "预制菜"
+   ],
+   "score": 10.55,
+   "id": "3b7d4fc88a6502cb",
+   "no": 11
+  },
+  {
+   "title": "浙江隐形巨头，卖饮料瓶半年收入96亿",
+   "url": "https://www.foodaily.com/articles/42309",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "summary": "财报数据显示，2026年上半年，万凯新材实现营业收入96.52亿元，同比增长17.52%；归母净利润为5.62亿元，同比增长约910%；扣非后归母净利润为3.46亿元，同比增长971.52%。",
+   "cat": "trend",
+   "tags": [
+    "财报"
+   ],
+   "score": 10.4,
+   "id": "a7c18ea7e1385894",
+   "no": 12
+  },
+  {
+   "title": "白酒行业2025年终观察：深水区破局前行，重构中锚定新增长曲线",
+   "url": "https://www.news.cn/food/20251231/970071d1a546486ea04b216e3667c66c/c.html",
+   "published": "2025-12-31T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "summary": "库存出清承压 即时零售加速重构渠道生态渠道库存的“堰塞湖”是2025年白酒行业渠道面临的核心问题。",
+   "cat": "trend",
+   "tags": [
+    "即时零售"
+   ],
+   "score": 10.2,
+   "id": "425989f9a28ccdeb",
+   "no": 13
+  },
+  {
+   "title": "尚德守法筑根基 共享食安护民生——写在2026年全国食品安全宣传周举办之际",
+   "url": "http://www.news.cn/food/20260919/dff76f0e4b394d2a9cd71545558ef954/c.html",
+   "published": "2026-09-19T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "summary": "以“尚德守法 共享食安——深化全链条监管”为主题，聚焦食品安全法治建设、监管创新升级、行业自律提质，全面夯实食品安全治理根基。",
+   "cat": "trend",
+   "tags": [
+    "食品安全",
+    "政策"
+   ],
+   "score": 10.2,
+   "id": "4935bd13e826a819",
+   "no": 14
+  },
+  {
+   "title": "餐饮大事件485期｜霸王茶姬Q2全球GMV76.6亿、百果园上半年扭亏为盈、冰雪时光总投资6.6亿元的产业园开园",
+   "url": "https://www.canyinj.com/news/24572.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "餐饮茶饮赛道热度持续攀升，头部品牌业绩更迭、行业格局悄然焕新！近期消费市场重磅动态密集出炉，亮点干货满满：新茶饮龙头霸王茶姬Q2全球GMV狂飙76.6亿，高质量增长态势稳固；",
+   "cat": "trend",
+   "tags": [
+    "财报",
+    "茶饮"
+   ],
+   "score": 9.85,
+   "id": "39f4cadaca2cecba",
+   "no": 15
+  },
+  {
+   "title": "规范冷冻饮品生产许可 市场监管总局公开征求意见",
+   "url": "http://www.news.cn/food/20260729/eea006c3a6a148f89c51736848f6370b/c.html",
+   "published": "2026-07-29T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "summary": "细化各项制度管理要求，既确保企业执行到位，也为生产许可审查提供明确参考依据。\"",
+   "cat": "trend",
+   "tags": [
+    "食品安全",
+    "政策"
+   ],
+   "score": 8.4,
+   "id": "a8dde2c223411830",
+   "no": 16
+  },
+  {
+   "title": "《2025超市现场制售食品发展现状与发展路径研究报告》发布",
+   "url": "http://www.ccfa.org.cn/xiangxi.jsp?id=446887&type=33",
+   "published": "",
+   "source": "中国连锁经营协会",
+   "source_id": "ccfa",
+   "summary": "",
+   "cat": "trend",
+   "tags": [],
+   "score": 7.95,
+   "id": "edcbb4b187b70051",
+   "no": 17
+  },
+  {
+   "title": "关于征集“2026年食品安全与质量促进创新案例”的通知",
+   "url": "http://www.ccfa.org.cn/xiangxi.jsp?id=447253&type=10004",
+   "published": "",
+   "source": "中国连锁经营协会",
+   "source_id": "ccfa",
+   "summary": "",
+   "cat": "trend",
+   "tags": [
+    "食品安全",
+    "政策"
+   ],
+   "score": 7.95,
+   "id": "c76ae4a1041287b9",
+   "no": 18
+  },
+  {
+   "title": "国务院食安办等28部门关于开展2026年全国食品安全宣传周活动的通知",
+   "url": "http://www.news.cn/food/20260918/a27fa1e6095643d3a45fbf8cea171517/c.html",
+   "published": "2026-09-18T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "summary": "（十三）供销合作总社开展“共创食品安全，共享健康生活”主题宣传活动。",
+   "cat": "trend",
+   "tags": [
+    "健康化",
+    "食品安全",
+    "政策"
+   ],
+   "score": 7.9,
+   "id": "1e16e265e92c3ec5",
+   "no": 19
+  },
+  {
+   "title": "2026中国粉面行业市场报告：国民主食的进与退",
+   "url": "https://www.canyinj.com/news/24574.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "“生意做遍，不如卖面”；“打工十年一场空，卖面一年成富翁”，两句老话，道出面类餐饮的超级刚需属性。南方的粉、北方的面，粉面市场，撑起中国餐饮版图中古老且厚重的底盘。",
+   "cat": "trend",
+   "tags": [],
+   "score": 7.35,
+   "id": "0944da52ff592a32",
+   "no": 20
+  },
+  {
+   "title": "2026烧烤行业市场报告：三千亿市场，未烤出超级品牌",
+   "url": "https://www.canyinj.com/news/24525.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "这些模式在延续街边场景的同时，在场景体验和商业模式上寻找新变量。在2025年刮起一股风潮的“地摊牛肋条自助烤肉”，人均消费集中在59元左右，以“高价值感食材+高性价比定价”的组合快速打开市场；",
+   "cat": "trend",
+   "tags": [
+    "价格战",
+    "供应链"
+   ],
+   "score": 7.35,
+   "id": "3bc2361786aa983c",
+   "no": 21
+  },
+  {
+   "title": "“装修就花了60万的店，我2.6万卖了！”一批自助烤肉店，倒下了",
+   "url": "http://www.canyin168.com/Article/xw/81374.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "近年来，自助赛道翻红，带火了一批旋转自助小火锅、旋转自助烤肉。热度之下，甚至有人把门店开进了核心商圈，高峰排队超5小时。",
+   "cat": "trend",
+   "tags": [
+    "火锅"
+   ],
+   "score": 6.5,
+   "id": "42e8f9a9ea514d91",
+   "no": 22
+  },
+  {
+   "title": "一个商场挤进5家、排队突破千桌！烤鱼“翻红”，又成年轻人“新宠”？",
+   "url": "http://www.canyin168.com/Article/xw/81366.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "这并非偶然，无刺泡泡重庆首店开业后，单日最高取号量突破千桌；师烤·豆花烤鱼门店假期日均翻台率高达8轮；马有鱼·馕坑烤全鱼多家门店饭点排队，所到之处几乎都登顶当地烤鱼品类榜首……",
+   "cat": "trend",
+   "tags": [
+    "开店"
+   ],
+   "score": 6.5,
+   "id": "b43dc95d0e9ecf3d",
+   "no": 23
+  },
+  {
+   "title": "《2026CCFA食品安全与质量促进创新实践案例集》发布",
+   "url": "http://www.ccfa.org.cn/xiangxi.jsp?id=447217&type=10004",
+   "published": "",
+   "source": "中国连锁经营协会",
+   "source_id": "ccfa",
+   "summary": "",
+   "cat": "trend",
+   "tags": [
+    "食品安全"
+   ],
+   "score": 6.45,
+   "id": "e5712641eec95d3b",
+   "no": 24
+  },
+  {
+   "title": "山姆12.9元生菜没了「供港」：60年的标准，81天作废",
+   "url": "https://www.foodaily.com/articles/42317",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "summary": "翻到背面看，什么都没变。供应商还是東昇，产地还是宁夏固原市彭阳县，规格还是 600 克，价格还是 12.9 元。",
+   "cat": "trend",
+   "tags": [
+    "政策"
+   ],
+   "score": 6.4,
+   "id": "7a80ca6be6e0aac6",
+   "no": 25
+  },
+  {
+   "title": "SKU砍掉25%，客流暴增1.4倍！揭秘永旺最新店型",
+   "url": "https://www.foodaily.com/articles/42313",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "summary": "砍掉近四分之一的商品，销售额不降反增，整体增长1.3～1.7倍——日本永旺旗下新概念食品超市Food Style，用不到一年时间在东京验证了“做减法”的整改逻辑：SKU压缩25%，来店客数反增1.4倍。",
+   "cat": "trend",
+   "tags": [
+    "开店"
+   ],
+   "score": 6.4,
+   "id": "71ce92b30072d02d",
+   "no": 26
+  },
+  {
+   "title": "唐久烘焙陕西工厂投产 加码西北鲜食供应链布局",
+   "url": "https://mp.weixin.qq.com/s/h13ftrjeGGCZwhlgWsSAoA",
+   "published": "",
+   "source": "中国连锁经营协会",
+   "source_id": "ccfa",
+   "summary": "2026年9月16日，唐久烘焙·陕西工厂（陕西东方领鲜食品有限公司）投产仪式在西安唐久物流园举行。中国连锁经营协会（CCFA）会长彭建真出席仪式并致辞。",
+   "cat": "trend",
+   "tags": [
+    "烘焙",
+    "供应链"
+   ],
+   "score": 6.25,
+   "id": "60f4f4e4e8a5808c",
+   "no": 27
+  },
+  {
+   "title": "新华网科普 | 关于食品安全，别被“想当然”误导",
+   "url": "https://www.news.cn/food/20260606/93889bcbf0714e9dbb10bc019e4d6f29/c.html",
+   "published": "2026-06-07T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "summary": "新华网科普 | 关于食品安全，别被“想当然”误导-冷冻食品，一定不如新鲜食品吗。",
+   "cat": "trend",
+   "tags": [
+    "食品安全"
+   ],
+   "score": 5.7,
+   "id": "4ec22822845df8e8",
+   "no": 28
+  },
+  {
+   "title": "公关视角看热点｜被LV索赔1030万，茉莉奶白为何反而卖爆了？",
+   "url": "https://www.canyinj.com/news/24434.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "“托LV的福”，茉莉奶白最近成为热搜榜单的“常驻嘉宾”。",
+   "cat": "trend",
+   "tags": [],
+   "score": 5.05,
+   "id": "40abbea7310b802a",
+   "no": 29
+  },
+  {
+   "title": "市场监管总局：深化“幽灵外卖”专项整治工作",
+   "url": "http://www.news.cn/food/20260903/2d262111deec4d6c9d0e0e83ce71fa8e/c.html",
+   "published": "2026-09-03T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "summary": "",
+   "cat": "trend",
+   "tags": [
+    "食品安全",
+    "政策"
+   ],
+   "score": 4.9,
+   "id": "ed42c14f3b00f2b7",
+   "no": 30
+  },
+  {
+   "title": "体验经济成文旅增长新动能，抖音生活服务解锁新生代文旅路径",
+   "url": "https://www.canyinj.com/news/24437.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "抖音生活服务近日在浙江杭州举办的诗画浙江线上文旅嘉年华暨抖音生活服务Life+文旅生态大会就颇为典型。在大会上，抖音生活服务正式发布2026“心动目的地”战略，宣布投入专属流量与配套补贴，助推各地文旅发展。",
+   "cat": "trend",
+   "tags": [
+    "价格战"
+   ],
+   "score": 4.85,
+   "id": "4c3547c3af0ccaf3",
+   "no": 31
+  },
+  {
+   "title": "食品包装企业重点关注| 关于邀请参加“Foodaily 全球食品饮料创新博览会食品包装展区”的通知",
+   "url": "https://www.foodaily.com/articles/42325",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "summary": "基于此，Foodaily每日食品与中国包装联合会包装智能装备专业委员会就Foodaily全球食品饮料创新博览会暨食品健康生态展（以下简称“2027 Foodaily创新博览会”）达成深度合作，联合打造2027 Foodaily创新博览会食品包装展区，聚焦包…",
+   "cat": "trend",
+   "tags": [
+    "健康化",
+    "数字化",
+    "政策"
+   ],
+   "score": 4.4,
+   "id": "82fb30fefb6c9d24",
+   "no": 32
+  },
+  {
+   "title": "电子证照如何守护外卖食品安全",
+   "url": "http://www.news.cn/food/20260805/9ed00e416ee54197b7c15210abcfa325/c.html",
+   "published": "2026-08-05T00:00:00+08:00",
+   "source": "新华网·食品",
+   "source_id": "xinhua_food",
+   "summary": "电子证照如何守护外卖食品安全-\"问：电子证照如何将“幽灵外卖”拒之门外。\"",
+   "cat": "trend",
+   "tags": [
+    "食品安全"
+   ],
+   "score": 4.1,
+   "id": "f590cb13d6ba56c6",
+   "no": 33
+  },
+  {
+   "title": "蜜雪利润首降！新茶饮巨头们集体“刹车”，万店红利终结？",
+   "url": "http://www.canyin168.com/Article/xw/81361.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "蜜雪是“烦恼的巨头”。营收152亿，体量是其他品牌的总和还多，但增速只有2.3%，利润反而下滑14.7%。这是蜜雪2025年3月上市以来首次半年报利润负增长。毛利率从31.6%降至30.4%，净利率从18.3%滑落至15.2%。",
+   "cat": "brand",
+   "tags": [
+    "资本",
+    "财报",
+    "茶饮"
+   ],
+   "score": 13.6,
+   "id": "1d911d33eaebe930",
+   "no": 34
+  },
+  {
+   "title": "餐饮大事件482期｜外卖没封口消费者有权拒收、COMMUNE幻师香港首店开业、印尼“瑞幸”正筹备IPO",
+   "url": "https://www.canyinj.com/news/24504.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "本周餐饮行业热点密集爆发，新规落地、天价菜品争议、头部品牌资本运作、出海拓店、新品迭代轮番上演，行业新旧格局持续更迭！广东外卖新规正式明确封口配送标准，消费者维权再添保障；",
+   "cat": "brand",
+   "tags": [
+    "出海",
+    "开店",
+    "资本"
+   ],
+   "score": 12.95,
+   "id": "26984163d6d0461f",
+   "no": 35
+  },
+  {
+   "title": "餐饮大事件484期｜海底捞部分门店上线点歌功能、必胜客全球首席执行官将卸任、小菜园上半年营收29.03亿",
+   "url": "https://www.canyinj.com/news/24554.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "餐饮市场风云迭代，一周行业热点尽数收录！既有宏观市场的稳健增长数据落地，也有头部餐企、新锐茶饮的花式创新与战略调整，更有新规落地、消费乱象、品牌进退、行业洗牌等重磅动态刷屏。",
+   "cat": "brand",
+   "tags": [
+    "财报",
+    "茶饮",
+    "人事"
+   ],
+   "score": 11.95,
+   "id": "2c25fd7832594664",
+   "no": 36
+  },
+  {
+   "title": "关店、收缩、聚焦：餐饮巨头子品牌集体“退潮”",
+   "url": "http://news.winshang.com/html/074/2241.html",
+   "published": "2026-09-20T00:00:00+08:00",
+   "source": "赢商网",
+   "source_id": "winshang",
+   "summary": "茶颜悦色旗下子品牌“昼夜诗酒茶·艺文小酒馆以及”海底捞旗下“焰请烤肉铺子”门店数量先后收缩。",
+   "cat": "brand",
+   "tags": [
+    "关店"
+   ],
+   "score": 10.9,
+   "id": "b6032c3d9bd3f13c",
+   "no": 37
+  },
+  {
+   "title": "关店31家！“现烤面包界顶流”踩下急刹车",
+   "url": "http://www.canyin168.com/Article/xw/81371.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "这个曾被称作“现烤面包界顶流”的品牌，每到一地开店必引发排队热潮。这才两年时间，画风突变，为什么？",
+   "cat": "brand",
+   "tags": [
+    "关店",
+    "开店",
+    "烘焙"
+   ],
+   "score": 10.1,
+   "id": "e55fc4b0b3ae79ce",
+   "no": 38
+  },
+  {
+   "title": "关店千家后，喜茶再放加盟，还能重回“王座”吗？",
+   "url": "http://www.canyin168.com/Article/xw/81377.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "从2022年11月开放加盟，到去年2月暂停加盟。门店从不到900家，一路狂飙到巅峰的4610家，再急刹车回落至3515家，喜茶走完了第一轮“扩店实验”。",
+   "cat": "brand",
+   "tags": [
+    "关店",
+    "加盟",
+    "茶饮"
+   ],
+   "score": 9.5,
+   "id": "96518fcd080a2985",
+   "no": 39
+  },
+  {
+   "title": "餐饮大事件483期｜“全国小炒肉大王”，改了、锅圈食汇香港首店即将开业、茶颜悦色深圳再落一子",
+   "url": "https://www.canyinj.com/news/24534.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "费大厨摘下 “全国小炒肉大王” 称号正式换 slogan，小菜园因顾客用餐盘喂狗给出十倍餐费补偿；锅圈食汇进军香港、方中山胡辣汤落地伦敦，本土餐饮加速出海。",
+   "cat": "brand",
+   "tags": [
+    "出海",
+    "开店"
+   ],
+   "score": 9.35,
+   "id": "b6fa7fdec45b3671",
+   "no": 40
+  },
+  {
+   "title": "永和大王们被亲爹“打包”赴港IPO，想靠资本“救火”？",
+   "url": "http://www.canyin168.com/Article/xw/81373.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "近日，快乐蜂的一则IPO引发餐饮圈关注，它正式拟拆分旗下国际业务主体JFCI赴港上市。而这其中国际业务最大的海外战区，就是“中国市场”。",
+   "cat": "brand",
+   "tags": [
+    "出海",
+    "资本"
+   ],
+   "score": 9.0,
+   "id": "fa485bc9c66bedae",
+   "no": 41
+  },
+  {
+   "title": "闭店率超30%！昔日网红“小酒馆”彻底被抛弃了？",
+   "url": "http://www.canyin168.com/Article/xw/81363.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "更值得玩味的是，几年前那批高调涌入小酒馆的品牌，如今大多已悄然退场，行业闭店率更是超过30%。",
+   "cat": "brand",
+   "tags": [
+    "关店"
+   ],
+   "score": 8.1,
+   "id": "9caabe2a682e701b",
+   "no": 42
+  },
+  {
+   "title": "板前中场战事：闭店潮已来，但九毛九、喜茶们还在反向加注",
+   "url": "https://www.canyinj.com/news/24526.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "有人仓促离场，有人逆势加仓，曾经被“风口”托举着站上流量巅峰的板前餐饮，进入中场战事。",
+   "cat": "brand",
+   "tags": [
+    "关店",
+    "茶饮"
+   ],
+   "score": 7.85,
+   "id": "2d8f3997115181d4",
+   "no": 43
+  },
+  {
+   "title": "火鸡面巨头出手：2.85 亿美元收购日本香料公司，抢滩香精赛道？",
+   "url": "https://www.foodaily.com/articles/42323",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "summary": "日前，在中国大陆拥有3226家店的便利店巨头--全家，第六代店型在上海亮相。相比过去，这次升级最明显的变化，就是餐饮的分量更重了。",
+   "cat": "brand",
+   "tags": [
+    "资本"
+   ],
+   "score": 7.4,
+   "id": "350dec2fa993c403",
+   "no": 44
+  },
+  {
+   "title": "海外卖铁板鱿鱼日入3000美元，中餐出海，这次轮到了“草根”",
+   "url": "https://www.canyinj.com/news/24575.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "这个夜市由最初的两三家摊位起步，如今已经发展成一条成熟的美食街。采访中，有铁板鱿鱼摊主日入3000美元、肉夹馍摊主月入12万美元、煎饺摊位一天卖出3000枚……这条街上还有长沙臭豆腐、江西炒粉、四川凉面等小吃。",
+   "cat": "brand",
+   "tags": [
+    "出海"
+   ],
+   "score": 7.35,
+   "id": "cabd1c24e6ef3958",
+   "no": 45
+  },
+  {
+   "title": "5年进入60城，开店160家，她却说连锁经营没有秘密？",
+   "url": "https://www.canyinj.com/news/14806.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "而最终孤注一掷换来的是一炮而红，从长沙走向全国60个城市，成为拥有160多家连锁店的网红品牌——蛙来哒。",
+   "cat": "brand",
+   "tags": [
+    "开店"
+   ],
+   "score": 6.95,
+   "id": "4d115972bd8b444c",
+   "no": 46
+  },
+  {
+   "title": "IFF CEO最新发声，告别「一站式供应商」，三大创新业务重新定义行业边界",
+   "url": "https://www.foodaily.com/articles/42320",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "summary": "2026年9月10日，在巴克莱第19届年度全球消费必需品大会的炉边谈话上，国际香精香料公司（IFF）首席执行官Jon Erik Fyrwald就外界最关心的战略转型问题表示，公司正坚定推进自我重新定义，彻底告别过去“覆盖广泛领域的一站式原料供应商”定位，全…",
+   "cat": "brand",
+   "tags": [
+    "人事"
+   ],
+   "score": 6.5,
+   "id": "8c8de1d39e94af6b",
+   "no": 47
+  },
+  {
+   "title": "排队2小时，黄牛代排炒至150元？！又一美国炸鸡巨头排队“入华”抢生意",
+   "url": "http://www.canyin168.com/Article/xw/81360.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "后脚，74岁的“德州老炮”Church's Texas Chicken（中国叫“德克圣堂炸鸡”）在上海开出首店，哪怕下着雨，也依旧有顾客撑伞排队两个多小时，代排队黄牛炒到150元一单。",
+   "cat": "brand",
+   "tags": [
+    "开店",
+    "快餐"
+   ],
+   "score": 6.5,
+   "id": "24392d096a11795d",
+   "no": 48
+  },
+  {
+   "title": "5月28-29日 北京 特许加盟大会&生活服务业发展大会",
+   "url": "https://mp.weixin.qq.com/s/krrRP48U1qHSl6gO15ldYw",
+   "published": "",
+   "source": "中国连锁经营协会",
+   "source_id": "ccfa",
+   "summary": "2026年5月28日-29日，由中国连锁经营协会（CCFA）主办的“2026 CCFA 特许加盟大会&生活服务业发展大会”在京举行。",
+   "cat": "brand",
+   "tags": [
+    "加盟"
+   ],
+   "score": 6.25,
+   "id": "843e579c67040f73",
+   "no": 49
+  },
+  {
+   "title": "北京30年老餐企开首家 “板前卤煮” 店！地域美食正批量孕育黑马”？",
+   "url": "http://www.canyin168.com/Article/xw/81364.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "近日，30年北京老牌快餐品牌，被称为北京“南城之光”阳阳中国饭，开了首家板前“卤煮”专门店！",
+   "cat": "brand",
+   "tags": [
+    "快餐"
+   ],
+   "score": 5.1,
+   "id": "91d9f682f7bd03da",
+   "no": 50
+  },
+  {
+   "title": "共生共赢：餐饮界10周年峰会暨首届9.19品牌公关日圆满落幕",
+   "url": "https://www.canyinj.com/news/24678.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "9月19日，由餐饮界新媒体、上海博华、哈谷传媒联合主办的“餐饮界10周年峰会暨首届9.19品牌公关日”在深圳皇冠假日酒店（会展中心店）隆重举行。",
+   "cat": "brand",
+   "tags": [],
+   "score": 4.95,
+   "id": "704e0bacc115fd06",
+   "no": 51
+  },
+  {
+   "title": "共生共赢：餐饮界10周年峰会暨首届919品牌公关日",
+   "url": "https://www.canyinj.com/news/24528.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "9月19日，近500位行业嘉宾将齐聚深圳皇冠假日酒店(会展中心店)，共同见证“餐饮界10周年暨首届9.19品牌公关日”的隆重启幕。届时，这些品牌决策者将围绕一个个核心命题展开深度探讨：在充满不确定性的舆论环境下，餐饮品牌如何用公关构筑真正的护城河？",
+   "cat": "brand",
+   "tags": [],
+   "score": 4.95,
+   "id": "9dc672229af9fea2",
+   "no": 52
+  },
+  {
+   "title": "“辣得我灵魂出窍”！104亿次播放之后，江西菜如何从网红走向长红？",
+   "url": "http://www.canyin168.com/Article/xw/81359.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "“附近终于有江西菜了。”这条视频当晚被发到抖音，评论区涌进几百条留言，“看起来辣得我灵魂出窍”“江西人表示这是微辣”“这家店在哪？我要吃”……",
+   "cat": "brand",
+   "tags": [],
+   "score": 4.5,
+   "id": "61730bde9093b51f",
+   "no": 53
+  },
+  {
+   "title": "中国最大饺子馆，不想只卖水饺了！还卖15元/份现卤猪蹄、9.9元的茶咖",
+   "url": "http://www.canyin168.com/Article/xw/81369.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "价格也不算高。棒大骨9.9元/份、卤猪蹄15元/份，鲜肉烧麦14元/份，茶饮和咖啡多数在10元左右。",
+   "cat": "brand",
+   "tags": [
+    "价格战",
+    "咖啡",
+    "茶饮"
+   ],
+   "score": 4.5,
+   "id": "5f5fbcecdd174cfa",
+   "no": 54
+  },
+  {
+   "title": "全是预制品，一批冷冻面包店火了！贝果2.9元，有人单店月入60万.…..",
+   "url": "http://www.canyin168.com/Article/xw/81362.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "当现烤面包还在拼“刚出炉”，一批冷冻烘焙店却火了：宁波的早安咚咚开出10家店，上海的炉边皮皮已有5家，太仓的一焙一城也开到了6家……",
+   "cat": "brand",
+   "tags": [
+    "烘焙"
+   ],
+   "score": 4.5,
+   "id": "9e5955b8392a7821",
+   "no": 55
+  },
+  {
+   "title": "谭厨创始人谭子滔获评石岐乳鸽菜式烹饪技艺市级非遗传承人",
+   "url": "https://www.canyinj.com/news/24549.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "近日，谭厨中山菜创始人谭子滔正式获评中山市石岐乳鸽菜式烹饪技艺市级非物质文化遗产代表性传承人。",
+   "cat": "brand",
+   "tags": [
+    "人事"
+   ],
+   "score": 4.45,
+   "id": "574065d4e2516570",
+   "no": 56
+  },
+  {
+   "title": "单日出货2000根，“超长蛋挞风”究竟是怎么火起来的？",
+   "url": "https://www.foodaily.com/articles/42310",
+   "published": "",
+   "source": "Foodaily每日食品",
+   "source_id": "foodaily",
+   "summary": "部分烘焙门店“三个烤箱不停烤”，还得配合限购策略才能维持正常运营，单日出货量超过2000根。",
+   "cat": "brand",
+   "tags": [
+    "烘焙"
+   ],
+   "score": 4.4,
+   "id": "23e00ba8546ac77d",
+   "no": 57
+  },
+  {
+   "title": "奶茶店里卖现打啤酒，12元/杯！茶饮巨头为何都盯",
+   "url": "http://www.canyin168.com/Article/xw/81372.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "",
+   "cat": "brand",
+   "tags": [
+    "茶饮"
+   ],
+   "score": 3.7,
+   "id": "81418380f9080c91",
+   "no": 58
+  },
+  {
+   "title": "藏在4万家餐厅背后的“番茄大王”：向上卷，做难",
+   "url": "http://www.canyin168.com/Article/xw/81367.html",
+   "published": "",
+   "source": "红餐网",
+   "source_id": "hongcan",
+   "summary": "",
+   "cat": "brand",
+   "tags": [],
+   "score": 3.7,
+   "id": "0f5119d8700284ca",
+   "no": 59
+  },
+  {
+   "title": "9月18日至20日，长沙国际会展中心迎来了一场餐饮行业的活动盛宴。",
+   "url": "https://www.canyinj.com/news/24676.html",
+   "published": "",
+   "source": "餐饮界",
+   "source_id": "canyinj",
+   "summary": "9月18日至20日，长沙国际会展中心迎来了一场餐饮行业的活动盛宴。",
+   "cat": "brand",
+   "tags": [],
+   "score": 3.55,
+   "id": "d8e3ad76efae0153",
+   "no": 60
+  }
+ ],
+ "llm": false,
+ "issue": 1
+}
