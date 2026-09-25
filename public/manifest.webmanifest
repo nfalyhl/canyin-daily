@@ -1,0 +1,16 @@
+{
+  "name": "餐饮日报 · 行业情报",
+  "short_name": "餐饮日报",
+  "description": "每天一分钟，读完餐饮行业的产品上新、行业趋势与品牌动作。",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f2f3f1",
+  "theme_color": "#f2f3f1",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
