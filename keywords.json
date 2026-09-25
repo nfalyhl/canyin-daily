@@ -1,0 +1,142 @@
+{
+  "categories": {
+    "product": {
+      "label": "产品上新",
+      "short": "上新",
+      "hints": {
+        "上新": 3.5, "新品": 3.5, "首发": 3.5, "新推": 3, "首款": 3, "推出": 3,
+        "联名": 3, "限定": 2.5, "新口味": 3, "上市": 2, "回归": 2.5, "菜单": 2.5,
+        "上新季": 3, "开卖": 2.5, "发售": 2.5, "上线": 2, "换新": 2, "升级": 1.5,
+        "上架": 2.5, "新包装": 2.5, "全新产品": 3, "产品升级": 2.5,
+        "口味": 2, "配方": 1.5, "配料": 1.5, "包装": 1, "系列": 1, "爆品": 2,
+        "招牌": 1.5, "全新": 1.5, "试吃": 1, "尝鲜": 1.5,
+        "新品发布": 3, "新茶": 2, "新菜单": 3, "新店型": 1.5, "新品上市": 3,
+
+        "launch": 3, "launches": 3, "launched": 3, "new menu": 3.5, "new item": 3.5,
+        "limited-time": 3, "limited time": 3, "lto": 2, "unveil": 3, "unveils": 3,
+        "debut": 3, "debuts": 3, "introduces": 3, "rolls out": 3, "rolling out": 2.5,
+        "brings back": 3, "returns": 2, "adds": 2, "added to menu": 3.5,
+        "collaboration": 2.5, "collab": 2, "flavor": 2.5, "flavour": 2.5,
+        "menu revamp": 3, "chef": 1, "recipe": 1.5, "seasonal": 2.5
+      }
+    },
+    "trend": {
+      "label": "行业趋势",
+      "short": "趋势",
+      "hints": {
+        "趋势": 3, "报告": 3, "白皮书": 3, "洞察": 2.5, "数据": 2, "政策": 3,
+        "标准": 2, "规范": 2, "市场规模": 3, "增长": 2, "下滑": 2, "下降": 1.5,
+        "同比": 2, "环比": 1.5, "预测": 2, "榜单": 1.5, "供应链": 2, "预制菜": 2,
+        "食品安全": 3, "监管": 3, "健康化": 2.5, "下沉市场": 2.5, "即时零售": 2.5,
+        "价格战": 2.5, "内卷": 2, "解读": 1.5, "格局": 1.5, "现状": 1.5,
+        "观察": 1.5, "指数": 1.5, "赛道": 2, "消费趋势": 3, "行业报告": 3,
+        "市场调研": 2.5, "条例": 2, "办法": 2, "通知": 1.5, "意见": 1.5,
+        "协会": 1.5, "闭店率": 2.5, "翻台率": 2, "客单价": 2.5, "人效": 2,
+        "坪效": 2, "毛利率": 2, "降本": 2, "提效": 1.5, "数字化": 2,
+
+        "report": 3, "survey": 3, "data": 2, "trends": 3, "trend": 2.5,
+        "growth": 2, "decline": 2, "forecast": 2.5, "market": 2, "consumer": 2.5,
+        "insight": 2.5, "study": 2.5, "inflation": 2.5, "prices": 2, "pricing": 2,
+        "labor": 2.5, "wage": 2.5, "regulation": 2.5, "regulatory": 2.5,
+        "traffic": 2.5, "same-store": 2.5, "foot traffic": 2.5, "index": 2,
+        "sales": 1.5, "analysts": 2, "outlook": 2.5, "delivery": 1.5,
+        "supply chain": 2.5, "automation": 2, "ai": 1.5, "sustainability": 2,
+        "tariff": 2.5, "minimum wage": 2.5, "union": 2, "menu prices": 2.5
+      }
+    },
+    "brand": {
+      "label": "品牌动作",
+      "short": "品牌",
+      "hints": {
+        "融资": 3, "上市": 3, "IPO": 3, "递表": 3, "并购": 3, "收购": 3,
+        "财报": 3, "营收": 2.5, "净利": 2, "亏损": 2, "破产": 3, "退市": 2.5,
+        "开店": 2, "关店": 3, "闭店": 3, "撤出": 2.5, "扩张": 1.8, "出海": 3,
+        "战略": 2, "加盟": 2, "裁员": 2, "换帅": 3, "人事": 1, "官宣": 1,
+        "首店": 2, "落子": 2, "更名": 1.5, "布局": 1, "投资": 1.5, "签约": 1,
+        "合作": 1.0, "进驻": 2, "加注": 2, "退潮": 2.5, "创始人": 1.6, "董事长": 1.6,
+        "CEO": 1.6, "估值": 2, "门店数": 2, "万店": 2.5, "集团": 0.6, "品牌": 0.6,
+        "暂停": 1.5, "停业": 2.5, "转让": 2, "卸任": 2.5, "接任": 2.5, "任命": 2,
+
+        "acquisition": 3, "acquires": 3, "acquire": 3, "merger": 3, "deal": 1.5,
+        "raises": 2.5, "funding": 2.5, "investment": 2, "invests": 2,
+        "earnings": 3, "revenue": 2.5, "profit": 2, "loss": 2, "bankruptcy": 3,
+        "bankrupt": 3, "chapter 11": 3, "closes": 3, "closing": 3, "shutters": 3,
+        "lays off": 3, "layoffs": 3, "ceo": 2, "cfo": 2, "appoints": 2.5,
+        "steps down": 2.5, "resigns": 2.5, "expansion": 2, "expands": 2,
+        "opens": 2, "opening": 2, "franchise": 2, "franchisees": 2,
+        "partnership": 1.5, "partners": 1.2, "rebrand": 2, "ipo": 3,
+        "valuation": 2, "stake": 2, "files for": 2.5, "goes public": 2.5,
+        "store closures": 3, "cutting": 1.5, "headquarters": 1
+      }
+    }
+  },
+  "restaurant_terms": [
+    "餐饮", "餐厅", "餐馆", "饭店", "门店", "堂食", "外卖", "茶饮", "奶茶",
+    "咖啡", "火锅", "烧烤", "烘焙", "面包", "预制菜", "食材", "供应链", "连锁",
+    "快餐", "小吃", "酒馆", "餐企", "厨", "菜品", "菜单", "套餐", "团餐", "加盟",
+    "卤味", "米线", "面馆", "粉面", "炸鸡", "汉堡", "披萨", "自助餐", "饮品",
+    "调味", "零食", "白酒", "啤酒", "乳品", "酱油", "食品", "饮料", "餐饮品牌",
+    "轻食", "糖水", "美食", "生菜", "生鲜", "中央厨房", "冷链", "速冻", "冻品",
+    "现制", "现炒", "中餐", "西餐", "日料", "韩餐", "湘菜", "川菜", "粤菜",
+    "融合菜", "食客", "客单价", "翻台", "连锁店", "门店数", "万店",
+
+    "restaurant", "restaurants", "foodservice", "food service", "qsr",
+    "quick service", "fast food", "fast-casual", "fast casual", "cafe", "coffee",
+    "coffeehouse", "pizza", "burger", "burgers", "taco", "chicken", "sandwich",
+    "diner", "dining", "menu", "chains", "chain", "franchise", "eatery",
+    "catering", "grocery", "food", "beverage", "cuisine", "kitchen", "bar",
+    "brewery", "bakery", "ice cream", "snack", "delivery", "drive-thru"
+  ],
+  "exclude_title": [
+    "招聘", "诚聘", "招标", "中标公告", "更正", "讣告", "免责声明", "版权声明",
+    "怎么样", "好不好", "多少钱", "加盟费", "靠谱吗", "口碑如何", "是正规",
+    "有前景吗", "值得加盟", "几线城市", "如何加盟", "是谁", "什么档次",
+    "好喝吗", "好吃吗", "品类多吗", "好做吗", "值得做吗", "费用多少",
+    "考察热门品牌", "品牌介绍", "需要投资", "利润如何", "回本周期",
+    "horoscopes", "coupon codes", "promo code", "best deals today"
+  ],
+  "tags": {
+    "联名": ["联名", "IP合作", "跨界", "collaboration", "collab"],
+    "出海": ["出海", "海外", "国际化", "东南亚", "中餐出海", "international expansion",
+             "overseas", "global expansion", "enters"],
+    "关店": ["关店", "闭店", "停业", "撤出", "退潮", "收缩", "closes", "closing",
+             "shutters", "store closures", "layoffs", "bankruptcy"],
+    "开店": ["开店", "首店", "落子", "进驻", "扩张", "新店", "opens", "opening",
+             "expansion", "new location", "debut store"],
+    "资本": ["融资", "IPO", "上市", "递表", "并购", "收购", "估值", "战略投资",
+             "acquisition", "acquires", "raises", "funding", "ipo", "merger", "valuation"],
+    "财报": ["财报", "营收", "净利", "业绩", "亏损", "利润", "同店", "earnings",
+             "revenue", "profit", "same-store", "comparable sales"],
+    "加盟": ["加盟", "合伙人", "联营", "franchise", "franchisee"],
+    "价格战": ["价格战", "9.9", "降价", "补贴", "性价比", "低价", "price war",
+               "discount", "value menu", "price cuts"],
+    "预制菜": ["预制菜", "中央厨房", "速冻", "冻品", "半成品", "prepared food",
+               "frozen", "ready meal"],
+    "健康化": ["健康", "减盐", "低糖", "零糖", "无添加", "营养", "轻食", "healthy",
+               "low-sugar", "sodium", "clean label", "protein"],
+    "下沉市场": ["下沉", "县域", "乡镇", "三四线", "small-town", "rural"],
+    "即时零售": ["即时零售", "闪购", "外卖平台", "前置仓", "delivery", "third-party delivery",
+                 "ghost kitchen", "dark kitchen"],
+    "食品安全": ["食品安全", "食安", "抽检", "监管", "处罚", "过期", "food safety",
+                 "recall", "outbreak", "inspection", "listeria", "e. coli"],
+    "数字化": ["数字化", "AI", "智能", "系统", "小程序", "会员运营", "私域",
+               "digital", "ai-powered", "loyalty", "app", "self-order", "kiosk"],
+    "咖啡": ["咖啡", "咖啡店", "coffee", "espresso", "latte"],
+    "茶饮": ["茶饮", "奶茶", "bubble tea", "tea shop", "milk tea"],
+    "火锅": ["火锅", "锅底", "串串", "hot pot", "hotpot"],
+    "烘焙": ["烘焙", "面包", "蛋糕", "bakery", "bread", "pastry", "donut"],
+    "快餐": ["快餐", "汉堡", "炸鸡", "披萨", "fast food", "burger", "chicken",
+             "pizza", "sandwich", "taco"],
+    "供应链": ["供应链", "食材", "采购", "冷链", "物流", "牧场", "工厂",
+               "supply chain", "distribution", "logistics", "warehouse"],
+    "人事": ["换帅", "任免", "离职", "卸任", "接任", "任命", "创始人", "CEO",
+             "高管", "总经理", "总裁", "appoints", "steps down", "resigns", "names new"],
+    "政策": ["政策", "通知", "办法", "条例", "标准", "监管", "意见", "规范",
+             "regulation", "fda", "usda", "labor law", "minimum wage", "tariff"],
+    "劳工": ["用工", "人力", "时薪", "最低工资", "招工", "labor", "wage",
+             "staffing", "union", "turnover"],
+    "外卖": ["外卖", "配送", "外卖平台", "delivery", "doordash", "uber eats",
+             "grubhub", "driver"]
+  },
+  "brief_min_items": 5
+}
