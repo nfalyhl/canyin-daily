@@ -1,0 +1,119 @@
+name: iOS TestFlight
+
+# 手动触发，或 ios/ 目录有改动时自动跑。
+# 运行前需要在仓库 Settings → Secrets and variables → Actions 里配置 4 个 Secret：
+#   ASC_KEY_ID     App Store Connect API Key 的 Key ID
+#   ASC_ISSUER_ID  Issuer ID
+#   ASC_KEY_P8     .p8 私钥文件的全部内容（含 BEGIN/END 行）
+#   APPLE_TEAM_ID  开发者账号的 Team ID（10 位）
+on:
+  workflow_dispatch:
+    inputs:
+      marketing_version:
+        description: "版本号（如 1.0.0）"
+        required: false
+        default: "1.0.0"
+  push:
+    branches: [main, master]
+    paths:
+      - "ios/**"
+      - "public/offline.html"
+      - ".github/workflows/ios-testflight.yml"
+
+jobs:
+  testflight:
+    runs-on: macos-15
+    timeout-minutes: 40
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 准备内置页面
+        run: |
+          if [ ! -f public/offline.html ]; then
+            echo "::error::缺少 public/offline.html，请先在本地运行 python daily.py 并提交"
+            exit 1
+          fi
+          mkdir -p ios/CanyinDaily/www
+          cp public/offline.html ios/CanyinDaily/www/index.html
+          ls -lh ios/CanyinDaily/www/
+
+      - name: 安装 XcodeGen
+        run: brew install xcodegen
+
+      - name: 生成 Xcode 工程
+        working-directory: ios
+        run: |
+          xcodegen generate
+          xcodebuild -list -project CanyinDaily.xcodeproj
+
+      - name: 写入 App Store Connect API Key
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          mkdir -p ~/private_keys
+          printf '%s' "$ASC_KEY_P8" > ~/private_keys/AuthKey_${ASC_KEY_ID}.p8
+          ls -l ~/private_keys/
+
+      - name: 归档（自动处理签名）
+        working-directory: ios
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          xcodebuild archive \
+            -project CanyinDaily.xcodeproj \
+            -scheme CanyinDaily \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath build/CanyinDaily.xcarchive \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath ~/private_keys/AuthKey_${ASC_KEY_ID}.p8 \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            MARKETING_VERSION="${{ github.event.inputs.marketing_version || '1.0.0' }}" \
+            CURRENT_PROJECT_VERSION="${{ github.run_number }}"
+
+      - name: 导出并上传到 TestFlight
+        working-directory: ios
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: |
+          cat > ExportOptions.plist <<PLIST
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key>
+            <string>app-store-connect</string>
+            <key>destination</key>
+            <string>upload</string>
+            <key>signingStyle</key>
+            <string>automatic</string>
+            <key>teamID</key>
+            <string>${APPLE_TEAM_ID}</string>
+            <key>uploadSymbols</key>
+            <true/>
+          </dict>
+          </plist>
+          PLIST
+          cat ExportOptions.plist
+          xcodebuild -exportArchive \
+            -archivePath build/CanyinDaily.xcarchive \
+            -exportOptionsPlist ExportOptions.plist \
+            -exportPath build/ipa \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath ~/private_keys/AuthKey_${ASC_KEY_ID}.p8 \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID"
+
+      - name: 备份 ipa（若有本地产物）
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: CanyinDaily-ipa
+          path: ios/build/ipa/**
+          if-no-files-found: ignore
