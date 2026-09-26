@@ -55,6 +55,10 @@ COOKIE = "canyin_session"
 SESSION_DAYS = 30
 TZ_OFFSET = timedelta(hours=8)
 
+# 设备名额：每个账号最多几台设备同时在线（超出要踢掉一台才能再登）
+MAX_DEVICES = 3
+DEVICE_TTL_DAYS = 30          # 超过这么多天没上线的设备自动释放名额
+
 # 登录失败限流：连续错 6 次锁 3 分钟
 LOGIN_FAILS: dict = {}
 LOGIN_LOCK = threading.Lock()
@@ -118,6 +122,128 @@ def check_password(username: str, password: str) -> bool:
     return False
 
 
+# --------------------------------------------------------------------------
+# 设备名额（每个账号最多 MAX_DEVICES 台）
+# --------------------------------------------------------------------------
+DEVICES_FILE = CONFIG / "devices.json"
+DEV_LOCK = threading.Lock()
+
+
+def _now_ts() -> int:
+    return int(time.time())
+
+
+def load_devices() -> dict:
+    return load_json(DEVICES_FILE, {}) or {}
+
+
+def save_devices(doc: dict) -> None:
+    save_json(DEVICES_FILE, doc)
+
+
+def _prune_devices(doc: dict, user: str) -> bool:
+    """丢掉太久没上线的设备，释放名额。"""
+    changed = False
+    cutoff = _now_ts() - DEVICE_TTL_DAYS * 86400
+    devs = doc.get(user) or {}
+    for did in list(devs):
+        if int(devs[did].get("last") or 0) < cutoff:
+            devs.pop(did, None)
+            changed = True
+    if devs:
+        doc[user] = devs
+    elif user in doc:
+        doc.pop(user, None)
+        changed = True
+    return changed
+
+
+def _device_list(devs: dict) -> list:
+    out = [dict(v, id=k) for k, v in devs.items()]
+    out.sort(key=lambda d: int(d.get("last") or 0), reverse=True)
+    return out
+
+
+def list_devices(user: str) -> list:
+    with DEV_LOCK:
+        doc = load_devices()
+        if _prune_devices(doc, user):
+            save_devices(doc)
+        devs = dict(doc.get(user) or {})
+    return _device_list(devs)
+
+
+def register_device(user: str, device_id: str, name: str, ua: str, ip: str,
+                    kick: str = "") -> dict:
+    """登记 / 更新设备。名额满了且没指定要踢的设备时，返回 device_limit + 设备列表。"""
+    device_id = device_id or ("legacy-" + hashlib.sha1(
+        (ip + ua).encode("utf-8")).hexdigest()[:12])
+    with DEV_LOCK:
+        doc = load_devices()
+        _prune_devices(doc, user)
+        devs = dict(doc.get(user) or {})
+        cur = devs.get(device_id)
+        if not cur and len(devs) >= MAX_DEVICES:
+            if not kick:
+                return {"ok": False, "code": "device_limit", "devices": _device_list(devs)}
+            if kick not in devs:
+                return {"ok": False, "code": "bad_kick", "devices": _device_list(devs)}
+            devs.pop(kick, None)
+        now = _now_ts()
+        rec = dict(cur or {"id": device_id, "first": now})
+        rec.update({"name": (name or "未知设备")[:60], "ua": ua[:160],
+                    "ip": ip, "last": now})
+        devs[device_id] = rec
+        doc[user] = devs
+        save_devices(doc)
+        return {"ok": True, "device_id": device_id, "devices": _device_list(devs)}
+
+
+def touch_device(user: str, device_id: str) -> bool:
+    """心跳：设备还在（没被踢掉、没过期）返回 True。"""
+    with DEV_LOCK:
+        doc = load_devices()
+        pruned = _prune_devices(doc, user)
+        devs = dict(doc.get(user) or {})
+        rec = devs.get(device_id)
+        if not rec:
+            if pruned:
+                save_devices(doc)
+            return False
+        now = _now_ts()
+        if now - int(rec.get("last") or 0) > 600:
+            rec = dict(rec, last=now)
+            devs[device_id] = rec
+            doc[user] = devs
+            save_devices(doc)
+    return True
+
+
+def drop_device(user: str, device_id: str) -> None:
+    with DEV_LOCK:
+        doc = load_devices()
+        devs = dict(doc.get(user) or {})
+        if device_id in devs:
+            devs.pop(device_id, None)
+            if devs:
+                doc[user] = devs
+            else:
+                doc.pop(user, None)
+            save_devices(doc)
+
+
+def public_devices(user: str, current_id: str = "") -> list:
+    return [{
+        "id": d.get("id"),
+        "name": d.get("name") or "未知设备",
+        "ip": d.get("ip", ""),
+        "first": fmt_ts(d.get("first")),
+        "last": fmt_ts(d.get("last")),
+        "lastTs": int(d.get("last") or 0),
+        "current": d.get("id") == current_id,
+    } for d in list_devices(user)]
+
+
 def server_secret() -> bytes:
     if SECRET_FILE.exists():
         try:
@@ -134,15 +260,26 @@ def server_secret() -> bytes:
     return key
 
 
-def make_token(username: str) -> str:
+def fmt_ts(ts) -> str:
+    try:
+        return (datetime.utcfromtimestamp(int(ts)) + TZ_OFFSET).strftime("%Y-%m-%d %H:%M")
+    except Exception:
+        return ""
+
+
+def make_token(username: str, device_id: str = "") -> str:
     exp = int(time.time()) + SESSION_DAYS * 86400
-    raw = f"{username}|{exp}".encode("utf-8")
+    raw = f"{username}|{device_id}|{exp}".encode("utf-8")
     body = base64.urlsafe_b64encode(raw).decode().rstrip("=")
     sig = hmac.new(server_secret(), body.encode(), hashlib.sha256).hexdigest()[:32]
     return f"{body}.{sig}"
 
 
 def verify_token(token: str):
+    """校验 Cookie 签名，返回 (username, device_id, legacy)；失败返回 None。
+
+    legacy=True 表示是旧格式 Cookie（没有设备号），调用方会自动给它补一个设备身份。
+    """
     if not token or "." not in token:
         return None
     body, _, sig = token.rpartition(".")
@@ -152,10 +289,18 @@ def verify_token(token: str):
     try:
         pad = "=" * (-len(body) % 4)
         raw = base64.urlsafe_b64decode(body + pad).decode("utf-8")
-        username, exp = raw.rsplit("|", 1)
+        parts = raw.rsplit("|", 2)
+        if len(parts) == 3:
+            username, device_id, exp = parts
+            legacy = False
+        elif len(parts) == 2:            # 兼容升级前的旧 Cookie
+            username, exp = parts
+            device_id, legacy = "", True
+        else:
+            return None
         if int(exp) < time.time():
             return None
-        return username
+        return username, device_id, legacy
     except Exception:
         return None
 
@@ -343,8 +488,28 @@ class Handler(SimpleHTTPRequestHandler):
                 return v
         return ""
 
+    def current_session(self):
+        """返回 {"user":…, "device_id":…}；Cookie 无效或设备被踢掉则返回 None。"""
+        got = verify_token(self._token())
+        if not got:
+            return None
+        username, device_id, legacy = got
+        if legacy or not device_id:
+            # 升级前的旧 Cookie：按 浏览器+IP 补一个设备身份，名额满了就得重新登录
+            ua = self.headers.get("User-Agent") or ""
+            ip = self._client_ip()
+            device_id = "legacy-" + hashlib.sha1((ip + ua).encode("utf-8")).hexdigest()[:12]
+            if not touch_device(username, device_id):
+                res = register_device(username, device_id, "旧会话", ua, ip)
+                if not res.get("ok"):
+                    return None
+        if not touch_device(username, device_id):
+            return None
+        return {"user": username, "device_id": device_id}
+
     def current_user(self):
-        return verify_token(self._token())
+        s = self.current_session()
+        return s["user"] if s else None
 
     def _redirect(self, to: str):
         self.send_response(302)
@@ -365,8 +530,19 @@ class Handler(SimpleHTTPRequestHandler):
         if path.startswith("/api/"):
             user = self.current_user()
             if path == "/api/session":
-                return self._json({"logged_in": bool(user), "user": user or "",
-                                   "offsets": self._collect_state(False)})
+                sess = self.current_session()
+                did = (sess or {}).get("device_id", "")
+                return self._json({
+                    "ok": bool(sess), "logged_in": bool(sess), "user": (sess or {}).get("user", ""),
+                    "device_id": did, "max_devices": MAX_DEVICES,
+                    "devices": public_devices(user, did) if user else [],
+                    "offsets": self._collect_state(False)})
+            if path == "/api/devices":
+                sess = self.current_session()
+                did = (sess or {}).get("device_id", "")
+                return self._json({"ok": True, "user": user, "device_id": did,
+                                   "max_devices": MAX_DEVICES,
+                                   "devices": public_devices(user, did)})
             if not user:
                 return self._json({"error": "未登录"}, 401)
 
@@ -405,8 +581,23 @@ class Handler(SimpleHTTPRequestHandler):
             return self._json({"error": "未登录"}, 401)
 
         if path == "/api/logout":
+            sess = self.current_session()
+            if sess and sess.get("device_id"):
+                drop_device(sess["user"], sess["device_id"])   # 退出即释放名额
             cookie = f"{COOKIE}=; Path=/; Max-Age=0; HttpOnly; SameSite=Lax"
             return self._json({"ok": True}, cookie=cookie)
+
+        if path == "/api/devices/kick":
+            sess = self.current_session()
+            target = str(body.get("deviceId") or "").strip()
+            if not target:
+                return self._json({"ok": False, "error": "没指定要下线的设备"}, 400)
+            if target == sess.get("device_id"):
+                return self._json({"ok": False, "error": "不能下线当前正在使用的这台设备"}, 400)
+            drop_device(user, target)
+            return self._json({"ok": True, "user": user, "device_id": sess.get("device_id", ""),
+                               "max_devices": MAX_DEVICES,
+                               "devices": public_devices(user, sess.get("device_id", ""))})
 
         if path == "/api/settings":
             doc = load_settings()
@@ -525,10 +716,30 @@ class Handler(SimpleHTTPRequestHandler):
         if check_password(username, password):
             with LOGIN_LOCK:
                 LOGIN_FAILS.pop(ip, None)
-            cookie = (f"{COOKIE}={make_token(username)}; Path=/; Max-Age={SESSION_DAYS * 86400}; "
+            device_id = str(body.get("deviceId") or "").strip()
+            device_name = str(body.get("deviceName") or "").strip()[:60]
+            kick = str(body.get("kick") or "").strip()
+            ua = self.headers.get("User-Agent") or ""
+            res = register_device(username, device_id, device_name, ua, ip, kick)
+            if not res.get("ok"):
+                if res.get("code") == "device_limit":
+                    n = len(res.get("devices") or [])
+                    print(f"  ✗ 设备名额已满：{username}（{n}/{MAX_DEVICES}，{ip}）")
+                    return self._json({
+                        "ok": False, "code": "device_limit",
+                        "error": f"这个账号已经在 {n} 台设备上登录（上限 {MAX_DEVICES} 台）",
+                        "maxDevices": MAX_DEVICES,
+                        "devices": public_devices(username, device_id),
+                    }, 403)
+                return self._json({"ok": False, "code": res.get("code"),
+                                   "error": "要下线的设备不存在，请刷新后重试"}, 400)
+            did = res.get("device_id", "")
+            cookie = (f"{COOKIE}={make_token(username, did)}; Path=/; Max-Age={SESSION_DAYS * 86400}; "
                       f"HttpOnly; SameSite=Lax")
-            print(f"  ✓ 登录成功：{username}（{ip}）")
-            return self._json({"ok": True, "user": username}, cookie=cookie)
+            print(f"  ✓ 登录成功：{username}（{ip}，设备 {did[:8]}）")
+            return self._json({"ok": True, "user": username, "deviceId": did,
+                               "maxDevices": MAX_DEVICES,
+                               "devices": public_devices(username, did)}, cookie=cookie)
 
         with LOGIN_LOCK:
             rec = LOGIN_FAILS.get(ip) or {"fails": 0, "until": 0}
