@@ -48,6 +48,16 @@
   }
   button:disabled { opacity: .6; cursor: default; }
   .err { margin: 14px 0 0; font-size: 12.5px; color: var(--c-product); min-height: 18px; }
+  .limit { margin-top: 16px; border-top: 1px dashed var(--line); padding-top: 14px; }
+  .limit[hidden] { display: none; }
+  .limit__hint { margin: 0 0 10px; font-size: 12px; color: var(--ink-2); line-height: 1.7; }
+  .limit__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+  .limit__item { display: flex; align-items: center; gap: 10px; padding: 9px 11px;
+    background: var(--bg); border: 1px solid var(--line-2); border-radius: 6px; }
+  .limit__item div { flex: 1; min-width: 0; }
+  .limit__item b { display: block; font-size: 13px; }
+  .limit__item span { font-size: 11px; color: var(--ink-3); }
+  .limit__item button { width: auto; margin: 0; padding: 6px 10px; font-size: 12px; font-weight: 600; }
   .foot { margin: 18px 0 0; font-size: 11.5px; color: var(--ink-3); line-height: 1.7; }
 </style>
 </head>
@@ -67,6 +77,11 @@
 
   <button type="submit" id="btn">登录</button>
   <p class="err" id="err" role="alert"></p>
+  <div class="limit" id="limit" hidden>
+    <p class="limit__hint">该账号的设备名额已满（上限 <b id="limitMax">3</b> 台）。
+      选一台下线，就能在本机登录：</p>
+    <ul class="limit__list" id="limitList"></ul>
+  </div>
   <p class="foot">没有账号请让管理员执行
     <span style="font-family:var(--mono)">python tools\setup_users.py --add 用户名 密码</span> 添加。</p>
 </form>
@@ -80,6 +95,33 @@
   var form = document.getElementById('form');
   var err = document.getElementById('err');
   var btn = document.getElementById('btn');
+  var limitBox = document.getElementById('limit');
+  var limitList = document.getElementById('limitList');
+  var DEV_KEY = 'canyin-device-id';
+
+  // 设备身份：和 auth.js 用同一个 localStorage 键，保证前后台认的是同一台设备
+  function deviceId() {
+    var id = '';
+    try { id = localStorage.getItem(DEV_KEY) || ''; } catch (e) {}
+    if (!id || id.length < 6) {
+      try {
+        id = (window.crypto && crypto.randomUUID) ? crypto.randomUUID()
+          : 'dev-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+        localStorage.setItem(DEV_KEY, id);
+      } catch (e) {}
+    }
+    return id;
+  }
+
+  function deviceName() {
+    var ua = navigator.userAgent || '';
+    var os = /Windows/.test(ua) ? 'Windows' : /iPhone|iPad|iPod/.test(ua) ? 'iPhone/iPad'
+      : /Android/.test(ua) ? 'Android' : /Macintosh/.test(ua) ? 'macOS'
+      : /Linux/.test(ua) ? 'Linux' : '未知系统';
+    var br = /Edg\//.test(ua) ? 'Edge' : /OPR\//.test(ua) ? 'Opera' : /Chrome\//.test(ua) ? 'Chrome'
+      : /Firefox\//.test(ua) ? 'Firefox' : /Safari\//.test(ua) ? 'Safari' : '浏览器';
+    return os + ' · ' + br;
+  }
 
   // 已经登录过就直接进主页
   fetch('/api/session', { cache: 'no-store' })
@@ -87,8 +129,20 @@
     .then(function (s) { if (s && s.logged_in) location.replace('/index.html'); })
     .catch(function () {});
 
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
+  function renderLimit(devices) {
+    if (!devices || !devices.length) { limitBox.hidden = true; return; }
+    limitBox.hidden = false;
+    limitList.innerHTML = devices.map(function (d) {
+      return '<li class="limit__item"><div><b>' + d.name + '</b>' +
+        '<span>' + (d.last || '') + (d.ip ? ' · ' + d.ip : '') + '</span></div>' +
+        '<button type="button" class="b" data-kick="' + d.id + '">下线并登录</button></li>';
+    }).join('');
+    Array.prototype.forEach.call(limitList.querySelectorAll('[data-kick]'), function (b) {
+      b.addEventListener('click', function () { submit(b.getAttribute('data-kick')); });
+    });
+  }
+
+  async function submit(kick) {
     err.textContent = '';
     btn.disabled = true;
     btn.textContent = '登录中…';
@@ -98,10 +152,18 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           username: document.getElementById('u').value.trim(),
-          password: document.getElementById('p').value
+          password: document.getElementById('p').value,
+          deviceId: deviceId(),
+          deviceName: deviceName(),
+          kick: kick || undefined
         })
       });
       var data = await r.json();
+      if (data && data.code === 'device_limit') {
+        document.getElementById('limitMax').textContent = data.maxDevices || 3;
+        renderLimit(data.devices);
+        throw new Error(data.error || '设备名额已满');
+      }
       if (!r.ok || !data.ok) throw new Error(data.error || ('HTTP ' + r.status));
       btn.textContent = '登录成功，正在进入…';
       location.replace('/index.html');
@@ -110,6 +172,11 @@
       btn.disabled = false;
       btn.textContent = '登录';
     }
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    submit(null);
   });
 })();
 </script>
