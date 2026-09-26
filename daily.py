@@ -1268,8 +1268,10 @@ def render_index_html(digest: dict, offline_days: int = 14) -> None:
                           separators=(",", ":")).replace("</", "<\\/")
 
     # 联网版：数据分隔开放，页面自己向 data/ 目录取往期
+    auth_json = dump(load_json(PUBLIC / "auth-config.json", {}) or {})
     out = tpl.replace("/*__BOOT_DATA__*/null", dump(digest))
     out = out.replace("/*__BOOT_ARCHIVE__*/null", "null")
+    out = out.replace("/*__AUTH_CONFIG__*/null", auth_json)
     (PUBLIC / "index.html").write_text(out, encoding="utf-8")
 
     # 单文件版：把最近几天的数据全部内联，离线也能翻往期，供 App / 微信传输用
@@ -1284,10 +1286,15 @@ def render_index_html(digest: dict, offline_days: int = 14) -> None:
 
     single = tpl.replace("/*__BOOT_DATA__*/null", dump(digest))
     single = single.replace("/*__BOOT_ARCHIVE__*/null", dump(archive))
+    single = single.replace("/*__AUTH_CONFIG__*/null", auth_json)
     css = (PUBLIC / "style.css").read_text(encoding="utf-8")
     js = (PUBLIC / "app.js").read_text(encoding="utf-8")
+    auth_file = PUBLIC / "auth.js"
+    auth_js = auth_file.read_text(encoding="utf-8") if auth_file.exists() else ""
     single = single.replace('<link rel="stylesheet" href="style.css">',
                             "<style>\n" + css + "\n</style>")
+    single = single.replace('<script src="auth.js"></script>',
+                            "<script>\n" + auth_js + "\n</script>")
     single = single.replace('<script src="app.js"></script>',
                             "<script>\n" + js + "\n</script>")
     for tag in ('<link rel="manifest" href="manifest.webmanifest">',
