@@ -51,11 +51,27 @@ SECRET_PATTERNS = [
 
 
 def token() -> str:
+    """取 GitHub 凭据：优先环境变量，其次用 git 已保存的凭据（不需要你手动填）。"""
     t = (os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or "").strip()
-    if not t:
-        print("缺少 GITHUB_TOKEN 环境变量。先生成 Token：https://github.com/settings/tokens")
-        sys.exit(1)
-    return t
+    if t:
+        return t
+    try:
+        import subprocess
+        p = subprocess.run(["git", "credential", "fill"],
+                           input="protocol=https\nhost=github.com\n\n",
+                           capture_output=True, text=True, timeout=20)
+        for line in (p.stdout or "").splitlines():
+            if line.startswith("password="):
+                t = line.split("=", 1)[1].strip()
+                if t:
+                    print("（使用 git 里已保存的 GitHub 凭据）")
+                    return t
+    except Exception:
+        pass
+    print("没有找到 GitHub 凭据。两种办法：")
+    print("  1. 设置环境变量：$env:GITHUB_TOKEN = 'ghp_xxx'")
+    print("  2. 或者让 git 记住一次：git config --global credential.helper manager")
+    sys.exit(1)
 
 
 def api(method, path, payload=None, raw=None, ctype="application/json", tries=3):
