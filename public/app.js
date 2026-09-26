@@ -741,6 +741,9 @@
 
   /* --------------------------------------------------- 登录状态 / 退出 --- */
   async function initSession() {
+    // auth.js 存在时由它接管（静态站点登录门禁 / 本机服务器的账号与设备名额）
+    var A = window.CanyinAuth;
+    if (A && A.enabled) return;
     if (!HAS_API) {
       var w0 = $('#whoami');
       if (w0) {
