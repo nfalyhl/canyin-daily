@@ -8,6 +8,7 @@
     .\run-daily.ps1 -UseLlm                           # 启用大模型润色要点（需先设 API Key）
     .\run-daily.ps1 -Translate "zh,ja"                # 翻译成多种语言
     .\run-daily.ps1 -NoTranslate                      # 不翻译，只采集
+    .\run-daily.ps1 -Publish                          # 采集完顺便发到 GitHub Pages
     .\run-daily.ps1 -Fast                             # 只跑列表，不抓正文（约 8 秒）
 #>
 param(
@@ -16,7 +17,8 @@ param(
     [string]$Translate = "zh",
     [switch]$NoTranslate,
     [switch]$UseLlm,
-    [switch]$Fast
+    [switch]$Fast,
+    [switch]$Publish
 )
 
 $ErrorActionPreference = "Stop"
@@ -47,3 +49,13 @@ Write-Output $output
 
 # 采集失败时返回非 0，便于计划任务里排查
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+# 可选：把页面发到 GitHub Pages（需要 GITHUB_TOKEN 环境变量）
+if ($Publish) {
+    if (-not $env:GITHUB_TOKEN) {
+        Write-Host "跳过发布：没设 GITHUB_TOKEN" -ForegroundColor Yellow
+    } else {
+        Write-Host ""
+        & python "tools\publish_site.py"
+    }
+}
