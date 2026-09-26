@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>餐饮日报 · 每日餐饮行业情报</title>
+<meta name="description" content="内网 / 外网双板块的餐饮行业日报：产品上新、行业趋势、品牌动作 + 品类市场格局。">
+<meta name="theme-color" content="#eef0ee">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="餐饮日报">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__strip"></div>
+  <div class="topbar__inner">
+    <div class="brand">
+      <span class="brand__cn">餐饮日报</span>
+      <span class="brand__en">DAILY&nbsp;PASS</span>
+    </div>
+
+    <!-- 两个大板块 -->
+    <nav class="sections" id="sectionNav" aria-label="板块切换"></nav>
+
+    <div class="topbar__meta">
+      <span id="dateLine">—</span><i></i>
+      <span id="issueNo" class="mono">—</span><i></i>
+      <span id="genLine" class="mono">—</span>
+    </div>
+
+    <div class="topbar__tools">
+      <span class="who" id="whoami" hidden></span>
+      <button type="button" class="btn" id="syncBtn" hidden>同步</button>
+      <button type="button" class="btn solid" id="copyBtn">复制要点</button>
+      <button type="button" class="btn" id="archiveBtn">往期</button>
+      <button type="button" class="btn" id="shiftBtn">夜班</button>
+      <button type="button" class="btn" id="logoutBtn" hidden>退出</button>
+    </div>
+  </div>
+</header>
+
+<main class="shell">
+
+  <div class="langbar" id="langBar" hidden>
+    <span class="langbar__label">外网译文</span>
+    <div class="langbar__chips" id="langChips"></div>
+    <span class="langbar__status" id="langStatus"></span>
+    <button type="button" class="btn solid" id="langGo" hidden>翻译本期</button>
+  </div>
+
+  <section class="brief">
+    <div class="brief__bar">
+      <span class="sec" id="briefTitle" style="margin:0">今日要点</span>
+      <span class="brief__note" id="briefNote"></span>
+      <span class="brief__note" id="copyHint" role="status" style="margin-left:12px"></span>
+    </div>
+    <ol class="brief__grid" id="briefList"></ol>
+  </section>
+
+  <div class="cols">
+
+    <aside class="side">
+      <div class="side__block" id="nodeBlock" hidden>
+        <span class="sec">外网节点 <span class="panel__hint" id="nodeState">未设置</span></span>
+        <input id="nodeInput" class="node-input" type="text" spellcheck="false"
+               placeholder="http://127.0.0.1:7897">
+        <div class="node-actions">
+          <button type="button" class="btn solid" id="nodeSave">保存</button>
+          <button type="button" class="btn" id="nodeTest">测试</button>
+        </div>
+        <button type="button" class="btn wide" id="collectBtn">用该节点重新采集</button>
+        <div class="node-log" id="nodeLog" hidden></div>
+        <p class="formula">只有标记 <span class="mono">needs_proxy</span> 的海外源
+          （QSR / Retail Dive / Restaurant Hospitality）走这个节点，其余外网源直连，
+          所以不填节点也能用。</p>
+      </div>
+
+      <div class="side__block" id="trBlock" hidden>
+        <span class="sec">翻译服务 <span class="panel__hint" id="trState"></span></span>
+        <div class="tr-row">
+          <label class="tr-radio"><input type="radio" name="provider" value="mymemory">
+            免费接口（无需 Key）</label>
+          <label class="tr-radio"><input type="radio" name="provider" value="llm">
+            大模型（质量更好，需 Key）</label>
+        </div>
+        <div id="trLlmBox" hidden>
+          <input id="trKey" class="node-input" type="password" spellcheck="false"
+                 placeholder="API Key（留空 = 不修改已保存的）">
+          <button type="button" class="linkbtn" id="trClearKey">清除已保存的 Key</button>
+          <input id="trBase" class="node-input mt6" type="text" spellcheck="false"
+                 placeholder="https://api.deepseek.com/v1">
+          <input id="trModel" class="node-input mt6" type="text" spellcheck="false"
+                 list="modelList" placeholder="deepseek-v4-flash">
+          <datalist id="modelList"></datalist>
+          <button type="button" class="linkbtn" id="trModels">拉取可用模型列表</button>
+        </div>
+        <div class="tr-row mt6">
+          <label class="tr-radio"><input type="radio" name="scope" value="all">
+            标题 + 要点</label>
+          <label class="tr-radio"><input type="radio" name="scope" value="title">
+            仅标题（省额度）</label>
+        </div>
+        <div class="node-actions">
+          <button type="button" class="btn solid" id="trSave">保存</button>
+          <button type="button" class="btn" id="trTest">试译一句</button>
+        </div>
+        <div class="node-log" id="trLog" hidden></div>
+      </div>
+
+      <div class="side__block">
+        <span class="sec">板块</span>
+        <div class="navlist" id="catNav"></div>
+      </div>
+      <div class="side__block">
+        <span class="sec">品类</span>
+        <div class="navlist navlist--compact" id="bcNav"></div>
+      </div>
+      <div class="side__block">
+        <span class="sec">今日高频</span>
+        <ul class="kws" id="kwList"></ul>
+      </div>
+    </aside>
+
+    <section class="feed" id="feed" aria-live="polite"></section>
+
+    <aside class="panel">
+      <div class="panel__block">
+        <span class="sec" id="marketTitle">市场格局 <span class="panel__hint">综合占比</span></span>
+        <div class="donut" id="donut"></div>
+        <ul class="legend" id="catLegend"></ul>
+        <p class="formula" id="formula"></p>
+      </div>
+      <div class="panel__block">
+        <span class="sec">品牌提及 TOP <span class="panel__hint" id="brandHint"></span></span>
+        <div class="bars" id="brandBars"></div>
+      </div>
+      <div class="panel__block">
+        <span class="sec">资讯中已披露的规模</span>
+        <ul class="scales" id="scaleList"></ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="foot__row" id="srcList"></div>
+  <p style="margin:0">
+    内容由公开信息源自动采集聚合，要点为原文摘录（内网为中文源，外网为海外源，含英文/日文原文），版权归原作者所有；
+    点击标题可跳转原文核对。市场格局图为「本次采集到的公开信息」统计，非官方市场数据，仅供参考。
+    本页由 <span class="mono">daily.py</span> 于 <span id="footTime" class="mono">—</span> 生成。
+  </p>
+</footer>
+
+<dialog class="sheet" id="archiveSheet">
+  <div class="sheet__bar">
+    <strong>往期日报</strong>
+    <button type="button" class="btn" id="sheetClose">关闭</button>
+  </div>
+  <ul class="sheet__list" id="archiveList"></ul>
+</dialog>
+
+<script id="boot-data" type="application/json">null</script>
+<script id="boot-archive" type="application/json">null</script>
+<!-- 鉴权配置（authBase 非空 = 静态站点启用登录门禁；由 daily.py 生成时内联） -->
+<script id="auth-config" type="application/json">{"_说明":"留空 = 不做登录门禁；protectContent=true 表示正文不内联、登录后由服务端下发","authBase":"https://canyin-auth.nfalyhl.deno.net","maxDevices":3,"protectContent":true,"title":"餐饮日报"}</script>
+<script src="auth.js"></script>
+<script src="mobile.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

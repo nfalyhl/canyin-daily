@@ -1,0 +1,7 @@
+{
+  "_说明": "留空 = 不做登录门禁；protectContent=true 表示正文不内联、登录后由服务端下发",
+  "authBase": "https://canyin-auth.nfalyhl.deno.net",
+  "maxDevices": 3,
+  "protectContent": true,
+  "title": "餐饮日报"
+}
