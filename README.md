@@ -76,9 +76,14 @@ public\data\index.json             ← 往期目录
 网站是**登录后才能访问**的：未登录时页面、数据文件、接口全部拦住（302 跳登录页 / 401）。
 
 - 账号只存 **PBKDF2-SHA256 哈希 + 随机盐**（`config/users.json`，权限 600）
-- 会话用 **HMAC 签名 Cookie**（默认 30 天），服务重启不掉登录
+- 会话用 **HMAC 签名 Cookie**（默认 30 天，且绑定设备），服务重启不掉登录
+- **每个账号最多 3 台设备同时在线**（`MAX_DEVICES`，见下）：名额满了不会偷偷顶掉老设备，
+  而是把在线设备列出来，让你自己选一台「下线并登录」；在设备上点「退出」会立刻释放名额；
+  30 天没上过线的设备自动释放（`DEVICE_TTL_DAYS`）
 - 连续 6 次密码错误，该 IP 锁 3 分钟
 - 目前两个账号：`YYQ`、`管理员`（密码是创建时你设的）
+- 设备记录：本机版在 `config/devices.json`，公网静态版在鉴权服务的 KV 里（见第十二节）
+- 界面上顶栏的「设备」按钮可以随时看「哪些设备在线」并下线其中任意一台
 
 ```powershell
 python tools\setup_users.py --add 用户名 密码      # 新增
@@ -86,13 +91,13 @@ python tools\setup_users.py --passwd 用户名 新密码  # 改密
 python tools\setup_users.py --del 用户名            # 删除
 python tools\setup_users.py --list                 # 列出
 python tools\test_server.py                        # 鉴权自检（14 项）
+python tools\test_devices.py                       # 设备名额自检（用临时账号，不占你的名额）
 ```
 
 密钥 `config/secret.key` **不要删**（删了所有人要重新登录）。
 
-> ⚠️ 登录保护**只在 `server.py` 跑起来时生效**。若只用 `publish-pages.py` 传到
-> GitHub Pages 这类静态托管，那里没有后端，任何人拿到网址都能看数据。
-> 要登录，就得把 `server.py` 跑在一台能被访问的机器上（内网服务器 / 云主机）。
+> ⚠️ 本机登录保护只在 `server.py` 跑起来时生效。静态托管（GitHub Pages）上没有后端，
+> 那里的登录靠**独立的鉴权服务**兜底，见第十二节。
 
 ---
 
@@ -321,19 +326,51 @@ python daily.py --llm
 
 ```powershell
 $env:GITHUB_TOKEN = "ghp_你的token"     # https://github.com/settings/tokens 勾 repo
-python tools\publish-pages.py
-python tools\publish-pages.py --dry-run  # 先看会传哪些文件
+python tools\publish_site.py
+python tools\publish_site.py --dry-run  # 先看会传哪些文件
 ```
 
-会自动创建 `<用户名>.github.io` 仓库并上传 `public/`，得到
-**`https://<用户名>.github.io/`**（首次等 1-2 分钟）。之后每次采集完再跑一次即可。
+会自动创建仓库并上传 `public/` 到 `gh-pages` 分支，得到
+**`https://nfalyhl.github.io/canyin-daily/`**（首次等 1-2 分钟）。之后每次采集完再跑一次即可。
 
-> ⚠️ 静态托管**没有后端**，所以没有登录保护、没有节点设置、没有翻译。
-> 要这些能力，就把 `server.py` 跑在能被访问的机器上。
+> ⚠️ 静态托管**没有后端**，所以没有外网节点设置、没有翻译开关。
+> 登录和设备名额靠独立的**鉴权服务**（下一节）。
 
 ---
 
-## 十二、目录结构
+## 十二、公网站点也要登录（鉴权服务 + 设备名额）
+
+静态托管没法校验密码，所以登录这件事交给一个独立的**鉴权服务**：
+
+- 代码：`cloud/main.ts`（单文件，零依赖，用 Deno 自带的 KV 存账号/设备）
+- 部署：**Deno Deploy 免费版**（100 万请求/月），国内手机可直连，官网用 GitHub 登录即可
+- 网页侧：`public/auth.js` —— 没登录时用全屏门禁盖住页面（数据在前面渲染也看不到）
+- 账号：与 `config/users.json` **同一套哈希**（不存明文），靠环境变量 `USERS_JSON` 同步
+- 名额：**每个账号最多 3 台设备**（`MAX_DEVICES`）；满了列出在线设备让你选一台下线
+
+部署步骤、完整接口表、注意事项都在 **`cloud/README.md`**，这里是速查：
+
+```powershell
+python tools\publish_auth_service.py          # 把 cloud/ 推到 nfalyhl/canyin-auth
+python tools\auth_admin.py emit               # 生成 USERS_JSON（贴到 Deno Deploy 环境变量）
+# 浏览器里：console.deno.com 建组织 → Provision Deno KV → New App 选 canyin-auth
+#   Runtime=Dynamic、Entrypoint=main.ts、Dynamic arguments=--unstable-kv（不能省！）
+#   Attach Database 挂 KV → 加环境变量 → Deploy
+python tools\auth_admin.py test --base https://你的地址                  # 自检
+python tools\auth_admin.py test --base https://你的地址 --user YYQ       # 试登录
+python tools\auth_admin.py set-auth https://你的地址                     # 写进站点配置
+daily.py --render-only ; python tools\publish_site.py                     # 重新生成并发布
+```
+
+想关掉门禁：`python tools\auth_admin.py set-auth ""`，再重新生成发布。
+改完 `cloud/main.ts` 要重新发布服务，本地可以先跑 `python cloud\test_local.py`（需装 Deno）。
+
+> ⚠️ 门禁保护的是「入口」，不是「正文」：站点内容是静态 HTML/JSON，
+> 直接拉 `data/digest-*.json` 仍能读到。要连正文一起锁住，得把数据也搬到后端按登录态下发。
+
+---
+
+## 十三、目录结构
 
 ```
 canyin-daily\
@@ -347,16 +384,25 @@ canyin-daily\
 ├─ setup-task.ps1            注册/管理 Windows 计划任务
 ├─ config\                   账号、密钥、设置（本地，不外传）
 │  ├─ users.json             账号哈希
+│  ├─ devices.json           每个账号当前在线的设备（名额管理）
 │  ├─ secret.key             会话签名密钥（不要删）
 │  ├─ translations.json      译文缓存
 │  └─ settings.json          外网节点、翻译服务等设置
 ├─ dist\                     生成的 APK
 ├─ android\                  Android 工程（WebView 壳 + 打包脚本）
 ├─ ios\                      iOS 工程（WKWebView 壳 + TestFlight 说明）
+├─ cloud\                    登录鉴权服务（Deno Deploy 单文件版 + 部署说明）
+│  ├─ main.ts                登录 / 设备名额 / 踢下线（用 Deno KV 存状态）
+│  ├─ deno.json              本地起步任务（deno task start）
+│  ├─ README.md              部署步骤、接口表、注意事项
+│  └─ test_local.py          本地起一个实例把逻辑跑一遍（需装 Deno）
 ├─ .github\workflows\        iOS 构建并上传 TestFlight
 ├─ tools\
 │  ├─ setup_users.py         管理登录账号
 │  ├─ test_server.py         鉴权/接口自检（14 项）
+│  ├─ test_devices.py        设备名额自检（3 台上限 / 踢下线 / 退出释放）
+│  ├─ auth_admin.py          鉴权服务：生成 USERS_JSON / 自检 / 写站点配置
+│  ├─ publish_auth_service.py  把 cloud/ 推到独立仓库供 Deno Deploy 部署
 │  ├─ test_translate_api.py  翻译接口自检
 │  ├─ translate_digest.py    给已有日报补翻译
 │  ├─ check_tr_cache.py      查看译文缓存命中情况
@@ -364,7 +410,7 @@ canyin-daily\
 │  ├─ make_icons.py          Web 图标
 │  ├─ make_android_icons.py  Android 启动图标
 │  ├─ make_ios_icon.py       iOS 1024 图标
-│  ├─ publish-pages.py       发布到 GitHub Pages
+│  ├─ publish_site.py        发布到 GitHub Pages（gh-pages 分支）
 │  ├─ apk_pack.py            合成 Android APK
 │  ├─ check_apk.py           检查 APK 内容
 │  ├─ peek.py / peek_market.py  终端查看日报内容
@@ -372,6 +418,8 @@ canyin-daily\
 │  └─ shot.py / shot_desktop.py / zoom.py   截图自检
 └─ public\                   网站根目录
    ├─ index.template.html    页面模板
+   ├─ auth.js                静态站点的登录门禁 + 设备管理弹窗
+   ├─ auth-config.json       鉴权服务地址（留空 = 不做登录门禁）
    ├─ index.html             生成物：日报页面（需登录）
    ├─ login.html             登录页（公开）
    ├─ offline.html           生成物：单文件版（供 App / 离线阅读）
@@ -382,7 +430,7 @@ canyin-daily\
 
 ---
 
-## 十三、Android APK
+## 十四、Android APK
 
 产出：`dist\canyin-daily-1.4.apk`（约 106 KB）
 
@@ -413,7 +461,7 @@ aapt2 / javac / d8 / zipalign / apksigner，不依赖网络。
 
 ---
 
-## 十四、iOS（TestFlight）
+## 十五、iOS（TestFlight）
 
 工程在 `ios/`（WKWebView 壳 + XcodeGen 配置），上传工作流在
 `.github/workflows/ios-testflight.yml`。完整步骤见 **`ios/README.md`**。
@@ -426,7 +474,7 @@ iOS 工程也无法在 Windows 上编译，所以走 GitHub Actions 的 macOS �
 
 ---
 
-## 十五、常见问题
+## 十六、常见问题
 
 **抓不到内容 / 大量 FAIL**
 网络问题居多。先 `--fast` 跑一遍看哪些源失败，需要代理的在网页「外网节点」里填节点重试；
