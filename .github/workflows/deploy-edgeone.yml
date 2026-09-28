@@ -1,0 +1,32 @@
+name: Deploy to EdgeOne
+
+# gh-pages 分支有更新（= tools/publish_site.py 刚发布过）就把整个分支
+# 部署到腾讯 EdgeOne Makers：静态站 + cloud-functions/ 里的鉴权云函数。
+# 国内访客直连 EdgeOne 的边缘节点，不需要代理。
+#
+# 前置（只需做一次）：
+#   1. 在 https://pages.edgeone.ai 生成 API Token
+#   2. GitHub 仓库 Settings → Secrets → Actions → 新增 EDGEONE_API_TOKEN
+#   3. 在 EdgeOne 控制台给项目配好环境变量（USERS_JSON 等）和 KV 绑定（canyin_kv）
+
+on:
+  push:
+    branches: [gh-pages]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Deploy to EdgeOne Makers
+        run: npx --yes edgeone@latest makers deploy . -n canyin-daily -t ${{ secrets.EDGEONE_API_TOKEN }}
