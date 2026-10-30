@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小红书采集 · 餐饮日报</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .xwrap { max-width: 900px; margin: 0 auto; padding: 24px 16px 60px; }
+  .xcard { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px 20px; margin: 0 0 18px; }
+  html.dark .xcard { background: #1b1b1f; border-color: #2c2c33; }
+  .xcard h2 { margin: 0 0 6px; font-size: 17px; }
+  .xhint { color: #6b7280; font-size: 13px; line-height: 1.65; margin: 6px 0 14px; }
+  html.dark .xhint { color: #9ca3af; }
+  .xgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px 18px; margin-bottom: 14px; font-size: 13px; }
+  .xgrid b { font-weight: 600; }
+  .xacts { display: flex; flex-wrap: wrap; gap: 10px; }
+  .xbtn { border: 1px solid #d1d5db; background: #fff; border-radius: 8px; padding: 8px 14px; font-size: 13px; cursor: pointer; }
+  .xbtn.solid { background: #111827; border-color: #111827; color: #fff; }
+  .xbtn[disabled] { opacity: .45; cursor: not-allowed; }
+  html.dark .xbtn { background: #26262c; border-color: #3a3a42; color: #e5e7eb; }
+  html.dark .xbtn.solid { background: #e5e7eb; border-color: #e5e7eb; color: #111827; }
+  .xmsg { margin-top: 12px; font-size: 13px; color: #b45309; min-height: 18px; }
+  .xqr { margin-top: 14px; text-align: center; }
+  .xqr img { width: 220px; height: 220px; border: 1px solid #e5e7eb; border-radius: 10px; background: #fff; }
+  .xlist { display: flex; flex-direction: column; gap: 10px; }
+  .xitem { border: 1px solid #eee; border-radius: 10px; padding: 10px 12px; font-size: 13px; line-height: 1.6; }
+  html.dark .xitem { border-color: #33333a; }
+  .xitem a { color: inherit; font-weight: 600; text-decoration: none; }
+  .xitem a:hover { text-decoration: underline; }
+  .xitem .meta { color: #6b7280; font-size: 12px; margin-top: 4px; }
+  .xcat { display: inline-block; padding: 1px 7px; margin-right: 7px; border-radius: 5px;
+          font-size: 11px; font-weight: 600;
+          background: color-mix(in srgb, var(--c, #8A94A6) 16%, transparent);
+          color: var(--c, #8A94A6); }
+  html.dark .xitem .meta { color: #9ca3af; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__strip"></div>
+  <div class="topbar__inner">
+    <div class="brand">
+      <span class="brand__cn">小红书采集</span>
+      <span class="brand__en">XIAOHONGSHU</span>
+    </div>
+    <div class="topbar__tools" style="margin-left:auto">
+      <button class="btn" id="btnSiteLogin" type="button">登录本站</button>
+      <a class="btn" href="./">← 回日报</a>
+    </div>
+  </div>
+</header>
+
+<main class="xwrap">
+
+  <section class="xcard">
+    <h2>采集状态</h2>
+    <p class="xhint">
+      小红书必须用<b>真实浏览器 + 家宽 IP</b> 采集（机房 IP 和无头浏览器都会被风控），所以采集跑在机主的电脑上，
+      这个页面只负责「下单」和「看结果」。<b>已经有别人登录过就不需要再扫码</b>，所有人共用同一份登录态与采集结果。
+    </p>
+    <p class="xhint">
+      <b>扫码不需要登录本站</b>：点「扫码登录」后二维码会直接出现在本页（手机、电脑都能看），用小红书 App 扫它就行 ——
+      采集机会静默拉起一个真实浏览器去生成二维码（自动最小化），<b>你不用去碰它</b>。
+      只有「立即采集 / 看结果」需要登录本站（日报正文是受保护的）。
+      采集机（机主的电脑）关机时这里会显示「采集机离线」，开机后自动恢复。
+    </p>
+    <div class="xgrid">
+      <div>登录状态：<b id="stLogin">—</b></div>
+      <div>最近采集：<b id="stAt">—</b></div>
+      <div>结果条数：<b id="stCount">—</b></div>
+      <div>关键词：<b id="stKw">—</b></div>
+      <div>采集机：<b id="stHost">—</b></div>
+    </div>
+    <div class="xacts">
+      <button class="xbtn solid" id="btnLogin">扫码登录</button>
+      <button class="xbtn" id="btnCollect">立即采集</button>
+      <button class="xbtn" id="btnLogout">退出登录（换号）</button>
+      <button class="xbtn" id="btnRefresh">刷新状态</button>
+    </div>
+    <div class="xmsg" id="msg"></div>
+    <div class="xqr" id="qrbox" hidden>
+      <img id="qr" alt="小红书登录二维码">
+      <p class="xhint" style="margin-top:10px">用小红书 App 扫码。二维码由采集机上的浏览器生成，登录态只留在那台电脑上，本页面拿不到你的账号。</p>
+    </div>
+  </section>
+
+  <section class="xcard" id="volbox">
+    <h2>用你自己的电脑当采集机<span class="xhint" id="volTag" style="font-weight:400"></span></h2>
+    <p class="xhint">机主的电脑不在 / 关机时，<b>任何一位访客</b>都能临时顶替 —— 只要一台能上网的电脑（家宽最佳），大约 5 分钟就能跑起来：</p>
+    <p style="margin:12px 0">
+      <a class="xbtn solid" href="dl/xhs-volunteer-pack.zip" download>下载采集机小包（约 20 KB）</a>
+      <a class="xbtn" href="dl/xhs-pack-readme.txt" download>先看使用说明（txt）</a>
+    </p>
+    <ol class="xhint">
+      <li>下载并解压小包（里面有「先看这个-使用说明.txt」）</li>
+      <li>双击 <code>start.cmd</code> —— 第一次会自动装一个小依赖</li>
+      <li>回到本页刷新，二维码就出现在上面，用小红书 App 扫它</li>
+    </ol>
+    <p class="xhint">安全说明：扫码得到的登录态只存在你自己电脑上，不会上传服务器；关掉那个黑窗口就等于下线。包里只有一个「报到 + 领指令」的受限令牌，拿不到任何管理权限。</p>
+  </section>
+
+  <section class="xcard">
+    <h2>采集结果 <span class="xhint" id="notesMeta" style="font-weight:400"></span></h2>
+    <div class="xlist" id="notes"><p class="xhint">还没有结果。先扫码登录，再点「立即采集」。</p></div>
+  </section>
+
+</main>
+
+<script src="auth.js?v=23"></script>
+<script>
+(function () {
+  var A = window.CanyinAuth;
+  function $(s) { return document.querySelector(s); }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
+    });
+  }
+  function msg(t) { $('#msg').textContent = t || ''; }
+  function agoText(sec) {
+    if (sec < 0) return '无心跳';
+    if (sec < 60) return sec + ' 秒前';
+    if (sec < 3600) return Math.round(sec / 60) + ' 分钟前';
+    if (sec < 86400) return Math.round(sec / 3600) + ' 小时前';
+    return Math.round(sec / 86400) + ' 天前';
+  }
+  function tok() { return A && A.token ? A.token() : ''; }
+  function call(path, payload) {
+    return new Promise(function (res, rej) {
+      var r = A.api(path, payload, 30000);
+      (r && r.then) ? r.then(res, rej) : res(r);
+    });
+  }
+  function errText(e) {
+    var d = (e && e.data) || {};
+    var code = d.code || (e && e.status);
+    if (code === 401 || code === 'unauthorized') return 'NEED_LOGIN';
+    return (d.error || (e && e.message) || String(e || '未知错误'));
+  }
+  function needLogin() {
+    $('#stLogin').textContent = '本站未登录（不影响扫码）';
+    msg('扫码不用登录本站；「立即采集 / 看结果」才需要先在下面登录本站。');
+  }
+
+  /** 不依赖本站登录的公开接口（同源相对路径，不带 token）。 */
+  function pubCall(path, payload) {
+    return fetch(path, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload || {}),
+      cache: 'no-store'
+    }).then(function (r) { return r.json().catch(function () { return {}; }); });
+  }
+
+  var timer = null;
+  var LAST = null, LAST_RENEW = 0;
+
+  function render(st) {
+    var s = st.state || {};
+    var on = !!st.loggedIn;
+    LAST = { loggedIn: on, pending: st.pending || '', qrExpired: !!s.qrExpired, loginState: s.loginState || '' };
+    // 采集机心跳：代理（xhs_agent.py）每轮都会刷新 agentAt；超过 90 秒没心跳就当离线。
+    var hb = s.agentAt ? Date.parse(String(s.agentAt).replace(' ', 'T')) : 0;
+    var ageSec = hb ? Math.round((Date.now() - hb) / 1000) : -1;
+    var online = ageSec >= 0 && ageSec < 90;
+    $('#stLogin').textContent = on ? '已登录（共享）' : (s.loginState === 'error' ? '登录态异常' : '未登录');
+    $('#stAt').textContent = s.lastCollectAt || s.collectedOn || '—';
+    $('#stCount').textContent = (s.count === 0 || s.count) ? String(s.count) : '—';
+    $('#stKw').textContent = (s.keywords && s.keywords.length) ? s.keywords.join('、') : '—';
+    $('#stHost').textContent = (s.agent || '—') +
+      (online ? '（在线 · ' + agoText(ageSec) + '）' : '（离线 · ' + agoText(ageSec) + '）');
+    $('#btnCollect').disabled = !on || !online;
+    $('#btnLogin').disabled = !online;
+    $('#btnLogout').disabled = !online;
+    $('#btnLogin').hidden = on;
+    $('#btnLogout').hidden = !on;
+    var showQr = !on && s.qr && online;
+    $('#qrbox').hidden = !showQr;
+    if (showQr) { $('#qr').src = s.qr; }
+    if (!online) {
+      msg('采集机（机主的电脑）当前离线' +
+        (ageSec >= 0 ? '（最后心跳 ' + agoText(ageSec) + '）' : '') +
+        '：小红书必须用真实浏览器 + 家宽 IP 采集，云端代替不了，所以扫码和采集都要等那台电脑开机。' +
+        '开机后会自动恢复（代理已是开机自启 + 启动补采），不用手动操作。');
+    } else if (st.pending) {
+      msg('采集机正在处理：' + st.pending + ' …（本机浏览器会静默起来一下，属正常）');
+    } else if (s.risk) {
+      msg('小红书风控：' + s.risk + '（稍后再试，别频繁重试）');
+    } else if (s.note) {
+      if (showQr) {
+        msg(s.qrExpired
+          ? '上一张码可能已过期，正在自动换新…（也可以再点一次「扫码登录」）'
+          : '二维码已生成，用小红书 App 扫下面这张码即可（有效期约 2 分钟，过期后会自动换新）。');
+      } else {
+        msg(s.note);
+      }
+    } else if (s.collectState === 'need_login') {
+      msg('还没有登录态，先扫码登录。');
+    } else if (on) {
+      msg('');
+    }
+    // 二维码会过期（旧码同时也要过心跳判断）：没登录且已有码时多看一眼
+    if (!on && online) { clearTimeout(timer); timer = setTimeout(poll, 5000); }
+  }
+
+  /** 未登录时也能看的部分：二维码 + 采集机状态（/api/xhs/qr 是公开只读的）。 */
+  function renderPublic(r) {
+    var s = r || {};
+    LAST = { loggedIn: !!s.loggedIn, pending: '', qrExpired: !!s.qrExpired, loginState: s.loginState || '' };
+    var hb = s.agentAt ? Date.parse(String(s.agentAt).replace(' ', 'T')) : 0;
+    var ageSec = hb ? Math.round((Date.now() - hb) / 1000) : -1;
+    var online = ageSec >= 0 && ageSec < 90;
+    $('#stLogin').textContent = (s.loggedIn ? '已登录（共享）' : '未登录') + ' · 本站未登录';
+    if (siteBtn) siteBtn.hidden = false;
+    $('#stAt').textContent = s.lastCollectAt || '—';
+    $('#stCount').textContent = (s.count === 0 || s.count) ? String(s.count) : '—';
+    $('#stKw').textContent = (s.keywords && s.keywords.length) ? s.keywords.join('、') : '—';
+    $('#stHost').textContent = (s.agent || '—') +
+      (online ? '（在线 · ' + agoText(ageSec) + '）' : '（离线 · ' + agoText(ageSec) + '）');
+    var showQr = !s.loggedIn && s.qr && online;
+    // 采集机离线时，把「你自己当采集机」的入口露出来
+    var vb = $('#volbox');
+    if (vb) vb.hidden = online;
+    $('#qrbox').hidden = !showQr;
+    if (showQr) { $('#qr').src = s.qr; }
+    $('#btnCollect').disabled = true;
+    $('#btnLogout').disabled = true;
+    $('#btnLogin').disabled = !online;
+    $('#btnLogin').hidden = !!s.loggedIn;
+    if (!online) {
+      msg('采集机（机主的电脑）当前离线 ' + (ageSec >= 0 ? '（最后心跳 ' + agoText(ageSec) + '）' : '') +
+        '：小红书必须用真实浏览器 + 家宽 IP 采集，云端代替不了，扫码和采集都要等那台电脑开机。');
+    } else if (showQr) {
+      msg(s.qrExpired
+        ? '上一张码可能已过期，正在自动换新…（也可以再点一次「扫码登录」）'
+        : '二维码在下面 👇 用小红书 App 扫它（约 2 分钟有效；过期了会自动换新）。');
+    } else if (s.loggedIn) {
+      msg('采集机上已经有小红书登录态，不用扫码。登录本站后就能点「立即采集」并看结果。');
+    } else {
+      msg('点「扫码登录」生成二维码（扫码不需要登录本站）。');
+    }
+    clearTimeout(timer);
+    timer = setTimeout(poll, 5000);
+  }
+
+  function poll() {
+    if (!tok()) { pollPublic(); return; }
+    call('/api/xhs/state', { token: tok() }).then(render, function (e) {
+      var t = errText(e);
+      if (t === 'NEED_LOGIN') { pollPublic(); } else { msg('取状态失败：' + t); }
+    });
+  }
+
+  function pollPublic() {
+    pubCall('/api/xhs/qr', {}).then(renderPublic, function (e) {
+      msg('取状态失败：' + ((e && e.message) || e));
+      clearTimeout(timer);
+      timer = setTimeout(poll, 8000);
+    });
+  }
+
+  function renderNotes(r) {
+    var items = r.items || [];
+    var meta = r.meta || {};
+    if (!items.length) {
+      $('#notes').innerHTML = '<p class="xhint">还没有结果。先扫码登录，再点「立即采集」。</p>';
+      $('#notesMeta').textContent = '';
+      return;
+    }
+    $('#notesMeta').textContent = '共 ' + items.length + ' 条' +
+      (meta.fetchedAt ? ' · ' + esc(meta.fetchedAt) : '') +
+      (meta.keywords && meta.keywords.length ? ' · ' + esc(meta.keywords.join('、')) : '');
+    $('#notes').innerHTML = items.map(function (n) {
+      var CAT_UI = {
+        '咖啡': { i: '☕', c: '#B07A45' },
+        '茶饮': { i: '🥤', c: '#34A873' },
+        '烘焙甜品': { i: '🍰', c: '#D167B0' },
+        '快餐': { i: '🍔', c: '#D9523F' },
+        '火锅烧烤': { i: '🍲', c: '#E8802E' },
+        '中式正餐': { i: '🍚', c: '#4A86D8' },
+        '其他': { i: '🏷', c: '#8A94A6' }
+      };
+      var cu = CAT_UI[n.cat] || CAT_UI['其他'];
+      return '<div class="xitem">' +
+        '<a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.title) + '</a>' +
+        '<div class="meta"><span class="xcat" style="--c:' + cu.c + '">' +
+        cu.i + ' ' + esc(n.cat || '其他') + '</span>' +
+        '@' + esc(n.author) + ' · ' + esc(n.like) + ' 赞</div></div>';
+    }).join('');
+  }
+
+  function notes() {
+    if (!tok()) { needLogin(); return; }
+    call('/api/xhs/notes', { token: tok() }).then(renderNotes, function (e) {
+      var t = errText(e);
+      if (t === 'NEED_LOGIN') needLogin();
+    });
+  }
+
+  function ask(action) {
+    var hasTok = !!tok();
+    if (!hasTok && action !== 'login') { needLogin(); return; }
+    $('#btnLogin').disabled = $('#btnCollect').disabled = $('#btnLogout').disabled = true;
+    msg('已下单：' + action + ' …等采集机响应（本机浏览器会静默起来一下，约 1 分钟内出现二维码）');
+    var req = hasTok
+      ? call('/api/xhs/ask', { token: tok(), action: action })
+      : pubCall('/api/xhs/ask', { action: action });   // 扫码登录不需要本站登录
+    req.then(function (r) {
+      if (r && r.skipped && r.message) msg(r.message);
+      setTimeout(function () {
+        $('#btnLogin').disabled = $('#btnCollect').disabled = $('#btnLogout').disabled = false;
+        poll();
+        if (hasTok) notes();
+      }, 1500);
+    }, function (e) {
+      $('#btnLogin').disabled = $('#btnCollect').disabled = $('#btnLogout').disabled = false;
+      var t = errText(e);
+      msg('下单失败：' + t);
+      clearTimeout(timer);
+      timer = setTimeout(poll, 4000);
+    });
+  }
+
+  $('#btnLogin').addEventListener('click', function () { ask('login'); });
+  $('#btnCollect').addEventListener('click', function () { ask('collect'); setTimeout(notes, 60000); });
+  $('#btnLogout').addEventListener('click', function () { ask('logout'); });
+  // 「刷新状态」不能只重读：码过期/超时、又没人在生成新码时，应该直接换一张新的，
+  // 否则点的永远是那张死码（2026-10-28 用户实测「二维码过期，刷新不了」）。60 秒内不重复下单。
+  $('#btnRefresh').addEventListener('click', function () {
+    var s = LAST || {};
+    var ls = s.loginState || '';
+    var stale = !s.loggedIn && !s.pending &&
+      (s.qrExpired || ls === 'timeout' || ls === 'expired' || ls === '');
+    if (stale && Date.now() - LAST_RENEW > 60000) {
+      LAST_RENEW = Date.now();
+      ask('login');
+      return;
+    }
+    poll(); notes();
+  });
+  // 这一页不再自动弹登录遮罩（会挡住二维码），所以工具栏给一颗按钮，想看日报时再弹
+  var siteBtn = document.getElementById('btnSiteLogin');
+  if (siteBtn) siteBtn.addEventListener('click', function () {
+    if (A && A.showGate) A.showGate();
+    else msg('登录框不可用，请回日报首页登录');
+  });
+
+  (A && A.ready ? A.ready : Promise.resolve()).then(function () { poll(); notes(); });
+  setInterval(function () { poll(); }, 8000);
+  // 未登录也保持轮询（8 秒一次）：采集机一开出二维码，手机上就能看到
+})();
+</script>
+</body>
+</html>

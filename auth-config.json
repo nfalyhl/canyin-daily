@@ -1,0 +1,9 @@
+{
+  "_说明": "留空 = 不做登录门禁；protectContent=true 表示正文不内联、登录后由服务端下发",
+  "authBase": "https://www.canyindaily.dpdns.org",
+  "maxDevices": 5,
+  "protectContent": true,
+  "title": "餐饮日报",
+  "_gateExempt 说明": "这些页面不自动弹登录遮罩（对未登录访客可用），页面自己决定什么时候弹。xhs.html 的扫码窗口必须这样——遮罩会挡住二维码。",
+  "gateExempt": ["xhs.html"]
+}
